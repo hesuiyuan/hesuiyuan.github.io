@@ -1,0 +1,133 @@
+<pre>
+<!-- 开始 -->
+div和css的盒子模型：
+                  盒子模型：利用块元素水平排练，纵向排练，嵌套排练相结合来完成网页布局的一种方式.
+                   table的布局麻烦
+
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+      div.one{
+      	width: 300px;
+      	height: 100px;
+      	border: 2px red solid;
+      	/*margin-bottom: 100px;*/
+      	
+      
+      	
+      }
+      .sss{
+      	width: 100px;
+      	height: 10px;
+      	border: 2px blue solid;
+      	margin:auto;
+
+
+      }
+      body,p,ul,dt,dd,dl,h1,h2,h3,ul,li,ol{
+      	margin:0;padding: 0;list-style: none;
+      }
+	</style>
+	&nbsp/*margin-left margin-right margin-top margin-botton*/
+	<!-- 俩个盒子同一个位置的边距会合并并且使用较大的值 -->
+	<!-- 如果在marign设置一一个值：四个方向
+	                       二个值：上下 左右 top botton left right
+	                       三个值：上 左右 下
+	                       四个值：上 右 下 左
+	                       marign可以赋值负数-->
+	                       <!-- marign-left:auto 
+	                             左居中效果-->
+
+</head>
+<body>
+	<div class="one">
+		<div class="sss"></div>
+	</div>
+</body>
+</html>
+</pre>
+
+<pre>
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+     .div{
+     	padding:;
+     }
+     /*padding设置内边框
+       一个真正的所占的宽高 width+padding-left 不可以设置负值*/
+      
+	</style>
+</head>
+<body>
+	<div>1xddvsVNSJKVnJVnSKV nK</div>
+
+</body>
+</html>
+
+border： border-top border-left border-right border-bottom
+         border-left-width
+        一个元素在没有设置宽度的时候，宽度会自动适应父元素
+        一个元素在没有设置高度的时候，高度会子元素撑开
+
+        ul中不要自己带的属性要加：margin:为零
+                                  padding：为零
+                                  list-style:none为了去掉点点
+行元素设置外边距只是识别左右 内边距都识别 不会影响其它行的元素
+行内快级元素: img input（需要设置一下下padding） textarea select
+             可以设置内外边距
+display:/block inline  inline-block(行内块元素)
+连接中放置图片：a标签没有宽高 display：block
+                 高度由图片自动撑开会有框比图片高    img｛display：block｝
+                 在ie浏览器中会给图片自动加一个边框  img｛border：none；｝
+                 float 浮动属性：left左   right
+                       脱离文档流，同级元素没有浮动元素属性会视它不见
+                       浮动元素可以在当前行显示，除非前面的元素有浮动，它会移动到前面的一行.
+                       *凡是是在一行显示的元素都需要添加浮动属性
+                       *浮动元素还是会限父元素的限制
+                        浮动元素在一行放不下去的时候，会自动换行
+                  clear：用来清除folat的影响  left right both
+                  浮动元素不能把父元素的高度撑开
+                     *在浮动元素的最后增加一个div 然后设置为clear:both
+                     给父元素设置 overflow   hidden
+                                  overflow:scroll
+                                  auto  不超出正常显示
+                                  overflow-x单独对x的设置   overflow-y单独对Y的设置 
+
+</pre>
+
+
+
+
+<pre>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+     .one{
+
+     }
+	</style>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,401 @@
+一、CSS 概述(了解)
+	*.CSS  ： Cascading Style Sheet 层叠样式表
+	*.CSS 作用就是给HTML页面标签添加各种样式
+	*.为什么用CSS
+		HTML的缺陷： 1. 不能够适应多种设备
+			         2. 要求浏览器必须智能化足够庞大
+					 3. 数据和显示没有分开
+					 4. 功能不够强大
+   CSS 优点：
+			1.使数据和显示分开
+			2.降低网络流量
+			3.使整个网站视觉效果一致
+			4.使开发效率提高了
+二、CSS语法
+	p{color：red;}
+  
+	选择器{属性名：属性值 ;}
+		   选择器后一定是大括号.属性名后必须用冒号隔开.属性值后用分号
+		   属性名和冒号之间最好不要有空格。
+
+三、CSS和HTML的结合方式
+	CSS代码理论上位置是任意的，但通常写在style标签里
+	CSS和HTML的结合方式有3种：
+		a. 行级样式表:采用style属性,范围只针对此标签适用
+				<div style = "border:1px solid red ;">大家好</div>
+		b. 内嵌样式表:采用<style>标签完成。范围针对此页面
+		c. 外部样式表: 采用建立样式表文件。针对多个页面.
+			引入样式表文件的方式:
+				1):采用<link>标签
+					eg:<link rel = "stylesheet" type = "text/css" href = "a.css"></link>
+				2):采用import，必须写在<style>标签中，并且必须是第一句
+					eg: @import url(a.css) ;
+							
+				两种引入方式的区别：
+						外部样式表中不能写<link>标签,但是可以写import语句
+
+四、CSS选择器
+	选择器分为两大类:
+	1.基本选择器
+	    a.标签选择器:指的就是选择器的名字代表html页面上的标签
+			p{
+				color:red ;
+				border:1px dashed green;
+			}
+			
+		b.类选择器：规定用圆点.来定义
+			优点：灵活
+			eg: .one{background-color:#ff0099; }
+			
+		c. ID选择器：规定用#来定义
+			eg: #one{cursor:hand; }
+		    区别：标签选择器针对的是页面上的一类标签.
+				类选择器可以供多种标签使用.
+				ID选择器是值供特定的标签(一个). ID是此标签在此页面上的唯一标识。
+				
+		d:通用选择器： 用*定义,代表页面上的所有标签。
+			*{
+					font-size:30px;
+					margin-left:0px;
+					margin-top:0px;
+			}
+
+2.扩展选择器
+	 a. 组合选择器:采用逗号隔开
+			eg: p,h1,h2,.one,#two{color:red ; }
+	 b. 关联选择器(后代选择器): 采用空格隔开
+			eg: h4 span i{color:red ; } 
+			表示h4标签中的span标签中的i标签的样式
+			h4和span和i标签不一定是紧挨着的。
+	 c. 伪类选择器
+		 1) :静态伪类：规定是用:来定义.只有两个.只能用于超链接.
+						  :link表示超链接点击之前的颜色
+						  :visited表示链接点击之后的颜色
+						  
+						eg:a:link{color:red ;}
+						   a:visited{color:yellow;}
+				注意： a:link{}定义的样式针对所有的写了href属性的超链接(不包括锚)
+					   a{}定义的样式针对所有的超链接(包括锚)
+		 2) :动态伪类 : 针对所有的标签都适用
+					:hover : 是移动到某个标签上的时候
+					:focus : 是某个标签获得焦点的时候
+					:active : 点击某个标签没有放松鼠标时
+					eg: label:hover{color:#00ff00; }
+						input:focus{
+								background-color:#ff9999;
+								border:1px solid red;
+							}
+						a:active{
+								color:blue;
+							}
+
+五、CSS各种选择器的冲突(掌握)
+		CSS样式的冲突:
+			1.ID选择器 > 类选择器 > 标签选择器
+			2.行级样式表 > 内嵌样式表 > 外部样式表
+			外部样式表的ID选择器  > 内嵌样式表的标签选择器
+
+				原则： 就近原则
+
+六、CSS的各种属性(掌握)
+	? CSS中尺度单位的介绍
+	  CSS的单位:
+		a. 绝对单位 1in=2.54cm=25.4mm=72pt=6pc , pt是点或者磅，pc是派卡
+		b. 相对单位：px, em(印刷单位相当于12个点), %(相对周围的文字)
+			
+		*字体设置
+		   p{
+				font-size:50px;    /*字体大小*/
+				font-style:italic ;  /*斜体*/
+				font-weight:bold;  /*粗体*/
+				font-family:幼圆;  /*字体类型*/
+				font-variant:small-caps;  /*小写变大写*/
+			}
+		*文本设置
+		   p{
+				letter-spacing:0.5cm ; /*字母间距*/
+				word-spacing:1cm;   /*单词间距*/
+				text-align:center;   /*在所包含容器的中间*/
+				text-decoration:overline; /*字体修饰 underline下划线 line-through中划线 overline上划线*/
+				text-transform:lowercase;  /*单词字体大小写*/
+				color:red ;
+			}
+			
+		*背景设置
+			body{
+					background-color:#ff99ff ;  /*背景颜色*/
+					background-image:url(images/2.gif) ; /*背景图片*/
+					background-repeat: no-repeat;  /*no-repeat不要平铺，repeat-x,横向平铺，repeat-y 纵向平铺*/
+					background-position:center right; /*背景位置*/
+					background-attachment: scroll ;           /*背景的移动 ,fixed跟着滚动条一起移动，scroll 不动*/
+				}
+		*列表设置
+			ul li{
+				list-style:none;    /*列表前样式*/
+				list-style-image:url(images/2.gif) ;  /*列表项前图片*/
+				margin-left:80px;  
+			 }
+
+		*盒子模型(border margin padding)
+			 padding:是内容到边的距离
+			 border: 是边的粗细
+			 margin:是控件到控件的距离
+			 
+		*定位设置(position,float,clear,z-index)
+			#d{
+				position: absolute;    /*
+						  1.绝对定位: 定义横纵坐标 .脱离了本身的顺序流
+						  2.相对定位: 相对的是自己在顺序流中原来的位置
+					  */
+
+				left:100px;    /*横坐标*/
+				top:100px;     /*纵坐标*/
+				border:1px solid red ;  
+				width:100px;
+				height:100px;
+				background-color:#ff66ff;
+			  }
+
+			#d1{
+				position: relative;    /*相对位置*/
+				left:100px;
+				top:100px;
+				border:1px solid green ;
+				width:100px;
+				height:100px;
+				background-color:#339900;
+			  }
+
+			span{
+				position: relative;
+				left:20px;
+				top:20px;
+			 }
+           z-index:值任意，值越大离我们越近
+		   float : 浮动
+		   overflow: 超出范围怎么办
+鼠标样式设置(cursor)
+
+七、滤镜(了解)
+Flex的布局：
+          要想子元素（-不设置高度就是内容默认的高度.）想一行显示，只需要给父元素加一个display：flex；
+          flex-direction: row | row-reverse | column | column-reverse；
+          row（默认值）：主轴为水平方向，起点在左端。
+          row-reverse：主轴为水平方向，起点在右端。
+          column：主轴为垂直方向，起点在上沿。
+          column-reverse：主轴为垂直方向，起点在下沿。
+          兼容写法：-web-box-orient:horizonal|vertical
+                   -web-box-direction:horizonal|vertical
+           
+          flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。
+          flew-wrap：warp；换行
+          水平项目的对齐方式：justify-content：
+                                          flex-start（默认值）：左对齐
+                                          flex-end：右对齐
+                                          center： 居中
+                                          space-between：两端对齐，项目之间的间隔都相等。
+                                          space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比
+                                                        项目与边框的间隔大一倍
+                            
+                               
+    .box {
+      align-items: flex-start | flex-end | center | baseline | stretch;
+    }一个的居中
+     
+
+        flex-start：交叉轴的起点对齐。
+        flex-end：交叉轴的终点对齐。
+        center：交叉轴的中点对齐。
+        baseline: 项目的第一行文字的基线对齐。
+        stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。
+
+
+    .box {
+      align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+    }用与多行元素
+
+     
+
+        flex-start：与交叉轴的起点对齐。
+        flex-end：与交叉轴的终点对齐。
+        center：与交叉轴的中点对齐。
+        space-between：与交叉轴两端对齐，轴线之间的间隔平均分布。
+        space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。
+        stretch（默认值）：轴线占满整个交叉轴。
+
+    .item {
+      order:2;
+    }
+    order属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。
+
+
+项目内的属性：flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。
+             如果所有项目的flex-grow属性都为1，则它们将等分剩余空间（如果有的话）。
+             如果一个项目的flex-grow属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。
+
+             flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。
+             如果所有项目的flex-shrink属性都为1，当空间不足时，都将等比例缩小。
+             如果一个项目的flex-shrink属性为0，其他项目都为1，则空间不足时，前者不缩小。
+             负值对该属性无效。
+
+
+            align-self属性优先级最高可以单独设置一个元素的属性
+
+            align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。
+            默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。
+
+
+          .item {
+          align-self: auto | flex-start | flex-end | center | baseline | stretch;
+                 }
+
+
+一.javascript 是前端开发当中的核心语言能够让网页更加的生动活泼 并具有交互性.
+  
+  1.数据的验证.
+  2.将动态的内容写入到网页当中
+  3.对事件做出的相应
+  4.可以读写html的内容
+  5.可以检测浏览器
+  6.可以创建cookies
+  7.模拟动画
+  8.服务器端的使用
+二.html结构层
+ css表现层
+ js 行为层
+
+三.javascript的语法特点：基于对象和事件驱动的 解释型 松散型语言
+                      基于对象：核心的编程思想 面向对象
+                      事件驱动：检测用户的操作来完成的程序的运行
+                      解释型：由浏览器来就算执行的
+                      松散型：弱类型语言 语法比较灵活
+
+四.javascript组成部分
+   ECMAScript 基础语法
+   BOM 浏览器对象模型
+   DOM 文档对象模型
+
+五.js的调用方式
+   1.在域名 重定向
+   2.通过事件调用
+   3.嵌入方式 script
+   4.外部引入script 标签中间什么都不要写
+   5.不同的引入方式执行的js代码是相互关联的
+  
+
+   6.变量-容器存储处
+     声明变量   var 变量名
+     声明赋值变量的几种形式：
+                           在声明的同时赋值
+                           先声明后赋值
+                           可以一次性声明多个变量然后进行赋值
+                           一次声明多个变量同时给赋值
+      变量的规范：1.严格区分大小写
+                  2.开始位置字母 下划线 $后面随便什么都可以
+                  3.变量的名字不能使用关键字和保留字
+                  4.驼峰命名法  首字母大写 studentTotalGrade=“123”
+                  5.命名要有要有意义
+      变量的赋值：
+                重新赋值会覆盖掉原来的值
+                重新声明赋值也会覆盖原来的值
+                重新声明但是没有赋值 不会影响原来的值
+                声明为赋值 会被自动赋值为undefined
+
+
+           ****使用var 声明变量会被优先解析
+               不使用var也可以完成变量的声明赋值
+               let也可以声明变量都是不会被优先解析
+
+
+
+
+                *cost声明常量不可以改变赋值的数值 
+                     --1.不能先声明后赋值
+javascript数据类型：1.初始类型：数值；*typeof 检测数据类型
+                               字符串；可以是单引号  双引号都是可以的  var str=‘a“b”c’*typeof的结果是string 
+                               undefined；          *typeof的结果是undefined
+                               布尔类型：true/false；*typeof的结果是boolean
+                               空类型：null          *typeof的结果是object
+                              
+                    2.引用类型：对象（函数 数组---小数）
+                                          ox12  代表16进制
+                                          0开始  代表8进制
+                               Number.MAX_VALUE 代表最大值
+                               Number.MIN_VALUE 代表最大值
+                               科学计数法也是可以使用  10e+2
+栈区 所占据的长度固定 访问速度快
+堆区 所占的长度不固定 访问速度慢
+
+javascript的运算符：算数运算符号（+ - * / % ++ --）
+                    num1++ ：先赋值后运算；
+                    ++num1 ：先运算后赋值；
+                    字符窜也是可以相加--结果是连接后的字符窜
+                    如果出现 NAN的时候表示为 not a number 当进行算数运算的时候的不到预期的结果就会出现NAN
+                    字符串由数值组成 可以进行- * / 如果是+的话还是直接连接起来的
+                    es6的新语法  **  代表2**3等于8  几次方
+                   ：关系运算符号 < >  ==代表比较  数字  运算的结果是布尔值
+                    ===不仅要比较大小还是比较数据类型是负相同
+
+                 ---字符串的比较：从第一个字母开始 比较ASCII码值的大小，如果相等进行看下一位就好
+                    A-Z 65-90 a-z 97-122 
+                  ---字符串和数字的比较  会尝试把字符转化为数值比较；如果无法转化的话结果就是false
+                     ture相对于1 false相对于0   undefined==null比较的时候也是ture
+                  ：赋值运算符：=表示符号右边值赋值给左边
+                               +=  -=   /=    %=    *=
+                               number=number+10
+                               number+=10
+                   ：逻辑运算符：与 或 非
+                                与：&& 同真才为真   如果对运算的时候
+                                或：|| 有真则为真
+                                非：！ 取反
+                     布尔值的运算 ture false     可以将之前的全部影藏 console.clear（）；                          
+             假值：0 “” undefined false null NaN  就只有这六个
+
+            一元运算符：typeof new 实例化对象   delete删除对象的属性
+            三元运算符：三元表达式    表达式？当表达式的结果为真的时候的值：当表达式的结果为假的时候值
+            特出运算符：（）1.可以提高运算符的优先级    2.运行函数
+                              ，声明多个变量的时候用，分割
+
+流程控制：1.顺序结构
+          2.选择结构：根据一些条件来判断 一些部分的代码是负需要被执行
+                      a.分支结构  单路分支if（判断的语句）｛当满足条件时执行的内容｝
+                                  双路分支if（判断的语句）｛当满足条件时执行的内容｝else{当不满足条件时执行的内容}
+                                  多路分支if（判断的语句）｛当满足条件时执行的内容｝else if（判断的语句）｛当满足条件时执行的内容｝
+                         嵌套分支 判断可以嵌套执行
+                      b.条件结构：根据某一个变量不同的值执行不同的内容
+                                  switch（判断的变量）case
+                                  do｛｝while（）先执行一次然后在while的判断-----与while的本质的区别
+                                  break:跳出当前循环
+                                  cotinue：停止当前这一次循环继续下一次
+
+
+ 
+
+         
+
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

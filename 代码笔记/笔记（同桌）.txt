@@ -1,0 +1,417 @@
+﻿http 超文本传输协议
+ 万维网 w3c 
+html 超文本标记语言
+font 字体  （废弃标签）
+a  链接标签
+h1--h6 标题标签
+div段落基本标签
+herf 访问网址
+ <--!_self -->(绝对地址）
+<a href="./3.html">123</a>{要访问的文件在同级直接写文件名 不同级则继续加地址}
+ img 图像
+<img src="jp.jpg" alt="图片加载失败" width="200px" height="100px" border="10px"title="老虎">
+<!-- 图像地图 -->
+<img src="21jpg" alt=""  usemap="mymap">
+<map name="mymap">
+图像地图
+img
+map
+area
+1嵌套时不能交叉嵌套
+2行标签之间嵌套顺序不会影响显示
+3行标签一般情况下嵌套在块标签里面
+  行标签  font   b    i   em      strong    del
+  块标签h1  - h6
+  1<br>（break打断破坏）换行作用 没有结束标签的称为单标签  可以用来多次换行 可以用在标签里面
+  <div></div>无意义的块标签最基本块标签对于内容没有任何影响
+   <span></span>最基本行标签对于内没有任何影响
+  
+<p>展示段落内容</p>自带一些外边距    用来放置段落文字。
+
+pre   预格式文本标签
+
+HTML  实体&nbst左尖括号&lt ；  右尖括号&gt；；  引号&quot     &用&amp
+&copy表示圆圈里面一个C
+列表标签
+   无序列表
+         ul li
+    type格式
+        disc  实心圆
+        square 放块
+        circle 圆环
+       有序列表
+         ol  li 
+      type格式
+      a
+      A
+      1  
+    自定义列表
+        dl   dt   dd
+     表格
+        table    tr    td  
+       width     宽
+       height   高
+       bgcolor   背景颜色
+       border        边框 
+       cellspacing    框间距
+       cellpadding   字与框间距
+       align     位置
+       center    中心
+       colspan    行合并
+       rowspan     列合并
+表单 (form)
+   是web浏览器和web服务器进行通讯最常用的手段  可以从服务器获得信息，也可以反馈信息
+   HTML提供了表单元素来设计和实现交互界面      
+   form 指定表单的范围
+     action 指定提交地址   
+     method 指定提交方式
+        默认 get   适合大部分情况  传输数据量比较小 速度比较快 安全性低 通过地址栏来提交
+             post  传输量大，速度慢，安全性较高，通过头文件提交。
+表单控件 （标签）（form）
+input name *必须有 表示数据的代号 value 默认值 size 字符个数 maxlength 限制输入长度 readonly 只读 disabled 禁用
+ type 指定当前表单控件的类型 单标签 行标签 name *必须有 表示数据的代号 value 默认值 size 字符个数 maxlength 限制输入长度 readonly 只读
+      password  隐藏输入 radio 单选  (加上相同name,加上不同的value) checkbox 多选 
+          label 扩展焦点                                          checked 默认选中
+      submit    提交
+      file      文件域
+      reset     重置
+      button    空按钮
+textarea 文本区域 cols列 rows行
+select   下拉选项 通过option来设置 selected 默认选中
+  label
+      for和id是对应的
+ifame  帧窗口 可实现一个窗口打开2个html
+ 行元素不能设置宽高
+
+
+css 层叠样式表  用于控制网页样式并允许将样式信息与网页内容分类的一种标记性语言   4种使用方式
+ 行内样式 在标签里面直接定义css
+ 嵌入样式 选择器
+ 引入样式 link 
+ 导入样式 @import url
+优先级
+行内>嵌入/导入/引入
+id选择器#>类名选择器.>标签名选择器>通用选择器*>默认样式>继承的样式
+群组选择器
+选择器1，选择器2，选择器3{ }
+交叉选择器
+ 标签名.类名
+ 标签名#id 
+后代选择器
+  .类名 标签名
+文字属性都会继承
+!important 提高样式优先级
+伪类选择器    在现有的选择器的基础上 进行二次的选择
+ ：hover  当鼠标经过元素时的样式
+ ：root   选择当前文件的根元素
+ ：empty  选择当前内容为空的元素 
+ ：active 当鼠标按下的样式
+ ：visited 访问过链接的样式
+ ：link 普通的样式
+ ：focus 获得焦点的元素
+ ：target 锚链接跳转后的样式
+ ：not（.one） 排除.one的元素
+ ：before          在内容之前插入元素     *必须有content
+  : after             在内容之后插入元素     *必须有content
+ 顺序选择器
+  li：first-child
+  li: nth-child(1)
+  li: nth-last-child(x)
+  li: nth-child(enev/odd)选择偶数/奇数
+  li:only-child唯一的子元素
+  div:first-of-type（x） 作为子元素同类型的第一个
+  子选择器
+    选择某一个元素的子元素  .name>li
+   兄弟选择器
+    p+div 代表紧邻p标签后面的div
+    p~div p标签后面的div
+属性选择器
+    input[name] 有name属性的input标签
+    [name] 有name属性就行
+    input[type=text] type等于name的input标签
+    input[name^=a] name开始等于a的input标签
+    input[name$=a] name结束等于a的input标签
+    input[name*=a] name里面有a的input标签
+  
+em当前所继承字体大小的倍数   rem 根元素字体大小的倍数
+rgba 颜色 透明度
+font-weight 加粗  bold      normal
+font-style 倾斜  italic     normal
+font-variant 英文大小写 small-caps
+text-align 水平位置 center居中;justify两端对齐（必须两行）  
+text-indent 缩进 
+text-decoration 定义文本修饰 line-through 删除线 underline 上划线 overline 下划线
+line-height 字体行高 只能单行 
+
+盒子模型
+利用块元素水平排列，纵向排列，嵌套排列相结合来完成网页布局的一种方式。
+margin 外边距 同一个位置的边距会合并，合并后使用较大的值。
+ 写一个值，代表4个方向都是这个值；2个值，第一个代表上下，第二个代表左右。3个值，代表上，左右，下；4个值代表4个方向，上右下左。
+margin:0 auto; 居中 margin-left:auto;margin-right:auto;
+ margin可以设置负值
+padding 内边距  不可以设置负值
+一个盒子真正的宽高是设置的宽高加上内边距再加边框
+border 可以设置4个方向，可以拆分单个属性；border-left-color:blue；
+一个元素在没有设置宽高时，宽度会自适应父元素，高度由子元素撑开。
+ul列表 可以用list-style:none;margin:0;padding:0;去除列表样式
+p 标签中 有外边距，大小是浏览器设置中的字体大小。 可以使用margin:0;清除样式。
+body 也有外边距。
+行元素设置外边距时只识别左右，内边距都识别，不会影响其他行的元素
+行内块级元素 img input textarea select  可以设置内外边距	
+display  转换属性 行元素和块元素转换
+    block 块 inline 行 inline-block 行内块元素 none 无   display:block;
+链接中放置图片
+  a标签没有宽高 display:block;
+    设置浮动后 能设置宽高 中间无边距，需重新设计
+   高度有图片自动撑开会比图片高   img{display:block;}
+   在IE浏览器中图片会自动出现边框 img{border:none;}
+float 浮动 left 左浮动  right  右浮动
+脱离文档流 同级无浮动元素会视它不见。浮动元素会在当前行显示，除非前面也有浮动属性，它会移动到前一行
+凡是需要在一行显示的属性，都要添加浮动属性。浮动元素受父元素限制。浮动超出父元素大小，会换行显示 
+clear 用来清除浮动影响的。浮动元素不能把父元素高度撑开。
+                                        可以在浮动元素的最后增加一个div 设置clear:both;
+                                        给父元素设置 overflow:hidden;
+overflow 对超出元素部分的处理
+              hidden 把超出部分隐藏
+              scroll    出现滚动条 肯定出现滚动条
+              auto     不超出正常显示 超出之后出现滚动条
+   overflow-x    overflow-y  单独对某个轴设置
+
+如果盒子内不能出现下移动解决方法
+ 1.父元素的上边框
+ 2.父元素的上内边距
+ 3.子元素的浮动属性
+ 4.子元素是第一个 
+
+边框样式
+ none 无样式
+ dotted 点线
+ dashed 虚线
+ solid 实线
+ double 双线
+ groove 槽线
+ ridge 脊线
+ inset 内凹
+ outset 外凸
+
+background背景
+   background-position  移动背景图片位置 
+                     attachment:fixed       /*移动端不能使用*/
+
+cursor  控制鼠标样式   pointer 变成手
+网页里设置图片，一般设置宽高
+      
+  定位
+  position:static 默认 无影响  称为静态定位
+  position:relative   相对定位 对于自身和周围元素无影响   可以设置left top等  可以相对于自身移动 上下左右冲突时，上左起作用
+ 相对定位是脱离文档流的 但他的位置依然保留
+    absolute  绝对定位  脱离文档流 周围元素会占据他的位置 位置是相对于有定位属性父元素的。
+          元素页面居中
+               1.先绝对定位  然后4个方向设置0    最后margin:auto;
+               2.先绝对定位   left：50%；最后margin 移动元素宽高一半；
+   fixed  固定定位 
+
+z-index  当前定位元素在z轴的层级
+   min-width  max-width  min-height max-height
+  overflow:auto  自动的滚动条
+list-style-type：disc 黑圆圈  square 小黑方块  lower-roman 小写罗马字排序
+                        circie 空心原点  decimal 空心原点   none  无
+              position:inside
+              imag:url     引用图片作为列表标记  
+visibility:hidden;隐藏元素
+border-collapse:collapse 合并边框
+table-layout:fixed 固定表格
+ 
+h5 标签小写
+     新增语义化标签
+结构性标签
+ section  定义一节内容，表达书的一部分（一章或一节） 确保html的完整性 无特殊样式 和div类似
+ header 头部标签  放置网页的头部   无特殊样式
+ footer  底部标签  放置网页的底部   无特殊样式
+ nav   放置菜单导航和链接导航的标签  是navigator 的缩写  无特殊样式
+ article	用来表示文章的主体内容   无特殊样式
+ hgroup  对网页的标题进行组合
+块级性标签
+ aside 侧边栏标签  无特殊样式
+ figure 放置音频，视频内容  有默认外边距 figcaption 标题
+行标签
+ code 放置代码   字体变小
+ meter 表示特定范围的数值  
+ time 无特殊样式
+ progress 表示进度条  min   max   value
+属性
+   contenteditable 内容可编辑
+   hidden  隐藏
+多媒体标签
+  video  autpaly 立即播放     controls 调出控制控件   muted 静音  preload（auto metadata  none） 规定加载方式
+            loop  重新开始
+  audio 音频
+  source( src) 引入视频 
+  标签里文字代表浏览器不支持显示此文字
+画板标签
+  canvas（width height ）
+表单
+  form 写name=id  其他控件可以直接指定form="id"
+  label 焦点
+  input(email )电子邮件
+  input(url )url网址
+  input(data) 日期 month  月份   time 时刻  week 周 datatime-local 完整时间
+          number  数字
+          range 滑块
+          search 搜索
+          tel 电话
+          color 颜色
+属性   placeholder    提示文字
+          required       提醒客户必须填写 
+             pattern           正则验证
+             autofocus  自动获得焦点
+             autocomplete  自动提示
+        novalidate  （只能设置在form）可以不需要验证
+        list  结合datalist  后跟option
+        multiple 多选
+select （size）下拉选项显示数目
+表单重写属性 
+ formaction  formenctype  formmethod formnovalidate formtarget
+
+css3属性
+    border-radius：xpx;  圆角半径  2个值 左上右下  右上左下   3个 左上   左下和右上   右下  4个  从左上顺时针 
+                            x/y   椭圆半径
+阴影  （可以设置多组）  
+        box-shadow:10px 10px  5px (10px) #ccc （inset）; 偏移 模糊  （拓展） 颜色 （内阴影）
+        box-shadow:0 0 0 1px #000,0 0 0 1px #111;
+        text-shadow:2px 2px 5px bule, 3px 3px 6px yellow;
+        outline  轮廓线   类似边框border  他的像素不会占据位置 
+        outline-offset  向外的偏移量
+        background-size  背景大小 （cover 放大图片至容器铺满 contain 放大至容器大）
+        background-clip:（*border-box  padding-box  content-box ）裁剪 
+        background-origin: （border-box  *padding-box  content-box ）定位   
+        background-image:url(),url();可以放置多张图片                                                    
+图片边框
+border-image-source：
+border-image-width:
+border-image-slice  截取量
+                       repeat  (round) 重复方式   拉伸stretch
+                       outset   相对于容器的偏移量
+box-sizing:border-box; 设置的大小是容器实际大小 内容自动缩放
+
+渐变 不是颜色 是图片{4种方式 线性渐变 重复线性渐变 径向渐变 重复的径向渐变}
+-moz-  -webkit- -ms- -o- 浏览器前缀 
+background:linear-gradient(#fff,#000);默认从上到下
+background:linear-gradient(to right,#fff,#000);从左向右（to right top）向右上渐变(10deg)从10°开始
+颜色默认平均分布     （#fff 0, #000 50%,#888 100%）    （#fff 10px, #000 50px,#888 100px）   
+background:radial-gradient( circle farthest-side at 200px 100px)
+形状farthest-corner, closest-corner, farthest-side,closest-side
+位置   at 
+有哪些属性可以实现过度
+transition-properdy：all；  
+transition-duration:1s;过度的时间
+过度的动画方式
+transition-timing-function: linear;匀速 
+                                         ess-in 加速
+                                         ease-out 减速
+                                         ease-in-out 先加速后减速
+       利用贝塞尔曲线设置    web.chacuo.net
+transition-delay:2s 延迟
+transition:all 1s ess-in  2s 
+转换
+transform:translate(  ) 位移
+                rotate（45deg） 旋转
+                scale（）缩放
+                skew（）斜切
+                origin(  )转换基准点  可以设置数值，百分比，left right
+transform-style：preserve-3d； 当前容器里面元素是以那种形式呈现
+perspective:;当前的景深
+backface-visibility：hidden;   背面是否可见，默认可见
+perspective-origin 上下左右 设置观察者的角度
+
+@keyframes name{ 0%{ transfrom:rotate(0deg); } 100%{ transfrom:rotate(360deg); }
+animation:round 3s linear infinite;
+IE6问题
+容器高度被子元素撑开  给容器设置 overflow:hidden;
+  通过给父元素设置相对定位 给子元素设置绝对定位
+容器的高度设置很小值，也会被撑开
+    给容器设置overflow:hidden
+浮动元素不能和行元素自动在一行显示
+    给行元素也设置浮动
+input中的文字不会自动垂直居中 
+    自己设置line-height居中
+  不支持固定定位
+     利用js 通过绝对定位模拟固定定位
+css  hack   通过给属性名或选择器添加特定前缀 从而让属性名和选择器只会被特定浏览器
+_class IE6
+_top:expression(eval(document.documentElement.scrolltop));
+*html{
+background:url(about:blank);
+background-attachment:fixed;
+  双倍边距
+   给第一个设置一半边距
+   给一个元素设置_display:inline
+margin设置为负值 超出部分会自动隐藏
+   给元素设置相对定位
+不支持除了a元素的hover效果
+ 使用js完成类似效果
+不支持png24
+  透明opacity: ;取值范围0~1
+  设置滤镜  filter:alpha(opacity=50);取值0~100
+
+动画  2部分 定义动画  
+@keyframes name {0%{} 10%{} 100%{}}
+应用动画
+animation-name  指定动画名称
+                 duration  指定持续时间
+                 timing-function：ess-in     指定动画运动方式
+                 delay      延迟时间
+                 iteration-count：infinite无限       动画次数
+                 direction:alternate;正向反向交替     动画交替执行
+                 fill-mode:forwards 固定到动画结束时样式       动画结束时状态
+                 play-state:paused 暂停动画running开始动画   
+字体图标
+@font-face 
+
+响应式布局
+一个网站能兼容多个终端-不是为每个终端做一个特定的版本。也就是一个页面在多个终端呈现需要的效果，能兼容多个终端    
+原理 媒体查询 media query 来实现
+@media+媒体类名+操作符（条件）{ /css样式/ } 
+媒体类型 screen屏幕  all所有的设备
+ 操作符         and逻辑与      not排除某种设备     only限定某种设备
+条件     width 当宽度为具体的值的时候可见
+min-width  当宽度大于某个值得时候可见
+max-width  当宽度小于某个值得时候可见
+阀值            当布局变化时临界值 
+
+user-select 能否被选中 必须要加前缀
+vertical-align: middle 居中            对齐方式  super  上标  sub 下标
+
+栅格化系统
+   
+像素
+  一个像素就是计算机屏幕能显示一种特定颜色的最小区域
+  设备像素    设备屏幕的物理像素 
+  逻辑像素   真正用来展示内容的像素数 和设备像素成比例 这个比例称之为DPR
+  
+ meta
+     width 设置布局视口的宽度为特定的值
+     initial-scale 设置页面的初始缩放程度和布局视口的高度
+     minimum-scale 最小缩放程度
+     maximum-scale 最大缩放程度
+     user-scalable  是否允许用户缩放 
+
+git  分布式版本控制系统
+github 基于git原理的一个代码托管平台
+新建文件夹
+右击 git bush
+复制路径
+git clone  克隆路径
+git status 检测当前版本状态
+git add* 提交修改
+git commit -m "add"把修改提交到本地版本库
+git pull 提交之前 将远程同步到本地
+git push 提交到远程服务器
+
+rem布局
+
+@import  css中引入样式
+
+letter-spacing 字与字间距
+
+work-break:break-all 英文单词换行

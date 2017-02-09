@@ -1,0 +1,99 @@
+﻿<pre>
+表单标签
+    form:是web浏览器和web服务器进行的通信的最常用的，不仅可以从web服务器中获取信息也可以给web中反馈信息.
+    &ltform action="**.php"(后台的地址）method="get"(指定提交方式） target="_blank"(重新一个网页打开）&gt&lt/form&gt
+      默认get:适应大部分的场合，传送数据量小，速度快，安全性不高
+      另外post：传送数据量大，速度慢，安全性比较高
+      &ltlabel for="sub"(这里的for与id互相用）&gt扩展选择&lt/label&gt
+      ul必须把li嵌套进行使用
+      帐号-&ltinput type="text"(文本的类型）name="123"(必须要有为了在后台可以识别) size="大小" maxlength="最大值的确定" readonly="只读"
+      密码-&ltinput type=“password”（密码/输入进去以小黑点代表）name=“必须要有”&gt
+      &ltinput type=“radio”(理解为一个可以点击的小圈点) name="必须要有"&gt
+      在选择一个情况下不要另外一个选择中我们需要加name=“sex”
+      For example
+                 性别:man&ltinput type="radio" name=sex(为了防止俩个同时选择) name="123"(为了给后台处理)&gt
+                 性别:man&ltinput type="radio" checked(代表默认选中）&gt
+      &ltinput type="checkbox"（代表一个小方块可以选择上对沟）&gt
+      &lttextarea name=""cols="30" （列cols-clospan合并列）rows="10"（行rows-rowspan为合并行）&gt（写的内容在页面显示）
+      &lt/textarea&gt
+      &ltselect name="" id="">写的内容&lt/select>
+      &ltoption value="**">写的内容要选择的&lt/option&gt
+      &ltinput type="file"（选择文件的连接）>
+      &ltinput type="reset"（重新至按钮）>
+      &ltinput type="button"（按钮的建立）value=“名字” onclick=document.body.style.background=#000 （换背景的办法）>
+      &lta href="http“//www.baidu.com”">点击需要连接的文字就可以直接到百度&lt/a&gt
+      在同一网页内插入另外一张网页（针窗口）&ltiframe src="http：//www.baidu.com" frameborder="0">&lt/iframe>
+       disabled不可以选择
+       readonly只读属性
+       checked 默认
+       select 默认选择下拉
+       align为水平对齐方式
+       vlign为垂直对齐方式
+
+
+第二节CSS：层垫样式用于控制网页样式或将样式信息与网页内容分离的y种标记性语言.
+          1.行内样式优先级最高    eg：&ltdiv style="width:100px;(可以设置宽高) border：3px ** ** （表框的大小+空格+color+空格+solid是实线）">
+          2.嵌入样式:在head的后面写入sytle然后进行编辑
+          3.引入样式：写在head的后面就好 &ltlink rel="stylesheet" href="（连接的位置）">
+          4.导入标签需要进行多次的重复导入和倒进
+          类选择器class=“one”     前面为.one｛然后进行相应的编辑｝
+          id选择器   id=“tow”        前面为#tow｛然后为相应的编辑｝
+          群组选择器    &ltstyle>p,(逗号隔开)h1,div{width: 100px;height: 100px;border: blue 3px solid}&lt/style>   （大括号都比较类似）
+          交叉选择器：eg：div.one/div#
+     注意：   id选择器>类名选择器>标签名选择器>通用选择器>每个标签的默认样式>
+     后代选择器：每个出现的方块互相不连接，所有文字样式都会继承
+              eg:     .sum div{width: 100px;height: 100px;border: 10px red solid}
+                        &ltdiv class="sum">
+                        &ltdiv id="one">12300&lt/div>
+                        &ltdiv>123&lt/div>
+   伪装选择器：在原有的基础上进行二次选择
+   鼠标的移入效果    p:hover{}
+    手按钮cursor：pointer/move
+
+
+   二.字体的属性：切记依然在style内加，对象
+                  利用class选择器.mm｛font-family：｛“***”切记所有的字要双引号｝｝  
+                  打字的时候注意就好
+                  font-size  大小
+               <!--    font-weight 加粗 bolid -->
+               <!--  font-style bold-->
+               text-align:center 水平居中
+               text-vlign：
+               text-indent：10px  首行缩进字符
+               text-decoration：定义文本修饰
+                                underline 下划线
+                                line-thought 中划线
+                                overline    上画线
+                  line-height 适合单行文字居中
+                  em/px类似em为当前字体的2倍
+                  rem什么时候都为更元素的大小的倍数
+                  color：rgb(255,255,0)逗号
+                         rgba（a代表透明度为0-1的范围）
+                 
+
+                 dashed
+                 font-sytle:italice
+                 font-weight:border
+                 font-family:微软雅黑，宋体;
+
+
+       
+
+
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+       .mm{font-size: 10px;border: red 1px solid;width: 10px;height: 10px;font-weight:bold;color: rgb(255,0,0); }
+        
+  </style>
+</head>
+<body>
+  <div class="mm">123</div>
+  <div>123</div>
+  <div>123</div>
+  <div>123</div>
+</body>
+</html> -->
