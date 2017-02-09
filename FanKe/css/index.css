@@ -321,7 +321,7 @@ text-align: center;
   line-height: 29px;
   color: #fff;
 
-  background: url(../gouwu.png)  no-repeat  -120px 0px ;
+  background: url(../images/gouwu.png)  no-repeat  -121px -1px ;
 }
 
 .content-sousuo .gouwu-word{
@@ -421,7 +421,7 @@ text-align: center;
 .yuanquan{
   width: 16px;
   height: 16px;
-  background: #000;
+  background: #fff;
   position: absolute;
   left: 50%;
   border-radius: 50%;
