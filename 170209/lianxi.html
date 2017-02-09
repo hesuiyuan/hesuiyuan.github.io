@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 500px;
+            height: 500px;
+            border: 1px solid #000;
+            border-radius: 50px;
+             margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .inter{
+            width: 100px;
+            height: 100px;
+            background-color: #e1220f;
+            margin: 20px;
+            border-radius: 50%;
+        }
+        .box:nth-child(2){
+            justify-content:space-between;
+            align-items:center;
+        }
+        .box:nth-child(3){
+            justify-content:space-between;
+            align-items: flex-start;
+        }
+        .box:nth-child(3)>.inter:nth-child(2){
+            align-self:center;
+        }
+        .box:nth-child(3)>.inter:nth-child(3){
+            align-self:flex-end;
+        }
+        .box:nth-child(4){
+            justify-content:space-between;
+            flex-wrap: wrap;
+        }
+        .box:nth-child(4)>.col{
+            width: 500px;
+            display: flex;
+            justify-content:space-between;
+        }
+        .box:nth-child(5){
+            justify-content:space-between;
+            flex-wrap: wrap;
+        }
+        .box:nth-child(5)>.col{
+              width: 500px;
+              display: flex;
+              justify-content:space-between;
+          }
+        .box:nth-child(5)>.low{
+            width: 500px;
+            display: flex;
+            justify-content: center;
+        }
+        .box:nth-child(6){
+             flex-direction: column;
+             align-content: space-between;
+             flex-wrap: wrap;
+        }
+        section{
+            height: 300px;
+            background-color: #e4e475;
+            border: 1px solid  #000000;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+        }
+        article{
+            width: 300px;
+            height: 300px;
+            background-color: #8b8b8b;
+        }
+    </style>
+</head>
+<body>
+<!--01-->
+<div class="box">
+    <div class="inter"></div>
+</div>
+<!--02-->
+<div class="box">
+    <div class="inter"></div>
+    <div class="inter"></div>
+</div>
+<!--03-->
+<div class="box">
+    <div class="inter"></div>
+    <div class="inter"></div>
+    <div class="inter"></div>
+</div>
+<!--04-->
+<div class="box">
+    <div class="inter"></div>
+    <div class="inter"></div>
+    <div class="col">
+         <div class="inter"></div>
+         <div class="inter"></div>
+    </div>
+</div>
+<!--05-->
+<div class="box">
+    <div class="inter"></div>
+    <div class="inter"></div>
+    <div class="low">
+        <div class="inter"></div>
+    </div>
+    <div class="col">
+        <div class="inter"></div>
+        <div class="inter"></div>
+    </div>
+</div>
+<!--06-->
+<div class="box">
+    <div class="inter"></div>
+    <div class="inter"></div>
+    <div class="inter"></div>
+    <div class="inter"></div>
+    <div class="inter"></div>
+    <div class="inter"></div>
+</div>
+<section>
+    <article></article>
+    <article></article>
+</section>
+
+</body>
+</html>
