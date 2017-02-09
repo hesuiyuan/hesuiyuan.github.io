@@ -7,7 +7,6 @@ a{text-decoration: none;padding: 0;
     margin:0; color:#999}
 body{ font-size: 12px;
     margin: 0;
-    background:#F5F5F5;
 }
 img{
     border: none;
@@ -17,11 +16,11 @@ img{
 }
 @font-face {
     font-family: 'iconfont';  /* project id 225979 */
-    src: url('at.alicdn.com/t/font_d6gywgq8gpclerk9.eot');
-    src: url('at.alicdn.com/t/font_d6gywgq8gpclerk9.eot?#iefix') format('embedded-opentype'),
-    url('at.alicdn.com/t/font_d6gywgq8gpclerk9.woff') format('woff'),
-    url('at.alicdn.com/t/font_d6gywgq8gpclerk9.ttf') format('truetype'),
-    url('at.alicdn.com/t/font_d6gywgq8gpclerk9.svg#iconfont') format('svg');
+    src: url('//at.alicdn.com/t/font_d6gywgq8gpclerk9.eot');
+    src: url('//at.alicdn.com/t/font_d6gywgq8gpclerk9.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_d6gywgq8gpclerk9.woff') format('woff'),
+    url('//at.alicdn.com/t/font_d6gywgq8gpclerk9.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_d6gywgq8gpclerk9.svg#iconfont') format('svg');
 }
 
 /*头部开始*/
