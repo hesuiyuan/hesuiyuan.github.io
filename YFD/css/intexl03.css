@@ -75,61 +75,68 @@ img{
     line-height: 30px;
     color: #000;
 }
+.banner-watch{
+    width: 1200px;
+    height: 350px;
+    margin: 0 auto;
+}
 .nav-text-one{
     width: 1200px;
     height: 42px;
     margin: 0 auto;
+    margin-top: 50px;
     color: #fff;
     font-size: 14px;
     line-height: 42px;
-    padding-left: 1100px;
+    padding-left: 35px;
     background: #000;
 }
-.biankuan{
-    width: 200px;
-    height: 1500px;
-    border-right: 2px solid #a3adaf;
-    float: left;
-}
-.leimingzi{
-    width: 100px;
-    height: 30px;
+.banner-watch-box{
+    width: 1200px;
+    height: 460px;
     margin-left: 36px;
-    font-size: 14px;
-    color: #9c9898;
-    text-align: center;
+}
+.title{
+    width: 600px;
+    height: 30px;
+    margin-top: 20px;
+    padding-left: 36px;
     line-height: 30px;
+    color: #e78612;
 }
-.leimingzi a{
-    color: #9c9898;
-}
-.leimingzi:hover{
-    background: #000;
-    color: #fff;
-}
-.leimingzi a:hover{
-    color: #fff;
-}
-.a133,.a134,.a135{
-    width: 270px;
-    height: 450px;
-    margin-top: 45px;
-    margin-left: 45px;
-    margin-right: 45px;
+.box-try{
+    width: 600px;
+    height:350px;
     float: left;
 }
-.a134{
-    margin-left: 0px;
-    text-align: center;
+.biao-img{
+    width: 600px;
+    height: 250px;
+    background: url("../images/第四页_06.png");
 }
-.a135{
-    margin-right: 0px;
-    text-align: center;
+.biao-text{
+    width: 564px;
+    height: 100px;
+    margin-top: 10px;
+    margin-left: 36px;
 }
-.a133 p{
-    text-align: center;
+.box-three,.box-three-tow{
+    width: 1200px;
+    height: 180px;
+    margin: 0 auto;
+    margin-top: 60px;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    display: flex;
 }
-
+.box-three-one{
+    width: 600px;
+    height: 180px;
+    padding-left: 36px;
+}
+.box-three-tow{
+    margin-top: 0px;
+}
 /*footer*/
 .footer-box{
     width: 100%;
