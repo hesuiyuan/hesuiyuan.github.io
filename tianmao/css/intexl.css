@@ -420,6 +420,7 @@ img{
     background-color: #fff;
     margin-right: 1px;
     margin-bottom: 1px;
+    box-sizing: border-box;
     float: left;
 }
 .heading{
