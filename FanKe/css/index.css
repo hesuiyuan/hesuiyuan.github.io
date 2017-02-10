@@ -445,6 +445,16 @@ text-align: center;
     margin-top: 40px;
     background: url("../images/djs0208.jpg");
 }
+.wenzioo{
+    width: 1200px;
+    height:40px;
+    text-align: center;
+    line-height: 40px;
+    margin: 0 auto;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #cccccc;
+}
 
  /*内容8从此开始*/
  .content8{width: 1200px;
@@ -644,7 +654,8 @@ text-align: center;
  .content9{width: 1200px;
  	       height :507px;
  	       margin: 0 auto;
-     margin-top: 40px;
+           margin-top: 40px;
+            margin-bottom: 40px;
  	       /*background-color: #ccc*/
 }
 
