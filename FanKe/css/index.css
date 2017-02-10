@@ -438,26 +438,21 @@ text-align: center;
   margin-left:565px;
 
 }
-/*.souji{
-  width: 73px;
-  height: 76px;
-  border: 1px solid #b81b22;
-  background: #fff;
+.tow-img{
+    width: 1200px;
+    height: 90px;
+    margin: 0 auto;
+    margin-top: 40px;
+    background: url("../images/djs0208.jpg");
 }
-.gudinglankefu{
-  width: 73px;
-  height: 71px;
-  border: 1px solid #b81b22;
-  background: #fff;
-}
-*/
 
  /*内容8从此开始*/
  .content8{width: 1200px;
  	       height :509px;
  	       margin: 0 auto;
  	      /* background-color: #ccc;*/
- 	      margin-bottom: 126px;
+ 	      margin-bottom: 40px;
+     margin-top: 40px;
 }
 
 
@@ -635,7 +630,12 @@ text-align: center;
  	color:#B81C22;
 
  }
-
+.new-img{
+    width: 1200px;
+    height: 40px;
+    background: url("../images/cz.jpg");
+    margin: 0 auto;
+}
 
 
 
@@ -644,6 +644,7 @@ text-align: center;
  .content9{width: 1200px;
  	       height :507px;
  	       margin: 0 auto;
+     margin-top: 40px;
  	       /*background-color: #ccc*/
 }
 
