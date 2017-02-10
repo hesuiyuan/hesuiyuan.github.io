@@ -673,11 +673,12 @@ img{
 }
 .footer-fp-img{
     width:73px;height:30px;
-    background:red;
+    /*background:red;*/
     float: left;
 }
 .footer-fp-img1{
     width:80px;height:30px;
-    background:red; float: left;
+    /*background:red;*/
+    float: left;
     margin-left:10px;
 }
