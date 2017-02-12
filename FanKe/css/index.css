@@ -515,13 +515,11 @@ text-align: center;
 
 
 
-.content8 .list2 .list2.1 {width: 290px;
+.content8 .list2 .list21 {width: 290px;
       height: 249px;
-    
-     
      }
 
-.content8 .list2.1 .images{width: 290px;
+.content8 .list21 .images{width: 290px;
               height: 180px;
                display: block;
                background-color: #B81C22}
@@ -531,7 +529,7 @@ text-align: center;
 
 
 
-      .content8 .list2 .list2.2 {width: 290px;
+      .content8 .list2 .list22 {width: 290px;
       height: 245px;
 
 
@@ -541,7 +539,7 @@ text-align: center;
      
      }
 
-.content8 .list2.2 .images{width: 290px;
+.content8 .list22 .images{width: 290px;
               height: 175px;
                display: block;
                background-color: #B81C22}
