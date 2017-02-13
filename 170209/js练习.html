@@ -82,15 +82,87 @@
 //        break out;
 //    }
 //    9*9的表格
-document.write("<br>");
-    for(var i=1;i<10;i++){
-        document.write("<br>");
-        for(var j=1;j<=i;j++){
-            document.write(j+"*"+i+"="+i*j+"&nbsp");
+//document.write("<br>");
+//    for(var i=1;i<10;i++){
+//        document.write("<br>");
+//        for(var j=1;j<=i;j++){
+//            document.write(j+"*"+i+"="+i*j+"&nbsp");
+//        }
+//
+//}
+//9*9lianxi
+//    for(var i=1;i<10;i++){
+//        document.write("<br>")
+//        for( var j=1;j<=i;j++){
+//            if ((i==3||i==4)&&j==2){
+//                document.write(i+"*"+j+"="+i*j+"&nbsp;&nbsp;&nbsp;&nbsp")
+//            }else {
+//                document.write(i+"*"+j+"="+i*j+"&nbsp;&nbsp")
+//            }
+//
+//        }
+//    }
+//函数的返回值
+//    function jia(num1,num2) {
+////        终止代码的执行
+//        var fn=num1+num2;
+//    return fn
+//    }
+//    alert(jia(5,10));
+
+
+//    function jian() {
+//        var sum=0;
+//        for (var i=0;i<arguments.length;i++)
+//        {
+//            sum=sum+arguments[i];//i的最大值为
+//        }
+//        return sum;
+//    }
+//    alert(jian(12,10));
+//  function fn(val) {
+//      if (typeof val=="number"){
+//          return "正式"
+//      }else if(typeof val=="string"){
+//          return "非正式"
+//      }
+//  }
+//    fn(11);
+
+
+//function jian() {
+//    var sum=0;
+//    if (arguments.length==1){
+//        for (var i=0;i<=arguments[0];i++){
+//        sum=sum+i
+//        }
+//        return sum;
+//    }else{
+//    for (var i=0;i<arguments.length;i++)
+//    {
+//        sum=sum+arguments[i];//i的最大值为
+//    }
+//    return sum;
+//}
+//}
+// document.write(jian(100))
+
+
+alert(jian(100));
+var age=10;
+function fn1() {
+    var age=11;
+    function fn2() {
+        var age=12;
+        function fn3() {
+            var age=12;
+            alert(age);
         }
 
-}
+    }
 
+}
+fn1();
 
 
 

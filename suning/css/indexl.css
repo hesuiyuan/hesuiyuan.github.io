@@ -22,11 +22,13 @@ input{
     width: 100%;
     height:0.88rem;
     background:#FABC09;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
 }
 .icon01{
     width: 0.97rem;
     height: 0.87rem;
-    float: left;
 }
 .icon01 img{
     width: 0.4rem;
@@ -39,7 +41,6 @@ input{
     height: 0.6rem;
     border-radius: 0.1rem;
     background: #fff;
-    float: left;
     margin-top: 0.16rem;
 }
 .goshapping{
@@ -51,7 +52,7 @@ input{
 }
 .banner img{
         width: 100%;
-        height: 3.2rem;
+      padding-top: 0.88rem;
 }
 .box-nav{
     width: 100%;
@@ -331,4 +332,225 @@ input{
 }
 .none-bottom{
     border-bottom: none;
+}
+.context-box-six{
+    width: 100%;
+    height: 1.28rem;
+    background-color: #fff;
+    display: flex;
+}
+.context-list-six{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.six-logo{
+    width: 1rem;
+    height: 100%;
+    background: url("../images/148237158258758129.png") no-repeat;
+    background-size: contain;
+    background-position: center;
+     margin-left: 0.2rem;
+}
+.six-text{
+    width:2.75rem;
+    height: 100%;
+    font-size: 0.12rem;
+    padding-left: 0.21rem;
+    padding-top: 0.29rem;
+}
+.six-tow{
+    width: 100%;
+    height: 2.3rem;
+    background-color: #ffffff;
+    display: flex;
+}
+.six-tow-one{
+    width: 50%;
+    height: 100%;
+    display: flex;
+}
+.tow-one-biger{
+    width:2.3rem;
+    height: 100%;
+    border: 2px solid #ddd;
+    margin-left: 0.2rem;
+    background: url("../images/0070079092-000000000600312921_1.png") no-repeat;
+    background-size: contain;
+}
+.tow-one-nobiger{
+    width:1.13rem;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 0.01rem;
+    justify-content: space-between;
+}
+.nobiger-one{
+    width: 100%;
+    height: 50%;
+    border: 2px solid #ddd;
+    background: url("../images/0070079092-000000000600312922_1.png") no-repeat;
+    background-size: contain;
+}
+.o{
+    width: 100%;
+    height: 0.6rem;
+    background: #fff;
+}
+/*like-box*/
+.like-box{
+    width: 100%;
+    height: 0.87rem;
+    display: flex;
+}
+.like-box-list-one,.like-box-list-three{
+    width:2.48rem;
+    height:0.52rem;
+    border-bottom: 2px solid #dddddd;
+}
+.like-box-list-one{
+    margin-left:0.24rem;
+}
+.like-box-list-tow{
+    width: 2.15rem;
+    height: 0.85rem;
+    font-size: 0.3rem;
+    text-align: center;
+    line-height: 0.85rem;
+}
+/*.like-box-list-tow img{*/
+    /*width: 0.34rem;*/
+    /*height: 0.34rem;*/
+/*}*/
+.like-text{
+    width: 100%;
+    height: 0.5rem;
+    font-size: 0.26rem;
+    color: #ffaa00;
+    text-align: center;
+}
+.content-box-sum{
+    width: 100%;
+    height: 3.46rem;
+    display: flex;
+}
+.box-sum-img{
+    width:3.45rem;
+    height: 100%;
+    margin-left: 0.2rem;
+    background:url("../images/0070126146-000000000141739079_1.png") no-repeat;
+    background-size: contain;
+}
+.box-sum-text{
+    width: 100%;
+    height: 1.5rem;
+    display: flex;
+    margin-bottom:0.2rem;
+    background-color: #fff;
+}
+.sum-text{
+    width:3.45rem;
+    height: 100%;
+    margin-left: 0.2rem;
+}
+.title-text,.title-text-num{
+    width: 100%;
+    height: 50%;
+    font-size: 0.24rem;
+    padding-top: 0.15rem;
+    padding-left: 0.1rem;
+    color: #333;
+}
+.title-text-num span{
+    color: #e21d1d;
+}
+.title-text-num{
+  position: relative;
+}
+
+.like-kiuang{
+    width: 1.29rem;
+    height: 0.49rem;
+    border: 1px solid #ffaa00;
+    border-radius: 0.05rem;
+    text-align: center;
+    line-height: 0.49rem;
+    position: absolute;
+    bottom:0.1rem;
+    right:0.15rem;
+    color: #ffaa00;
+}
+.footer-banner{
+    width: 100%;
+    height: 1.5rem;
+    background: url("../images/147089924753953251.png") no-repeat;
+    background-size: contain;
+    margin-bottom: 0.24rem;
+}
+.lond-going-box{
+    width: 100%;
+    height: 0.94rem;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+}
+.lond-going{
+    width: 100%;
+    height: 33.3333333%;
+}
+.lond-sum{
+    display: flex;
+}
+.lond{
+    width: 20%;
+    height: 100%;
+    border-right: 2px solid #ddd;
+    text-align: center;
+    line-height: 100%;
+    font-size: 0.12rem;
+}
+.no-lond{
+    border-right: none;
+}
+.copy{
+    width: 100%;
+    height: 0.57rem;
+    text-align: center;
+    line-height: 0.57rem;
+    font-size: 0.14rem;
+    color: #909090;
+    background-color: #fff;
+}
+.kong{
+    width: 100%;
+    height: 1.5rem;
+    background-color: #fff;
+}
+/*最下面*/
+.footer{
+    width: 100%;
+    height:1rem;
+    background-color: #fff;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+}
+.footer-list{
+    width: 20%;
+    height:1rem;
+}
+.tubiao-tow{
+    width: 100%;
+    height: 0.59rem;
+    margin: 0 auto;
+    background: url("../images/147278427948036982.png") no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-top: 0.14rem;
+}
+.footer-list span{
+    font-size: 0.12rem;
+    text-align: center;
 }
