@@ -167,8 +167,22 @@
 //}
 //}
 // document.write(jian(100))
+function jia() {
+    var sum=0;
+    if (arguments.length===1){
+        for (var i=0;i<=arguments[0];i++){
+            sum=sum+i;
+        }
+        return sum
+    }else {
+        for (var i=0;i<arguments.length;i++){
+            sum=sum+arguments[i];
+        }
+        return sum
+    }
 
-
+}
+console.log(jia(5,5));
 // alert(jian(100));
 // var age=10;
 // function fn1() {
@@ -287,11 +301,11 @@
 //   }
 //alert(num);
 //
-    var jia=function (num1,num2) {
-        return num1+num2;
-    };
-    var he=jia(123,123);
-    console.log(he);
+//    var jia=function (num1,num2) {
+//        return num1+num2;
+//    };
+//    var he=jia(123,123);
+//    console.log(he);
 
 
 //
@@ -403,6 +417,7 @@
 //
 //var er=[[1,2,30],[4,5,6]]
 //console.log(er[0][0]);//找出的数字为1
+
 
 
 
