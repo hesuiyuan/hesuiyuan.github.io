@@ -1,0 +1,138 @@
+@import url(respondsive.css);
+ul,li,ol,dl,dd,dt,tr,td,h1,h2,h3,h4,h5,h6,input,img,div,article,span,p{
+    margin: 0;padding: 0;
+    list-style:none;
+    display: block;}
+a{text-decoration: none;padding: 0;
+    margin:0; color: #000}
+body{
+    background-color: #f2f2f2;
+    margin: 0;
+}
+img{
+    border: none;
+}
+input{
+    border: #fff;
+}
+*{
+    box-sizing: border-box;
+}
+/*header*/
+.title-box{
+    width: 100%;
+    height: 1rem;
+    background-color: #29a6dc;
+}
+.content1{
+    width: 100%;
+    height:1rem;
+    display: flex;
+}
+.content1:first-child{
+    padding-left: 0.24rem;
+}
+.content1:last-child{
+    padding-right:0.24rem;
+}
+.list1{
+    width: 0.74rem;
+    height: 100%;
+    background: url("../images/1.png") no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.list2{
+    width:6.02rem;
+    height:0.61rem;
+    background: url("../images/2.png") no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-top: 0.19rem;
+}
+/*content1*/
+.logo{
+    width: 100%;
+    height: 1.84rem;
+    background: url("../images/3.png") no-repeat;
+    background-size: contain;
+     margin-left: 2.83rem;
+     margin-top: 0.86rem;
+}
+.logo-under-text{
+   padding-top: 0.51rem;
+}
+.logo-under-text h3{
+     font-size: 0.32rem;
+     text-align: center;
+}
+.logo-under-text span{
+    font-size: 0.22rem;
+    text-align: center;
+    padding-top: 0.17rem;
+    padding-bottom: 0.3rem;
+}
+.content3{
+    width: 7.02rem;
+    height: 3.58rem;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: .1rem;
+    box-shadow:.0rem .0rem  .2rem  #ccc;
+    display: flex;
+    flex-wrap: wrap;
+}
+.list3,.list3-none{
+    width: 100%;
+    height: 25%;
+    border-bottom:.01rem dashed #000000;
+}
+.list3 img{
+    width: 1.61rem;
+    height: 0.43rem;
+    margin-top: 0.23rem;
+    margin-left: .16rem;
+}
+.list3 span{
+      width: 0.98rem;
+      height: 0.28rem;
+      font-size: .28rem;
+      margin-left: 5.9rem;
+      text-align: center;
+       margin-top: -.3rem;
+  }
+.list3 b{
+    color: #6cc2e7;
+}
+.list3-none img{
+    width: 1.61rem;
+    height: 0.43rem;
+    margin-top: 0.23rem;
+    margin-left: .16rem;
+}
+.list3-none{
+    border-bottom: none;
+}
+.content4{
+    width: 100%;
+    height: 1rem;
+    margin-top: 3.17rem;
+    display: flex;
+}
+.linear-gradient{
+    background:linear-gradient(to right,#151c2c,#0c1019)
+}
+.list4{
+    width: 33.3333333%;
+    height: 100%;
+    background-color: #151c2b;
+    border-right: .01rem solid #717171;
+}
+.none-border{
+    border-right: none;
+}
+.list4 img{
+    width: .47rem;
+    height: .8rem;
+    margin: .09rem auto;
+}
