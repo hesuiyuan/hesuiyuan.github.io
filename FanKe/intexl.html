@@ -39,17 +39,13 @@
 
      		  </div>
 
-
-
-     		  <div    class="weixin">
+     		  <div class="weixin"></div>
+                <div class="ewm">
+					<img src="images/wxtp.png" alt="">
+				</div>
+            <div class="weibo">
      		    
-     		    <a href=""   >  </a>
 
-            </div>
-
-            <div    class="weibo">
-     		    
-     		    <a href=""   >  </a>
 
             </div>
 
@@ -132,14 +128,42 @@
 	</ul>
 </div>
 <!-- banner的开始 -->
-<div class="banneroo"><a href="#" class="img">
+	 <section class="img-box">
+<div class="banneroo"><a href="#">
 	<img src="images/banner1.jpg" alt="">
 </a>
-<a href="#" class="jiantuozuo"></a>
-<a href="#" class="jiantuoyou"></a>
-<div class="yuanquan"></div>
 </div>
-
+	 <div class="banneroo"><a href="#">
+		 <img src="images/banner2.jpg" alt="">
+	 </a>
+	 </div>
+	 <div class="banneroo"><a href="#">
+		 <img src="images/banner3.jpg" alt="">
+	 </a>
+	 </div>
+	 <div class="banneroo"><a href="#">
+		 <img src="images/banner4.jpg" alt="">
+	 </a>
+	 </div>
+	 <div class="banneroo"><a href="#">
+		 <img src="images/banner5.jpg" alt="">
+	 </a>
+	 </div>
+	 <div class="banneroo"><a href="#">
+		 <img src="images/banner6.jpg" alt="">
+	 </a>
+	 </div>
+	 </section>
+<!--<a href="#" class="jiantuozuo"></a>-->
+<!--<a href="#" class="jiantuoyou"></a>-->
+	<div class="section">
+    <div class="yuanquan"></div>
+	<div class="yuanquan"></div>
+	<div class="yuanquan"></div>
+	<div class="yuanquan"></div>
+	<div class="yuanquan"></div>
+	<div class="yuanquan"></div>
+	</div>
 <!-- gudinglan开始 -->
 <a href="" class="gudinglan"> <img src="images/tap-ico.png" alt="">
 <!--     <div class="gudinglan"> -->
@@ -729,6 +753,28 @@
 		<a href="#"><img src="images/banquan.png" alt=""></a>
 	</div>
 </body>
+<script>
+	var radom=document.getElementsByClassName("yuanquan");
+	var img=document.getElementsByClassName("banneroo");
+	for (let i=0;i<radom.length;i++){
+		radom[i].onmouseover=function(){
+			for(let j=0;j<img.length;j++){
+				radom[j].style.background="#ccc"
+				img[j].style.opacity="0"
+			}
+			radom[i].style.background="#A10000"
+			img[i].style.opacity="1"
+		}
+	}
+	var wei=document.getElementsByClassName("weixin")[0];
+	var ewm=document.getElementsByClassName("ewm")[0];
+	wei.onmouseover=function(){
+		ewm.style.display="block"
+	}
+	wei.onmouseout=function(){
+		ewm.style.display="none"
+	}
+</script>
 </html>
 
 

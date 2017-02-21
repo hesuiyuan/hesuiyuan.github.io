@@ -467,7 +467,12 @@ javascript中为一切皆对象   属性的无序集合体   //属性值为 数值 字符串...//方法 函
                                       RegExp（）正则对象
                                       Date（）日期对象
                                       Function（）函数对象
-           宿主对象  BOM 浏览器对象模型  history  location
+           宿主对象：BOM 浏览器对象模型：windows窗口对象；history 历史记录；location 对象 地址栏对象；document内容对象
+                         windows窗口对象： window.screenLeft获取浏览器的位址 window.screenTop
+                                          window.screenX获取浏览器的位址 window.screenY
+浏览器的尺寸：window.innerWidth
+             window.innerHeight 窗口的宽高
+                     
                      DOM 文档对象模型   document 所有的标签
          
 
