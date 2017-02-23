@@ -80,15 +80,31 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
 .chaoshi{width: 90px;height: 36px;
     text-align: center;line-height: 36px}
 .chaoshi a{color: #fff;font-family: iconfont}
+
+
+
 .banner{width:100%;height:482px;
     background:#CC0023;position: relative;
     margin-bottom: 60px }
-.banner img{width:1130px;height: 482px;
-    margin: 0 auto;display: block}
+.content{
+    position: relative;
+}
+.list{width:1130px;height: 482px;
+    margin: 0 auto;position: absolute;
+    top: 0; left: 0;transition: all 0.5s}
+.list img{width:1130px;height: 482px;display: block;opacity:1;}
+.list:first-child{
+    z-index:1;
+}
+
+
+
+
+
 .daohang{width: 200px;height: 482px;
-    position: absolute;left:59px;top:0;
+    position: absolute;left:22px;top:0;
     background:#EDE4E4;display: flex;flex-direction: column;
-    justify-content: space-between}
+    justify-content: space-between;z-index: 4}
 .neirong{width: 200px;height: 30px;
     flex-grow:1;text-align:left;line-height: 30px;
     color:#000;font-size:14px;font-family: iconfont;padding-left: 14px }
@@ -102,7 +118,7 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
 .neirong1:hover{background: #fff;color:blue}
 .neirong1 a:hover{color:blue}
 .xiaomao{width: 100px;height: 463px;
-    position: absolute;top:10px;right: 80px;
+    position: absolute;top:10px;right:25px;
     background:#5D0F13;padding-top: 12px}
 .xiaomao:hover{background: rgba(0,0,0,0.8)}
 .xiaomao img{width: 70px;height: 70px}
@@ -132,12 +148,13 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
 .weijin{color: #fff;font-size: 12px;text-align: center}
 .henang{width: 200px;height: 20px;position: absolute;
     bottom: 20px;left:579px;display: flex;
-    justify-content: space-between}
+    justify-content: space-between;z-index:3}
 .dian{width:20px;height: 20px;border-radius: 50%;
-    background: rgb(225, 0,10);
+    background:#A2A2A2
 }
-.dian:hover{background: rgba(255,255,255,0.3);
-    border: 2px solid rgba(0,0,0,0.2) }
+.dian:first-child{
+    background:#F1F1F1;
+}
 .guanggao{width: 1231px;height: 437px;margin: 0 auto;
     margin-bottom: 13px}
 .brand{width: 488px;height: 437px;float:left;

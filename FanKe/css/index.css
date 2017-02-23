@@ -412,6 +412,7 @@ text-align: center;
   right: 13px;
   bottom: 261px;
   background: url(../images/focus_lr0918.png) -60px -5px;
+    z-index: 3;
 }
 .jiantuoyou{
   width: 18px;
@@ -421,18 +422,17 @@ text-align: center;
   right: 1169px;
   bottom: 261px;
   background: url(../images/focus_lr0918.png)  -3px -5px;
+    z-index: 3;
 }
 .jiantuozuo:hover{background: url(../images/focus_lr0918.png) -60px -66px;
-
 }
 .jiantuoyuo:hover{background: url(../images/focus_lr0918.png) -3px -66px;
-
 }
 .section {
     width: 156px;
     height: 16px;
     position: absolute;
-    top:750px;left: 528px;
+    top:520px;left: 528px;
     z-index: 50;
 }
 .yuanquan{
