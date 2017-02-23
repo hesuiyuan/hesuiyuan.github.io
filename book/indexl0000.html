@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 500px;
+            height: 500px;
+            border: 1px solid #000;
+            position: absolute;
+            top:0;bottom:0;left:0;right:0;
+            margin: auto;
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 500px;
+        }
+        .box span{
+            font-size: 40px;
+            color:red;
+        }
+    </style>
+</head>
+<body>
+<div class="box" >第<span id="num">5</span>秒后关闭</div>
+</body>
+<script>
+     var s=document.getElementById("num")
+     var num=5;
+     setInterval(function (){
+       num--;
+         if (num==-1){
+             close()
+         }
+         s.innerHTML=num
+     },1000)
+
+</script>
+</html>

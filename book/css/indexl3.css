@@ -1,0 +1,333 @@
+@import url(respondsive.css);
+ul,li,ol,dl,dd,dt,tr,td,h1,h2,h3,h4,h5,h6,input,img,div,article,span,p{
+    margin: 0;padding: 0;
+    list-style:none;
+    display: block;}
+a{text-decoration: none;padding: 0;
+    margin:0; color: #000}
+body{
+    background-color: #fff;
+    margin: 0;
+}
+img{
+    border: none;
+}
+input{
+    border: #fff;
+}
+*{
+    box-sizing: border-box;
+}
+.header{
+    width: 100%;
+    height:0.88rem ;
+    background:#29a6dc ;
+    padding-top: 0.06rem;
+}
+.return{
+    width:0.58rem;
+    height:0.66rem;
+    background: url("../images/return.png")no-repeat;
+    background-size:100% 100% ;
+    margin-left:0.3rem;
+}
+.neirong{
+    width:100% ;
+    height: 3.5rem;
+    margin-top:0.7rem ;
+}
+.r-left{
+    width:2.45rem;height: 2.09rem; ;
+    background:url("../images/book.png") no-repeat;
+    background-size:100% 100%;
+    float: left;
+    margin-left:0.64rem;
+}
+.r-right{
+    width:3.36rem;height:3.5rem;
+    float: left;
+    margin-left:0.37rem;
+}
+.right-top{
+    width:2.17rem;height: 0.3rem;
+    font-size:0.3rem;
+}
+.right-top1{
+    width:0.56rem;height:0.22rem;
+    font-size: 0.2rem ;
+    float: left;
+    margin-top: 0.1rem;
+}
+.right-top2{
+    width:0.51rem;height:0.18rem;
+    font-size:0.14rem ;float: left;
+    margin-top: 0.1rem;color:#c8c8c8 ;
+}
+.right-top3{
+    width:3rem;height: 0.22rem;
+    font-size: 0.2rem;
+    margin-top: 0.1rem;color:#c8c8c8;
+    float: left;
+}
+.right-top4{
+    width:3rem;height: 0.22rem;
+    font-size: 0.2rem;
+    margin-top: 0.1rem;color:#c8c8c8;
+    float: left;
+}
+.wujiao{
+    width:1.39rem;height:0.29rem;
+    background: url("../images/xing.png");
+    background-size: 100% 100%;
+    float: left;
+    margin-top:0.1rem ;
+}
+.right-zi{
+    width: 3.36rem;height: 0.8rem;
+    font-size:0.2rem;
+    float: left;
+    color:#c9c9c9 ;
+}
+.lv{width:3.36rem;
+    height:0.34rem;
+    margin-top:0.3rem;
+    float: left;
+}
+.lv1{
+    width:0.86rem;
+    height:0.34rem;
+    border-radius:10px;
+    font-size: 0.3rem;
+    background:#67e479;
+    float: left;
+    line-height: 0.34rem;
+    text-align: center;
+    color: white;
+    margin-top:0.1rem;
+
+}
+.lv2{
+    width:0.86rem;
+    height:0.34rem;
+    border-radius:10px;
+    font-size: 0.3rem;
+    background:#67e479;
+    float: left;
+    line-height: 0.34rem;
+    text-align: center;
+    color: white;
+    margin-top:0.1rem;
+    margin-left:0.12rem ;
+}
+.lv3{
+    width:0.86rem;
+    height:0.34rem;
+    border-radius:10px;
+    font-size: 0.3rem;
+    background:#67e479;
+    float: left;
+    line-height: 0.34rem;
+    text-align: center;
+    color: white;
+    margin-top:0.1rem;
+    margin-left:0.12rem ;
+}
+.biaoqian{
+    width:6rem ;
+    height: 0.53rem;
+    margin: 0 auto;
+}
+.biaoqiang1{
+    width:0.41rem;
+    height: 0.52rem;
+    background: url("../images/book2.png");
+    background-size: 100% 100%;
+    float: left;
+}
+.biaoqiang3{
+    width:0.41rem;
+    height: 0.52rem;
+    background: url("../images/book3.png");
+    background-size: 100% 100%;
+    float: left;
+    margin-left:1.63rem ;
+
+}
+.biaoqiang2{
+    width:1.5rem;
+    height: 0.53rem;
+    float: left;
+    margin-left: 0.22rem;
+    font-size:0.2rem;
+    line-height: 0.53rem;
+    color: #2d2d2d;
+}
+.biaoqiang4{
+    width:1.5rem;
+    height: 0.53rem;  color: #2d2d2d;
+    float: left;
+    margin-left: 0.22rem;
+    font-size:0.2rem;
+    line-height: 0.53rem;
+}
+.read{
+    width:2.72rem ;
+    height: 0.99rem;
+    margin: 0 auto;
+    padding-top:0.22rem ;
+}
+.red{
+    width: 2.72rem;
+    height: 0.71rem;
+    border-radius: 0.5rem;
+    background: #29a6dc;
+}
+.read1{
+    width: 0.1rem;
+    height: 0.1rem;
+    border-radius: 50% ;
+    background: white;
+    margin-left:0.3rem ;
+    float: left; margin-top: 0.32rem;
+
+}
+.read3{
+    width: 0.1rem;
+    height: 0.1rem;
+    border-radius: 50% ;
+    background: white;
+    margin-left:0.36rem ;
+    float: left;
+    margin-top: 0.32rem;
+}
+.read2{
+    width:1.22rem;
+    height:0.3rem;
+    font-size: 0.3rem;
+    margin-left:0.36rem;
+    float: left;
+    color: white;
+    margin-top: 0.16rem;
+}
+.shuqian{
+    width: 3.5rem;
+    height: 0.6rem;
+    margin-top:0.58rem;
+    margin-left: 0.4rem;
+}
+.shu-lift,.one{
+    width: 0.37rem;
+    height: 0.6rem;
+    background:url("../images/qianbi.png") no-repeat;
+    background-size: 100% 100%;
+    float: left;
+}
+.shu-right{
+    width:2.35rem;
+    height: 0.6rem;
+    margin-left:0.19rem;
+}
+.shu-top{
+    width:1.5rem;
+    height:0.3rem;
+    font-size: 0.28rem;
+}
+.shu-xia{
+    width:2.6rem;
+    height:0.16rem;
+    font-size: 0.14rem;
+    margin-top:0.05rem;
+}
+.nan{
+    width:6.53rem;
+    height:1.35rem;
+    margin-left:0.44rem;
+    margin-top: 0.6rem;
+    background-color: #f8f8f8;
+    border-radius: .1rem;
+}
+.nan-left{
+    width: 0.78rem;
+    height: 0.8rem;
+    background: url("../images/nan.png")no-repeat;
+    background-size: 100% 100%;
+    float: left;
+    margin-top: .24rem;
+    margin-left: .02rem;
+}
+.nan-you{width: 5.35rem;
+    height: 1.35rem;
+    margin-left:0.3rem ;
+    float: left;
+}
+.you-zhong{
+    width:5.06rem;
+    height:0.75rem;
+    font-size:0.24rem;
+    color: #707070;
+    border-bottom: 1px dashed#000;
+}
+.you-xia{
+    width: 5.29rem;
+    height: 0.27rem;
+    margin-top:0.18rem;
+
+}
+.datetu{
+    width:0.22rem;
+    height:0.16rem;
+    background: url("../images/lishi.png")no-repeat;
+    background-size: 100% 100%;
+    float: left;
+    margin-top:0.08rem;
+}
+.date{
+    font-size:0.14rem;
+    margin-left: 0.14rem;
+    color: #a4a1a1;
+    float: left;
+}
+.rentu{
+    width:0.22rem;
+    height:0.16rem;
+    background: url("../images/lishi.png")no-repeat;
+    background-size: 100% 100%;
+    margin-left:2.5rem;
+    float: left;
+    margin-top:0.08rem;
+}
+.xia-renshu{
+    font-size:0.14rem;
+    margin-left: 0.14rem;
+    color: #a4a1a1;
+    float: left;
+}
+.shuqian{
+    width: 3.5rem;
+    height: 0.6rem;
+    margin-top:0.58rem;
+    margin-left: 0.4rem;
+}
+.shu-lift,.one{
+    width: 0.37rem;
+    height: 0.6rem;
+    background:url("../images/qianbi.png") no-repeat;
+    background-size: 100% 100%;
+    float: left;
+}
+.shu-right{
+    width:2.35rem;
+    height: 0.6rem;
+    margin-left:0.19rem;
+}
+.shu-top{
+    height:0.3rem;
+    font-size: 0.28rem;
+    padding-left:.4rem;
+}
+.shu-xia{
+    height:0.16rem;
+    font-size: 0.14rem;
+    margin-top:0.05rem;
+    padding-left:.4rem;
+}
