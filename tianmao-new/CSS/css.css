@@ -29,6 +29,7 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
     margin-left:-660px;
     background-color: #626262;
     transition: all 1s;
+    overflow: hidden;
 }
 .lists{
     cursor: pointer;
@@ -39,7 +40,7 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
     line-height: 40px;
     font-size: 10px;
     border-bottom: 1px solid #fff;
-    color:#F5F5F5;
+    color:#fff;
 }
 .fooer{width: 100%;height: 33px;
     border-bottom: 1px solid #e5e5e5;

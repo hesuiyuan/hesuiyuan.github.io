@@ -159,7 +159,32 @@ margin-top: 8px;
 
 
 /*  导航从此开始*/
-
+.box{
+    width: 99px;
+    height:0;
+    border-left:1px solid #efefef;
+    border-right: 1px solid #efefef;
+    position: relative;
+    z-index: 2;
+    margin-top: 10px;
+    transition: all 0.5s;
+    overflow: hidden;
+}
+.text{
+    width: 99px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    color: #727171;
+    background-color: #fff;
+    cursor:default;
+}
+.text:hover{
+    color: #b81c22;
+}
+.text:first-child{
+    border-top: 5px solid #b81c22;
+}
 
 .inner{
 
@@ -325,11 +350,41 @@ text-align: center;
   width: 130px;
   height: 29px;
   float: right;
-  /*background-color: #ccc;*/
   line-height: 29px;
   color: #fff;
-
   background: url(../images/gouwu.png)  no-repeat  -121px -1px ;
+}
+.gouwu{
+    position: relative;
+}
+ .gowuboxones{
+    width:96px;
+    height:28px;
+     border: 1px solid #b71c22;
+    position: absolute;
+     top: 89px;
+    left: 1133px;
+     border-left: none;
+     border-top: none;
+     background-color: #fff;
+
+}
+
+.gowubox{
+    width:220px;
+    height:28px;
+    border:1px solid #b71c22;
+    position: absolute;
+    border-right: none;
+    top: 88px;left:912px;
+    line-height: 28px;
+    color: #000;
+    background-color: #fff;
+    z-index: 8;
+}
+.gowubox, .gowuboxones{
+    opacity:0;
+    transition: all 0.5s;
 }
 
 .content-sousuo .gouwu-word{

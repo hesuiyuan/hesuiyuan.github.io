@@ -9,7 +9,7 @@ window.onload=function(){
                 img[j].style.opacity="0"
             }
             radom[i].style.background="#A10000";
-            img[i].style.opacity="1"
+            img[i].style.opacity="1";
             num=i;
         }
     }
@@ -57,5 +57,37 @@ window.onload=function(){
         num-=2;
         move();
     };
+
+
+ //   nav
+    var an=document.querySelectorAll(".dangahnglanwenzi>li");
+    var arran=Array.from(an).slice(1,-1);
+    var con=document.querySelectorAll(".dangahnglanwenzi ul");
+    var newarr=[];
+     for (let i=0;i<con.length;i++){
+         var lis=con[i].querySelectorAll("li");
+                 newarr.push((lis.length)*35+5+"px");
+     }
+           arran.forEach(function(v,j){
+              v.onmouseover=function(){
+                  con[j].style.height=newarr[j];
+              };
+               v.onmouseout=function(){
+                   con[j].style.height=0;
+               }
+           });
+    //gouwu
+    var gouwu=document.querySelector(".gouwu-word")
+    var gowuboxones=document.querySelector(".gowuboxones")
+    var gowubox=document.querySelector(".gowubox")
+    gouwu.onmouseover=function(){
+           gowuboxones.style.opacity="1"
+           gowubox.style.opacity="1"
+           jia.style.opacity="1"
+    };
+    gouwu.onmouseout=function(){
+        gowuboxones.style.opacity="0"
+        gowubox.style.opacity="0"
+    };
  //结束框
-}
+};
