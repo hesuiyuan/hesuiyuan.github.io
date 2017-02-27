@@ -3,7 +3,8 @@ window.onload=function(){
 
 var list=document.getElementsByClassName("list");
 var dian=document.getElementsByClassName("dian");
-    var content=document.querySelector(".content")
+ var content=document.querySelector(".content")
+    var boxx=document.querySelectorAll(".boxx")
 for (let i=0;i<dian.length;i++){
     dian[i].onmouseover=function(){
         for (let j=0;j<list.length;j++){
@@ -29,23 +30,14 @@ function move(){
     }
     list[num].style.opacity="1";
     dian[num].style.background="#F1F1F1"
-    // content.onmouseover(function(){
-    //     clearInterval(t1)
-    // })
 }
-    // content.onmouseout(function(){
-    //     t1=setInterval(move,2000)
-    // })
-
-
-//         02
-var content=document.getElementsByClassName("box")[0];
-content.onmouseover=function(){
+    content.onmouseover=function(){
     clearInterval(t1);
 };
-content.onmouseout=function(){
+    content.onmouseout=function(){
         t1=setInterval(move,2000);
     };
+    //02
     var sum=document.querySelector(".box-sum");
     var an=document.querySelectorAll(".lists");
     var tops=document.querySelector(".top");
@@ -70,7 +62,8 @@ content.onmouseout=function(){
             if (i==6){
                  var sect=sections.offsetTop;
                 animate(obj,{scrollTop:sect-120},50)
-            }else {
+            }
+            else {
                 if (i==7){
                   var fooe=fooers.offsetTop;
                     animate(obj,{scrollTop:fooe},50)
@@ -80,5 +73,11 @@ content.onmouseout=function(){
                 animate(obj,{scrollTop:s-110},50)
         }
     }
+    // var hnum=sections.offsetTop;
+    var color=["#E8E8E8","#E8E8E8","#E8E8E8","#E8E8E8","#F4CCC9"]
+    color.forEach(function(v){
+        console.log(v)
+    })
+
 //最后
 };
