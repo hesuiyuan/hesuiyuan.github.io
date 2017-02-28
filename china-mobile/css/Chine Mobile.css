@@ -304,7 +304,6 @@ background: #e4e4e4
 	width: 1200px;
 	height: 350px;
 	margin-top: 5px;
-/*	background: red*/
 }
 .zuomian{
 	width: 158px;
@@ -370,7 +369,7 @@ background: #e4e4e4
 	margin-top: 5px;
 }
 .boxx{
-	width:7400px;
+	width:740px;
 	position: relative;
 	float: left;
 	transition: all 1s;
@@ -379,6 +378,11 @@ background: #e4e4e4
 	width: 740px;
 	height: 350px;
 	float: left;
+	position: absolute;
+	top:0;left:0;
+}
+.dabanner:first-child{
+	z-index:2;
 }
 .xiaoquan{
 	width: 163px;
@@ -387,6 +391,7 @@ background: #e4e4e4
 	left: 50%;
 	margin-left: -82px;
 	margin-top: 329px;
+	z-index: 99999;
 }
 .xx{
 	width: 15px;
@@ -396,6 +401,28 @@ background: #e4e4e4
 	border-radius: 50%;
 	background: #ADADAE;
 }
+.l{
+	width:35px;
+	height:70px;
+	background: url("../images/images/lbnextpre.png") no-repeat;
+    position: absolute;
+	top: 315px;
+	left: 208px;
+	bottom: 0; right: 0;
+	z-index: 100;
+}
+.r{
+	width:35px;
+	height:70px;
+	background: url("../images/images/lbnextpre.png") no-repeat -35px;
+	position: absolute;
+	top: 315px;
+	left:913px;
+	z-index: 100;
+}
+/*.xx:hover{*/
+	/*background:#E32185;*/
+/*}*/
 .you{
 	width: 276px;
 	height: 348px;
@@ -488,7 +515,6 @@ background:url(../images/201603231611338666cs.gif) no-repeat 30px 0px;
 .czjiaofei{
 	width: 276px;
 	height: 14px;
-	/*margin-top: 119px;*/
 
 }
 .czhfzi{
@@ -520,14 +546,12 @@ background:url(../images/201603231611338666cs.gif) no-repeat 30px 0px;
 	margin-left: 22px;
 	margin-top: 11px;
 	border: 1px solid #dadada;
-/*	background: #000;*/
 }
 .kuang0{
 	width: 235px;
 	height: 34px;
 	margin-left: 22px;
 	margin-top: 11px;
-/*	background:red */
 }
 .jiner{
 	width: 40px;
@@ -537,7 +561,6 @@ background:url(../images/201603231611338666cs.gif) no-repeat 30px 0px;
 	float: left;
 	line-height: 34px;
 	text-align: center;
-/*	background: #000*/
 }
 .jiner:hover{
 	background: #e40077
@@ -772,8 +795,6 @@ background:url(../images/201603231611338666cs.gif) no-repeat 30px 0px;
 	width: 298px;
 	height: 188px;
 	border-top: 1px solid #fff;
-/*	float: left;*/
-/*	background: #555*/
 }
 .firstsmallss,.firstsmallsss{
 	border-left: 1px solid #ccc;
@@ -791,7 +812,6 @@ background:url(../images/201603231611338666cs.gif) no-repeat 30px 0px;
 	color: #333333;
 	margin-top: 10px;
 	margin-left: 20px;
-/*	background: #000;*/
 }
 .list2{
 	width: 279px;
@@ -816,7 +836,57 @@ background:url(../images/201603231611338666cs.gif) no-repeat 30px 0px;
 a{
 	display: block;
 }
-
+.boxtext{
+	width: 1200px;
+	height: 38px;
+	border: 1px solid #dfdfdf;
+	margin-top: 10px;
+}
+.smallicon{
+	width: 22px;
+	height: 38px;
+	background: url("../images/0000000.gif") no-repeat;
+	background-size: contain;
+	background-position: center;
+	margin-left: 21px;
+	float: left;
+}
+.boxtext span{
+	width: 52px;
+	height: 38px;
+	line-height: 38px;
+	margin-left: 8px;
+	float: left;
+}
+.text{
+	width: 392px;
+	height: 38px;
+	line-height: 38px;
+	color: #0aa6e8;
+	font-size: 14px;
+	float: left;
+}
+.date{
+	width: 70px;
+    height: 38px;
+	line-height: 38px;
+	color: #ccc;
+	font-size: 14px;
+	float: left;
+	margin-left: 8px;
+}
+.mleft{
+	height: 38px;
+	line-height: 38px;
+	 margin-left: 620px;
+}
+#lt{
+	width: 24px;
+	height: 38px;
+	float: left;
+	padding-left: 39px;
+	color: #0aa6e8;
+}
 /*最下面*/
 .wertq{
 	width: 1200px;

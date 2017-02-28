@@ -40,39 +40,68 @@ window.onload=function(){
              move();
          }
      };
-    var boxx=document.querySelectorAll(".boxx")[0];
+    //03
     var xx=document.querySelectorAll(".xx");
-    var dabanners=document.querySelectorAll(".dabanner");
-    var bannersum=document.querySelector(".bannersum")
+    var dabanners=document.querySelectorAll(".boxx>li");
+    var bannersum=document.querySelector(".bannersum");
     var dd=0;
-
-    var tt=setInterval(mmo,2000);
-    function mmo(){
-        if (dd==0){
-            boxx.style.transition="all 1s";
+    var z=1;
+    var nums=0;
+     var tt=setInterval(moove,2000);
+    function moove(){
+        nums=dd;
+        nums++;
+        if (num==10){
+            nums=0
         }
-            dd++;
-        boxx.style.marginLeft=-740*dd+"px";
-        if (dd==10){
-            boxx.style.transition="none";
-             boxx.style.marginLeft=0;
-            dd=0;
-        }
-        for (let i=0;i<xx.length;i++){
-            xx[i].style.background="#ADADAE";
-            xx[i].onclick=function(){
-                boxx.style.marginLeft=-740*i+"px";
-                dd=i;
-            }
-        }
-        xx[dd].style.background="#C60069"
+        dabanners[nums].style.left=740+"px";
+        dabanners[nums].style.zIndex=z++;
+        animate(dabanners[nums],{left:0},1000);
+        animate(dabanners[dd],{left:-740},1000);
+        dd=nums;
     };
-    bannersum.onmousemove=function(){
+    bannersum.onmouseover=function(){
         clearInterval(tt);
-    }
-    bannersum.onmouseout=function(){
-        tt=setInterval(mmo,2000);
-    }
+    };
+    bannersum.onmouseout=function (){
+      tt=setInterval(moove,2000)
+    };
+    xx.forEach(function(s,b){
+       s.onclick=function(){
+           var n=1;
+           if (b>dd){
+               n=1;
+           }else {
+               if (b<dd){
+                   n=-1;
+               }else {
+                   return
+               }
+           }
+           dabanners[b].style.left=n*740+"px"
+           dabanners[b].style.zIndex=z++;
+           animate(dabanners[b],{left:0},1000)
+           animate(dabanners[dd],{left:-n*740},1000)
+           dd=b;
+       }
+    });
+    //05
+   // var l=document.querySelector(".l");
+   // var r=document.querySelector(".r");
+   //   r.onclick=function(){
+   //       dabanners[nums].style.left=740+"px";
+   //       dabanners[nums].style.zIndex=z++;
+   //       animate(dabanners[nums],{left:0},1000);
+   //       animate(dabanners[dd],{left:-740},1000);
+   //       dd=nums;
+   //   };
+
+    
+    
+    
+    
+    
+    //04
     var denglu=document.querySelector(".denglu")
     var dengluimg=document.querySelector(".dengluimg")
     denglu.onmouseover=function(){
@@ -81,6 +110,28 @@ window.onload=function(){
     denglu.onmouseout=function(){
         dengluimg.style.opacity="0"
     };
+   var texts=[{text:"- 中国移动通信集团公司2016年下半年服务质量状况报告201...",date:"2017-02-12"},
+       {text:"- 针对存量来电显示收费客户开展服务回馈活动的公告",date:"2017-11-21"},{text:"- 客户个人信息收集、" +
+       "使用的目的、范围、方式以及使用规则",date:"2016-11-10"},{text:"- 关于2月9日至10日网站系统升级的公告",
+           date:"2016-12-21"}]
+    var wenzi=document.querySelectorAll(".text");
+    var time=document.querySelectorAll(".date");
+           var num1=0;
+           var num2=1;
+           setInterval(function(){
+               num1++;
+               if (num1==texts.length){
+                   num1=0;
+               }
+                wenzi[0].innerHTML=texts[num1].text
+               time[0].innerHTML=texts[num1].date
+               num2++;
+               if (num2==texts.length){
+                   num2=1;
+               }
+               wenzi[1].innerHTML=texts[num2].text
+               time[1].innerHTML=texts[num2].date
+       },3000);
 
 //    最后
 };
