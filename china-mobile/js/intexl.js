@@ -86,15 +86,15 @@ window.onload=function(){
        }
     });
     //05
-   // var l=document.querySelector(".l");
-   // var r=document.querySelector(".r");
-   //   r.onclick=function(){
-   //       dabanners[nums].style.left=740+"px";
-   //       dabanners[nums].style.zIndex=z++;
-   //       animate(dabanners[nums],{left:0},1000);
-   //       animate(dabanners[dd],{left:-740},1000);
-   //       dd=nums;
-   //   };
+   var l=document.querySelector(".l");
+   var r=document.querySelector(".r");
+     r.onclick=function(){
+         dabanners[nums].style.left=740+"px";
+         dabanners[nums].style.zIndex=z++;
+         animate(dabanners[nums],{left:0},1000);
+         animate(dabanners[dd],{left:-740},1000);
+         dd=nums;
+     };
 
     
     

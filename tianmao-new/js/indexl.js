@@ -73,11 +73,19 @@ function move(){
                 animate(obj,{scrollTop:s-110},50)
         }
     }
-    // var hnum=sections.offsetTop;
-    var color=["#E8E8E8","#E8E8E8","#E8E8E8","#E8E8E8","#F4CCC9"]
-    color.forEach(function(v){
-        console.log(v)
-    })
-
+    //侧滑栏
+    var boxsumli=document.querySelectorAll(".box-sum li");
+    var arrli=Array.from(boxsumli);
+    var newboxsumli=arrli.slice(1,-1);
+    var color=["#EA5F8D","#0AA6E8","#64C333","#F15453","#19C8A9","#F7A945","#000"];
+    var obk=newboxsumli[0];
+     newboxsumli.forEach(function(h,s){
+        h.onmouseover=function(){
+            newboxsumli[s].style.background=color[s]
+            obk.style.background="#626262"
+            obk=newboxsumli[s];
+        } 
+     });
 //最后
+//     var color=["#E8E8E8","#E8E8E8","#E8E8E8","#E8E8E8","#F4CCC9"]
 };

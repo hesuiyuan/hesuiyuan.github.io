@@ -1,5 +1,5 @@
 ul,li,input,p,body,header,footer,figure,img{margin: 0;padding: 0;list-style: none;border: none;}
-a{text-decoration: none}
+a,span{text-decoration: none}
 img{border: none}
 *{box-sizing: border-box}
 body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;background: #f5f5f5}
@@ -14,10 +14,13 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
 .top{
     width:100%;
     height: 0px;
-    background-color: #c60a0a;
+    background-color: #DE3232;
     position: fixed;
     transition: all 0.3s;
     z-index: 5;
+    background-image: url("../images/top.png");
+    background-repeat: no-repeat;
+     background-position: left;
 }
 /*****************/
 .box-sum{
@@ -33,14 +36,28 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
 }
 .lists{
     cursor: pointer;
+    overflow: hidden;
 }
 .lists,.listss{
     height:40px;
     text-align: center;
-    line-height: 40px;
     font-size: 10px;
     border-bottom: 1px solid #fff;
     color:#fff;
+}
+.listss{
+    line-height: 40px;
+    background-color: #DD2727;
+}
+.list-text{
+    width:10px;
+    font-size: 10px;
+     margin-left: 12px;
+    text-decoration: none;
+}
+.corol{
+    background-color: #ACACAC;
+    padding-top: 10px;
 }
 .boxx{
     width: 100%;
@@ -152,11 +169,11 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
 .neirong1 a{color: #000;font-size:14px }
 .neirong1:hover{background: #fff;color:blue}
 .neirong1 a:hover{color:blue}
-.xiaomao{width: 100px;height: 463px;
-    position: absolute;top:10px;right:25px;
+.xiaomao{width: 100px;height: 472px;
+    position: absolute;top:10px;right:30px;
     background:#5D0F13;padding-top: 12px}
 .xiaomao:hover{background: rgba(0,0,0,0.8)}
-.xiaomao img{width: 70px;height: 70px}
+.xiaomao img{width: 70px;height: 70px;margin-left: 15px}
 .nihao{font-size: 12px;color: #fff;
     text-align: center;margin-top: 10px}
 .qingdenglu{width: 80px;height: 24px;
@@ -212,7 +229,7 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
     border-radius: 50%;margin: 0 auto;margin-top: 70px;transition: all}
 .page img{width: 100%;height: auto}
 .page img:hover{transform: scale(1.1,1.1)}
-.word{width: 83px;height: 44px;position: absolute;
+.word{width: 95px;height: 44px;position: absolute;
     left:78px;top:56px}
 .word1{color: #000;font-size: 20px;text-align: center;
     font-weight: bold}
