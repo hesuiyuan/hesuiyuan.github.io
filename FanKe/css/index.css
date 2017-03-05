@@ -133,6 +133,9 @@ margin-right: 5px;
     top: 32px;left: 1025px;
     display: none;
 }
+.ewm img{
+    list-style: none;
+}
 
 
 .content .weibo{

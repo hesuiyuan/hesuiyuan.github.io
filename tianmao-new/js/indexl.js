@@ -4,21 +4,22 @@ window.onload=function(){
 var list=document.getElementsByClassName("list");
 var dian=document.getElementsByClassName("dian");
  var content=document.querySelector(".content")
-    var boxx=document.querySelectorAll(".boxx")
+    var boxx=document.querySelector(".boxx")
+    var colorss=["#000","#E8E8E8","#E8E8E8","#E8E8E8","#F4CCC9"]
 for (let i=0;i<dian.length;i++){
     dian[i].onmouseover=function(){
         for (let j=0;j<list.length;j++){
             list[j].style.opacity="0";
-            dian[j].style.background="#A2A2A2"
+            dian[j].style.background="#A2A2A2";
         }
         list[i].style.opacity="1";
-        dian[i].style.background="#F1F1F1"
+        dian[i].style.background="#F1F1F1";
         num=i
     };
 }
 //        00001
 var num=0;
-var t1=setInterval(move,2000)
+var t1=setInterval(move,2000);
 function move(){
     num++;
     if (num==list.length){
@@ -50,6 +51,34 @@ function move(){
             animate(sum,{width:0,height:0},1)
             tops.style.height="0"
         }
+        if (obj.scrollTop>=1700&&obj.scrollTop<2133){
+            newboxsumli[0].style.background=color[0]
+        }
+            if (obj.scrollTop>=2023&&obj.scrollTop<2914){
+                newboxsumli[0].style.background="#626262"
+                newboxsumli[1].style.background=color[1]
+        }
+        if (obj.scrollTop>=2804&&obj.scrollTop<3414){
+            newboxsumli[1].style.background="#626262"
+            newboxsumli[2].style.background=color[2]
+        }
+        if (obj.scrollTop>=3304&&obj.scrollTop<4017){
+            newboxsumli[2].style.background="#626262"
+            newboxsumli[3].style.background=color[3]
+        }
+        if (obj.scrollTop>=3907&&obj.scrollTop<4517){
+            newboxsumli[3].style.background="#626262"
+            newboxsumli[4].style.background=color[4]
+        }
+        if (obj.scrollTop>=4397&&obj.scrollTop<5082){
+            newboxsumli[4].style.background="#626262"
+            newboxsumli[5].style.background=color[5]
+        }
+        if (obj.scrollTop>=5028){
+            newboxsumli[5].style.background="#626262"
+            newboxsumli[6].style.background=color[6]
+        }
+
     };
 //    22222
     var an=document.querySelectorAll(".lists");
@@ -70,8 +99,11 @@ function move(){
                 }
             }
             var s=chuxinpin[i].offsetTop;
+
                 animate(obj,{scrollTop:s-110},50)
+            console.log(s)
         }
+
     }
     //侧滑栏
     var boxsumli=document.querySelectorAll(".box-sum li");
@@ -87,5 +119,4 @@ function move(){
         } 
      });
 //最后
-//     var color=["#E8E8E8","#E8E8E8","#E8E8E8","#E8E8E8","#F4CCC9"]
 };

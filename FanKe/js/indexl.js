@@ -17,6 +17,7 @@ window.onload=function(){
     var ewm=document.getElementsByClassName("ewm")[0];
     wei.onmouseover=function(){
         ewm.style.display="block"
+        ewm.style.zIndex="3"
     };
     wei.onmouseout=function(){
             ewm.style.display="none"
