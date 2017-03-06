@@ -3,17 +3,19 @@ window.onload=function(){
 
 var list=document.getElementsByClassName("list");
 var dian=document.getElementsByClassName("dian");
- var content=document.querySelector(".content")
-    var boxx=document.querySelector(".boxx")
-    var colorss=["#000","#E8E8E8","#E8E8E8","#E8E8E8","#F4CCC9"]
-for (let i=0;i<dian.length;i++){
-    dian[i].onmouseover=function(){
+ var content=document.querySelector(".content");
+ var boxxx=document.querySelector(".boxx");
+    var colorss=["#CC0023","#E8E8E8","#E8E8E8","#EBECF0","#E8E8E8","#F4CCC9"]
+     for (let i=0;i<dian.length;i++){
+     dian[i].onmouseover=function(){
         for (let j=0;j<list.length;j++){
             list[j].style.opacity="0";
             dian[j].style.background="#A2A2A2";
+
         }
         list[i].style.opacity="1";
         dian[i].style.background="#F1F1F1";
+         boxxx.style.background=colorss[i]
         num=i
     };
 }
@@ -27,10 +29,11 @@ function move(){
     }
     for (let j=0;j<list.length;j++){
         list[j].style.opacity="0";
-        dian[j].style.background="#A2A2A2"
+        dian[j].style.background="#A2A2A2";
     }
     list[num].style.opacity="1";
     dian[num].style.background="#F1F1F1"
+    boxxx.style.background=colorss[num]
 }
     content.onmouseover=function(){
     clearInterval(t1);
