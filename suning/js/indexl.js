@@ -33,6 +33,6 @@ window.onload=function(){
             }
             dx=-i*w;
             con.style.transform=`translateX(${dx}px)`;
-        })
+        });
     //最后
     };
