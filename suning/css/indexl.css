@@ -50,9 +50,21 @@ input{
     background:url("../images/QQ图片20170211110830_03.png") no-repeat;
     background-size: contain;
 }
+.banner{
+    width: 100%;
+    overflow: hidden;
+}
 .banner img{
         width: 100%;
-      padding-top: 0.88rem;
+        padding-top: 0.88rem;
+}
+.con{
+       width: 600%;
+       display: flex;
+       justify-content: space-around;
+}
+.list{
+    width:16.66666666666666%;
 }
 .box-nav{
     width: 100%;
