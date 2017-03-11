@@ -160,10 +160,15 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
 .smallimg:nth-child(2){
     top: 230px;
 }
-
-
-
-
+.bigwhite{
+    width: 853px;
+    height:500px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;left:200px;
+    transition: all 0.5s;
+    opacity: 0;
+}
 .daohang{width: 200px;height: 482px;
     position: absolute;left:22px;top:0;
     background:#EDE4E4;display: flex;flex-direction: column;
@@ -334,7 +339,7 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
     display: flex;justify-content: space-between;flex-wrap: wrap;
     margin-bottom: 10px }
 .dianpu{width: 615px;height: 338px;background: #fff;padding: 9px;box-sizing: border-box}
-.dianpu:hover{border: 1px solid #c42e32}
+.dianpu:hover{outline: 1px solid #c42e32}
 .dianpu-t{width: 590px;height: 44px}
 .hanban{width: 106px;height: 44px;float: left;
     background: url(../images/shangpu.jpg) no-repeat;
@@ -367,7 +372,7 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
 .qiudong{width: 1231px;height:319px;margin: 0 auto;display: flex;
     justify-content: space-between;margin-bottom: 1px }
 .ertong{width: 239px;height: 319px;background:#fff;padding: 2px}
-.ertong:hover{border: 1px solid #c42f2a}
+.ertong:hover{outline: 1px solid #c42f2a}
 .ertong-t{width: 235px;height: 230px;
     background: url(../images/yiyi.jpg) no-repeat;
     background-size: contain}

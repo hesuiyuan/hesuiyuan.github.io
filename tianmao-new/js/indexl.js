@@ -121,5 +121,19 @@ function move(){
             obk=newboxsumli[s];
         } 
      });
+    var bigwhite=document.querySelector(".bigwhite")
+    var danghang=document.querySelector(".daohang")
+    var li=document.querySelectorAll(".daohang li")
+     li.forEach(function(e){
+        e.onmouseover=function() {
+            bigwhite.style.opacity=1;
+        }
+     });
+    danghang.onmouseout=function(){
+        bigwhite.style.opacity=1;
+    };
+    danghang.onmouseout=function(){
+        bigwhite.style.opacity=0;
+    };
 //最后
 };
