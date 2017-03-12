@@ -38,6 +38,7 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
     background-color: #EFEFEF;
     margin-top: 6px;
     font-size: 14px;
+    text-indent: 0.5em;
 }
 .searchcon li:last-child input:focus{
     outline: none;
@@ -65,6 +66,7 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
     text-align: center;
     transition:all 1s;
     cursor: pointer;
+    opacity:0;
 }
 .cenav li{
     font-size: 12px;
@@ -72,11 +74,19 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
     border-bottom: 1px solid #fff;
      padding: 5px;
 }
+.cenav li:hover{
+    background-color: #D70B1C;
+}
+.cenav li:first-child{
+    background-color: #D70B1C;
+}
+.cenav li:first-child:hover{
+    background-color:#918888 ;
+}
 /*内容*/
 .header{
     width: 100%;
     height: 80px;
-    background-color: #c40502;
 }
 .header img{
     width: 1190px;
@@ -182,6 +192,8 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
     width: 50px;
     height:35px;
     background-color: #f10215;
+    text-align: center;
+    line-height: 35px;
 }
 #find{
     width:100%;
@@ -288,20 +300,55 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
+    position: relative;
 }
 .tent2s{
     width: 100%;
     height: 340px;
+    position: absolute;
+    top:0;left: 0;bottom: 0;right: 0;
  }
+.tent2s:first-child{
+    z-index: 5;
+}
 .tent2s img{
     width: 790px;
     height: 340px;
+    transition: all 0.5s;
+}
+/*banneroo*/
+.bigoo{
+    width: 182px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.64);
+    z-index: 7;
+    position: absolute;
+    left: 50%;
+    margin-left: -91px;
+    bottom: 160px;
+    border-radius:10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left:5px;
+    padding-right: 5px;
+}
+.oo{
+    width:12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.oo:first-child{
+    background-color: #DB192A;
 }
 .tent2ss{
     width: 100%;
     height: 130px;
     display: flex;
     justify-content: space-between;
+    position: absolute;
+    top: 350px;
 }
 .tent2sssmall{
     width:390px;
