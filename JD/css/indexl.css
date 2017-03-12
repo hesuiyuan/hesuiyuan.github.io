@@ -3,6 +3,76 @@ a,span{text-decoration: none}
 img{border: none;display: block}
 *{box-sizing: border-box}
 body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;background: #f5f5f5}
+/*下拉搜索框*/
+.search{
+    width: 100%;
+    height: 50px;
+    margin-top: -50px;
+    background-color: #fff;
+    border-bottom: 2px solid #c40502;
+    transition: all 0.5s;
+    z-index: 3;
+    position: fixed;
+}
+.searchcon{
+    width: 1190px;
+    height:100%;
+    margin: 0 auto;
+    display: flex;
+}
+.searchcon li:first-child{
+    width:30%;
+    height: 100%;
+    background: url("../images/logo_s.v2.png") no-repeat;
+    background-position-y:center;
+}
+.searchcon li:last-child{
+    width: 70%;
+    height: 100%;
+    display: flex;
+}
+.searchcon li:last-child input{
+    width: 500px;
+    height: 36px;
+    border: none;
+    background-color: #EFEFEF;
+    margin-top: 6px;
+    font-size: 14px;
+}
+.searchcon li:last-child input:focus{
+    outline: none;
+}
+.searchred{
+    width: 50px;
+    height: 36px;
+    margin-top: 6px;
+    background-color: #f10215;
+    text-align: center;
+    line-height: 36px;
+    color: #fff;
+}
+/*侧导航*/
+.cenav{
+    width: 34px;
+    height: 504px;
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
+    background-color: #918888;
+    top: 100px;;left: 9px;
+    position: fixed;
+    z-index: 5;
+    text-align: center;
+    transition:all 1s;
+    cursor: pointer;
+}
+.cenav li{
+    font-size: 12px;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+     padding: 5px;
+}
+/*内容*/
 .header{
     width: 100%;
     height: 80px;
@@ -17,6 +87,14 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
     width: 100%;
     height: 32px;
     background-color: #e3e4e5;
+}
+.logo{
+    width: 190px;
+    height: 170px;
+    position: absolute;
+    top: 80px;left:42px;
+    right: 0;bottom: 0;
+    background-color: #fff;
 }
 .box{
     width: 1190px;
@@ -249,6 +327,62 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
     margin: 0 auto;
     margin-top: 10px;
     position: relative;
+    display: flex;
+}
+/*道记时间*/
+.timekogo{
+    width: 28.4628378%;
+    height:100%;
+    z-index:4;
+}
+.logoo{
+    width: 34px;
+    height: 40px;
+    margin-left: 50px;
+    margin-top: 7px;
+    position: absolute;
+    background: url("../images/6s.png") no-repeat 0 -42px;
+}
+.timekogo p{
+    font-size: 30px;
+    color: #fff;
+    margin-left: 100px;
+    padding-top: 5px;
+}
+.timekogo span{
+    font-size: 12px;
+}
+.kong{
+    width: 45.2972973%;
+    height: 100%;
+}
+.time{
+    width:26.2398649%;
+    height: 100%;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-right: 10px;
+}
+.time p{
+    color: #fff;
+}
+.time i{
+    color: #440106;
+    font-weight: bold;
+}
+.hours,.mines,.secound{
+    width: 35px;
+    height: 35px;
+    background-color: #440106;
+    text-align: center;
+    line-height: 35px;
+    font-size: 24px;
+    font-family: Arial;
+    font-weight: 700;
+    color: #F90013;
+    border-radius: 5px;
 }
 .oneheader img{
     position: absolute;
