@@ -69,6 +69,8 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
     opacity:0;
 }
 .cenav li{
+    width: 34px;
+     height: 45px;
     font-size: 12px;
     color: #fff;
     border-bottom: 1px solid #fff;
@@ -80,8 +82,85 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
 .cenav li:first-child{
     background-color: #D70B1C;
 }
-.cenav li:first-child:hover{
-    background-color:#918888 ;
+/*右边侧导航*/
+.rightnav{
+    width:8px;
+    height:100%;
+    background-color: #7A6E6E;
+     position: fixed;
+    right: 0;
+    z-index: 10;
+}
+.rightnavsum{
+    width: 35px;
+    height:100%;
+    position: fixed;
+    right:5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+.rightnavtop{
+    width: 35px;
+    height: 41.4285714%;
+}
+.rightnavconone{
+    width: 35px;
+    height: 30.8571429%;
+}
+.rightnavoneul{
+    width:100%;
+    height:215px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    cursor: pointer;
+}
+.rightnavoneul li,.rightnavthreeul li{
+    width:34px;
+    height: 35px;
+    position: relative;
+}
+#i{
+    width:45px;
+    height: 35px;
+    position: relative;
+   border-radius: 5px;
+    z-index: 2;
+    padding-left:13px;
+    line-height: 35px;
+    background-color: #7A6E6E;
+}
+/*京东会员*/
+.rightchur,#ppp{
+    width:60px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    background-color: #CA1623;
+    color: #fff;
+    position: absolute;
+    border-radius: 5px;
+    font-size: 12px;
+    top:0;left:10px;
+    opacity: 0;
+    z-index: 1;
+    transition: all 0.5s;
+}
+.rightnavcontow{
+    width: 35px;
+    height:18.2857143%
+}
+.rightnavconthree{
+    width:35px;
+    height:10%;
+}
+.rightnavthreeul{
+    width:100%;
+    height: 71px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
 }
 /*内容*/
 .header{
@@ -116,15 +195,54 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
     line-height: 32px;
 }
 .list1{
-    width:293px;
+    width:60px;
     height: 100%;
-    padding-left: 220px;
+    margin-left: 220px;
     display: flex;
+    justify-content: space-between;
+     padding: 0 9px;
 }
 .list1 img{
     width:11px;
     height:15px;
     margin-top: 9px;
+    margin-left: 3px;
+
+}
+/*address*/
+.address{
+    width: 320px;
+    height: 215px;
+    background-color: #fff;
+    position: absolute;
+    z-index:8;
+    left:263px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    justify-items:center;
+    opacity: 0;
+}
+.addressbox{
+    width:20%;
+    height:100%;
+    display: flex;
+    align-content: space-around;
+    flex-wrap: wrap;
+    padding: 15px 15px;
+}
+.addressbox li{
+    width:100%;
+    height:26px;
+    line-height: 26px;
+    text-align: center;
+    color: #a8a8a8;
+    font-size: 14px;
+}
+#onlytext{
+    background-color: #F10215;
+    color: #fff;
 }
 .list1 span{
     font-size: 12px;
@@ -361,6 +479,108 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
 .tent3{
     width: 190px;
     height: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+.tent3box1{
+    width:190px;
+    height: 116px;
+    padding:15px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+    border-bottom: 1px solid #ccc;
+}
+.con1text{
+    padding-left: 15px;
+}
+.doin{
+    padding-top: 5px;
+}
+.newpeople{
+    width:170px;
+    height: 24px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.newpeople li{
+    width:74px;
+    height: 24px;
+    border: 2px solid #c43b1f;
+    box-sizing: border-box;
+    font-size: 12px;
+    text-align: center;
+    line-height: 20px;
+    color:  #c43b1f;
+}
+.newpeople li:hover{
+    background-color: #c43b1f;
+    color: #fff;
+}
+.tent3box1 img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+.tent3box2{
+    width:190px;
+    height: 154px;
+    font-size: 12px;
+}
+.con2text{
+    padding: 10px 20px 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+}
+.con2images span:hover{
+    cursor: pointer;
+    border-bottom: 2px solid #c43b1f;
+}
+.con2images span:first-child{
+     margin-right: 10px;
+    border-bottom: 2px solid #c43b1f;
+}
+.con2images span:last-child{
+     margin-left: 10px;
+}
+.con2textp{
+    padding-top: 20px;
+    padding-left: 20px;
+    border-bottom: 1px solid #ccc;
+}
+.con2textp p{
+    padding-bottom: 5px;
+}
+#bopp{
+    padding-bottom: 20px;
+}
+.tent3box3{
+    width: 190px;
+    height: 210px;
+}
+.con3{
+    margin-top: 3px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.con3 li{
+    width: 47px;
+    height: 69px;
+    text-align: center;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.con3 li div{
+    margin-top: 15px;
+}
+.con3 li p{
+    padding-top: 5px;
+    font-size: 12px;
 }
 /*抢购产品*/
 .one{
@@ -893,10 +1113,20 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
 .title{
     width:1190px;
     height:55px;
+    margin: 0 auto ;
     text-align: center;
     line-height: 55px;
     font-size: 20px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
 }
+.titleone{
+    width:40.1546219%;
+    height:3px;
+    background: url("../images/16.png");
+}
+/*完*/
 .lifeimg{
     width:1200px;
     height:350px;
@@ -1028,12 +1258,12 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
     padding-right: 10px;
 }
 .imglfet{
-    width:33.3333333333%;
+    width:32%;
     height: 100%;
     overflow: hidden;
 }
 .imglfet img {
-    width: 100%;
+    width: 193px;
     height: 260px;
     transition: all 0.3s;
 }
@@ -1094,12 +1324,12 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
     padding-right: 10px;
 }
 .fivelist:nth-child(2) div{
-    width:33.3333333333%;
+    width:32%;
     height:100%;
     overflow: hidden;
 }
 .fivelist:nth-child(2) div img{
-    width: 183px;
+    width: 193px;
     height: 130px;
     transition: all 0.3s;
 }
@@ -1208,10 +1438,79 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
     padding-top: 10px;
     color: #c4251e;
 }
-
-
-
-
+/*footer*/
+footer{
+    width: 100%;
+    height: 1000px;
+    background-color: #EAEAEA;
+    margin-top: 30px;
+}
+.footerbox1{
+    width: 1275px;
+    height: 103px;
+    margin: 0 auto;
+    background-color: #EAEAEA;
+    display: flex;
+    justify-content: space-around;
+    padding:30px 10px 30px 100px;
+    border-bottom: 1px solid #ccc;
+}
+.footerbox1 li{
+      width:25%;
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      color: #000;
+      font-weight: bold;
+}
+.footerbox1 aside{
+    width: 36px;
+    height: 42px;
+    background: url("../images/ico_service.png") no-repeat;
+}
+.footerbox1 span{
+    padding-left: 10px;
+}
+.severiveText{
+    width:1275px;
+    height: 200px;
+    margin: 0 auto;
+    background-color: #fff;
+    display: flex;
+    padding: 20px 50px;
+    border-bottom: 1px solid #ccc;
+}
+.severiveCon{
+    width:16.6666667%;
+    height: 100%;
+    font-size: 12px;
+    color: #666;
+    display: flex;
+    flex-wrap: wrap;
+}
+.severiveCon li:first-child{
+    color: #2d2d2d;
+    font-weight: bold;
+    font-size: 14px;
+}
+.severiveCon li{
+    width: 100%;
+    height: auto;
+}
+#maps div{
+    text-align: center;
+    font-size: 16px;
+    color: #2d2d2d;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+#maps p{
+    font-size: 12px;
+    padding-top: 5px;
+}
+#maps i{
+    padding-left:120px;
+}
 
 
 

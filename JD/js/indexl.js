@@ -24,7 +24,7 @@ window.onload=function(){
     var secounnd=document.querySelector(".secound");
     var mm,hh,m;
     var furture=new Date();
-    furture.setHours(23);
+    furture.setHours(20);
     furture.setMinutes(0);
     furture.setSeconds(0);
     setInterval(function () {
@@ -51,6 +51,7 @@ window.onload=function(){
     newcennav.forEach(function(v,i){
         v.onclick=function(){
             var height=five[i].offsetTop;
+           console.log(height)
             animate(obj,{scrollTop:height-50},500);
         };
         newcennav[8].onclick=function(){
@@ -59,8 +60,9 @@ window.onload=function(){
         };
         newcennav[9].onclick=function(){
           animate(obj,{scrollTop:0},500)
-        }
+        };
     });
+
     //banner的自动轮播
     //停止
     var tent=document.querySelector("#falk");
@@ -76,6 +78,7 @@ window.onload=function(){
     var oneoo=oo[0];
      oo.forEach(function(v,i){
                v.onmouseover=function(){
+                   num=i;
                    oneoo.style.backgroundColor="#fff";
                    oo[i].style.backgroundColor="#DB192A";
                    oneoo=oo[i];
@@ -84,7 +87,6 @@ window.onload=function(){
                    });
                    banner[i].style.opacity=1;
                };
-         num=i;
      });
     //自动
     var num=0;
@@ -104,10 +106,92 @@ window.onload=function(){
         oneoo=oo[num]
         too=num;
     }
-    
+    //address
+    var list1=document.querySelector(".list1");
+    var address=document.querySelector(".address");
+    list1.onmouseover=function(){
+        list1.style.border="1px solid #ccc";
+        list1.style.borderBottom="none";
+        list1.style.backgroundColor="#fff";
+        address.style.display="flex";
+        address.style.opacity="1";
+        address.onmouseover=function(){
+            list1.style.border="1px solid #ccc";
+            list1.style.borderBottom="none";
+            list1.style.backgroundColor="#fff";
+            address.style.display="flex";
+        };
+    };
+    list1.onmouseout=function(){
+        list1.style.border="none";
+        list1.style.backgroundColor="#E3E4E5";
+        address.style.display="none"
+    };
 
-    
+    address.onmouseout=function(){
+        list1.style.border="none";
+        list1.style.backgroundColor="#E3E4E5";
+        address.style.display="none"
+    };
+    //测动画
+    var navoneulli=document.querySelectorAll(".rightnavoneul li");
+    var rightchur=document.querySelectorAll(".rightchur");
+    var asd=document.querySelectorAll("#i");
+    navoneulli.forEach(function(v,i){
+        v.onmouseover=function(){
+            v.style.backgroundColor="#CA1623";
+            rightchur[i].style.left="-55px"
+            // animate(rightchur[i],{left:-55},500);
+            rightchur[i].style.opacity="1";
+            asd[i].style.backgroundColor="#CA1623"
+        };
+        v.onmouseout=function(){
+            v.style.backgroundColor="#7A6E6E";
+            // animate(rightchur[i],{left:100},500);
+            rightchur[i].style.left="100px";
+            asd[i].style.backgroundColor="#7A6E6E";
+            asd[i].style.borderRadius="5px"
 
+        }
+    });
+    //最下面
+    var ppp=document.querySelectorAll("#ppp");
+    var rightnavthreeul=document.querySelectorAll(".rightnavthreeul li")
+    rightnavthreeul.forEach(function(v,l){
+        rightnavthreeul[0].onclick=function(){
+           animate(obj,{scrollTop:0},500)
+        };
+        v.onmouseover=function(){
+            v.style.backgroundColor="#CA1623";
+            animate(ppp[l],{left:-55},500);
+            ppp[l].style.opacity="1"
+        };
+        v.onmouseout=function(){
+            v.style.backgroundColor="#7A6E6E";
+            animate(ppp[l],{left:0},500);
+        }
+    });
+    //促销 广告
+    var con2images=document.querySelectorAll(".con2images span");
+    var con2textp=document.querySelectorAll(".con2textp p");
+    var con=[{rr:"自营图书叠券享满300..."}, {rr:"牙齿炫白 星级口腔会场！ "},
+        {rr:"“鬼怪棉花”变身“好奇..."},
+        {rr:"下单立减1000元"}];
+    var cons=["京东成为中国最大家...", "京东自营家电清洗...",
+        "京东帮服务店突破170...",
+        " 京东售后退换无忧..."];
+             con2images[0].onmouseover=function(){
+                 con2textp.forEach(function(v,i){
+                     v.innerHTML=con[i].rr;
+                     con2images[0].style.borderBottom="2px solid #c43b1f"
+        });
+};
+    con2images[1].onmouseover=function(){
+        con2textp.forEach(function(v,i){
+            v.innerHTML=cons[i];
+             con2images[0].style.borderBottom="none"
+        });
+    };
 
     //最后
     };
