@@ -1,7 +1,12 @@
+@import "font_mxljiqmaerazto6r/iconfont.css";
 ul,li,input,p,body,header,footer,figure,img,i,em{margin: 0;padding: 0;list-style: none;border: none;font-style: normal}
 a,span{text-decoration: none}
 img{border: none;display: block}
-*{box-sizing: border-box}
+*{box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;}
 body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;background: #f5f5f5}
 /*下拉搜索框*/
 .search{
@@ -51,6 +56,7 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
     text-align: center;
     line-height: 36px;
     color: #fff;
+    font-family: 'iconfont';
 }
 /*侧导航*/
 .cenav{
@@ -75,6 +81,7 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
     color: #fff;
     border-bottom: 1px solid #fff;
      padding: 5px;
+    font-family: 'iconfont';
 }
 .cenav li:hover{
     background-color: #D70B1C;
@@ -125,11 +132,15 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
     width:45px;
     height: 35px;
     position: relative;
-   border-radius: 5px;
+    border-radius: 5px;
     z-index: 2;
-    padding-left:13px;
+    padding-left:8px;
     line-height: 35px;
     background-color: #7A6E6E;
+    color: #fff;
+    font-family: 'iconfont';
+    font-size: 18px;
+
 }
 /*京东会员*/
 .rightchur,#ppp{
@@ -146,6 +157,9 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
     opacity: 0;
     z-index: 1;
     transition: all 0.5s;
+}
+#ppp{
+    transition: none;
 }
 .rightnavcontow{
     width: 35px;
@@ -313,6 +327,11 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
     text-align: center;
     line-height: 35px;
 }
+.sou p{
+    margin-top: 3px;
+    font-family: 'iconfont';
+    color: #fff;
+}
 #find{
     width:100%;
     height: 35px;
@@ -331,8 +350,14 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
     margin-left: 25px;
     font-size: 12px;
     text-align: center;
-    line-height: 35px;
+    line-height: 32px;
     color: #f10214;
+    font-family: 'iconfont';
+
+}
+#goshoping span{
+    font-size: 18px;
+    font-weight: bold;
 }
 .list5{
     width: 100%;
@@ -460,6 +485,33 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
 .oo:first-child{
     background-color: #DB192A;
 }
+/*小箭头*/
+.left,.right{
+    width:30px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.37);
+    position: absolute;
+    left:0;
+    top: 140px;
+    z-index:11;
+    text-align: center;
+    line-height: 45px;
+    cursor: pointer;
+    transition: all 0.2s;
+    opacity: 0;
+}
+.left:hover{
+    background-color: rgba(0, 0, 0, 0.68);
+}
+.right:hover{
+    background-color: rgba(0, 0, 0, 0.68);
+}
+.left,.right i{
+    color: #fff;
+}
+.right{
+      left: 760px;
+}
 .tent2ss{
     width: 100%;
     height: 130px;
@@ -483,6 +535,14 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
+}
+.smallimages{
+    width: 190px;
+    height: 40px;
+     background: url("../images/29.png") no-repeat;
+    position: absolute;
+    right: 43px;
+    top:200px;
 }
 .tent3box1{
     width:190px;
@@ -550,10 +610,14 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
 .con2textp{
     padding-top: 20px;
     padding-left: 20px;
-    border-bottom: 1px solid #ccc;
 }
 .con2textp p{
+    width: 120px;
+    height: 21px;
     padding-bottom: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
 }
 #bopp{
     padding-bottom: 20px;
@@ -561,6 +625,7 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
 .tent3box3{
     width: 190px;
     height: 210px;
+    border-top: 1px solid #ccc;
 }
 .con3{
     margin-top: 3px;
@@ -577,6 +642,8 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
 }
 .con3 li div{
     margin-top: 15px;
+    font-family: 'iconfont';
+    font-size: 20px;
 }
 .con3 li p{
     padding-top: 5px;
@@ -598,7 +665,7 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
 }
 /*道记时间*/
 .timekogo{
-    width: 28.4628378%;
+    width: 30.4628378%;
     height:100%;
     z-index:4;
 }
@@ -618,9 +685,13 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
 }
 .timekogo span{
     font-size: 12px;
+    font-family: 'iconfont';
+}
+.timekogo i{
+     margin-left: 5px;
 }
 .kong{
-    width: 45.2972973%;
+    width: 43.2972973%;
     height: 100%;
 }
 .time{
@@ -791,6 +862,7 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
 .towheader span{
     font-size: 12px;
     padding-left:134px;
+    font-family: 'iconfont';
 }
 .towcon{
     width: 100%;
@@ -896,7 +968,8 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
    width: 140px;
     height:120px;
     margin: 0 auto;
-    background: url("../images/11.webp");
+    background: url("../images/11.jpg");
+    background-position-y:-10px;
     transition: all 0.5s;
 }
 .towdiv aside:hover{
@@ -1065,7 +1138,7 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
     position: absolute;
     top:50px;left: 35px;
     bottom: 0;right: 0;
-    transition: all 0.3s;
+    transition: all 1s;
 }
 .threecontent img:hover{
     transform:translate(20px);
@@ -1425,13 +1498,11 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
 .seven li:hover{
     outline: solid 1px #c4251e;
 }
-.seven li img{
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 20px;
-}
-.seven span{
-    text-align: center;
+.seven aside{
+    width: 238px;
+    height: 32px;
+    padding: 0 20px;
+    overflow: hidden;
 }
 .seven p{
     padding-left: 10px;
@@ -1441,7 +1512,7 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
 /*footer*/
 footer{
     width: 100%;
-    height: 1000px;
+    height: auto;
     background-color: #EAEAEA;
     margin-top: 30px;
 }

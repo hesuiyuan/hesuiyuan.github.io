@@ -24,7 +24,7 @@ window.onload=function(){
     var secounnd=document.querySelector(".secound");
     var mm,hh,m;
     var furture=new Date();
-    furture.setHours(20);
+    furture.setHours(24);
     furture.setMinutes(0);
     furture.setSeconds(0);
     setInterval(function () {
@@ -66,11 +66,17 @@ window.onload=function(){
     //banner的自动轮播
     //停止
     var tent=document.querySelector("#falk");
+    var left=document.querySelector(".left");
+    var right=document.querySelector(".right");
     tent.onmouseover=function(){
-        clearInterval(t1)
+        clearInterval(t1);
+        left.style.opacity=1;
+        right.style.opacity=1;
     };
     tent.onmouseout=function(){
         t1=setInterval(move,2000);
+        left.style.opacity=0;
+        right.style.opacity=0;
     };
     //手动
     var banner=document.querySelectorAll(".tent2s img");
@@ -97,6 +103,9 @@ window.onload=function(){
         if (num==banner.length){
             num=0;
         }
+        if (num==-1){
+            num=banner.length-1
+        }
         banner.forEach(function(v){
             v.style.opacity=0;
             oneoo.style.backgroundColor="#fff";
@@ -106,6 +115,18 @@ window.onload=function(){
         oneoo=oo[num]
         too=num;
     }
+    //清除点击快出现的蓝屏
+    //箭头点击的效果banner
+     right.onmousedown=function(e){
+         e.preventDefault()
+     };
+    right.onclick=function(){
+        move()
+    };
+    left.onclick=function(){
+        num=num-2;
+        move();
+    };
     //address
     var list1=document.querySelector(".list1");
     var address=document.querySelector(".address");
@@ -174,12 +195,12 @@ window.onload=function(){
     //促销 广告
     var con2images=document.querySelectorAll(".con2images span");
     var con2textp=document.querySelectorAll(".con2textp p");
-    var con=[{rr:"自营图书叠券享满300..."}, {rr:"牙齿炫白 星级口腔会场！ "},
-        {rr:"“鬼怪棉花”变身“好奇..."},
+    var con=[{rr:"自营图书叠券享满300自营图书"}, {rr:"牙齿炫白 星级口腔会场！ "},
+        {rr:"“鬼怪棉花”变身“好奇中国最大家京"},
         {rr:"下单立减1000元"}];
-    var cons=["京东成为中国最大家...", "京东自营家电清洗...",
-        "京东帮服务店突破170...",
-        " 京东售后退换无忧..."];
+    var cons=["京东成为中国最大家京东自营", "京东自营家电清洗帮服务店",
+        "京东帮服务店突破170店突破",
+        " 京东售后退换无忧店突破店突破"];
              con2images[0].onmouseover=function(){
                  con2textp.forEach(function(v,i){
                      v.innerHTML=con[i].rr;
