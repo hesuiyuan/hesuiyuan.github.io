@@ -15,6 +15,10 @@ img{
 }
 *{
     box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 @font-face {
     font-family: 'iconfont';  /* project id 223417 */
@@ -130,8 +134,49 @@ img{
     padding-left: 10px;
 }
 }
-
-
+.goshopping{
+    width: 250px;
+    height: 300px;
+    border: 1px solid #ccc;
+    position: absolute;
+    right: 5px; top:90px;
+    background-color: #fff;
+    z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+    opacity: 0;
+}
+.firstshopping{
+    width: 100%;
+    height: 28.5714286%;
+    font-size: 14px;
+    line-height: 84px;
+    border-bottom: 1px solid #ccc;
+    color: #ccc;
+    text-align: center;
+    margin:0 20px;
+}
+.secondshopping{
+    width: 100%;
+    height:14.5714286%;
+    border-bottom: 1px solid #ccc;
+    margin:0 20px;
+    font-size: 12px;
+}
+em{
+    font-style: normal;
+}
+.secondshopping em{
+    font-size: 14px;
+    line-height: 42px;
+    color: #0b04ff;
+}
+.secondshopping em:last-child{
+    padding-left: 10px;
+}
+.secondshopping:last-child{
+    border-bottom: none;
+}
 
 
 
@@ -140,8 +185,15 @@ img{
 .banner{
     width:100%;
     height: 553px;
-    background: #0A0A0A;
+    overflow: hidden;
     position: relative;
+}
+.bannersum{
+    width:500%;
+    height: 553px;
+    display: flex;
+    transition: all 0.5s;
+    /*transform: translateX(-1275px);*/
 }
 .banner01{
     width:100%;
@@ -149,7 +201,43 @@ img{
     background: url("../images/banner-l.jpg") no-repeat;
     background-position:center;
     background-size: auto 100%;
-
+    position: relative;
+    background-color: #0A0A0A;
+}
+i{
+    font-style: normal;
+}
+.banner02{
+    width:100%;
+    height:553px;
+    background: url("../images/banner-l2.jpg") no-repeat;
+    background-position:center;
+    background-position-y: 130px;
+    position: relative;
+    background-size: 110% 100%;
+}
+i{
+    font-weight: 900;
+    font-size: 36px;
+    font-family: "苹方 粗体", "粗体";
+}
+.textiMAC{
+    text-align: center;
+    height: 90px;
+    color: #000;
+    position: absolute;
+    left: 36%;top: 4%;
+    font-size: 30px;
+    font-weight:500;
+}
+.banner03{
+    width:100%;
+    height:553px;
+    background: url("../images/banner-l3.jpg") no-repeat;
+    background-position:center;
+    background-size: auto 100%;
+    position: relative;
+    background-color: #F2F2F2;
 }
 .texti7{
     width: 140px;
@@ -159,14 +247,92 @@ img{
     left: 46%;top: 4%;
     font-size: 30px;
 }
+.left,.right{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgba(204, 204, 204, 0.53);
+    position: absolute;
+    top:50%;left: 0;
+    margin-top:-35px;
+    font-size: 38px;
+    text-align: center;
+    line-height: 70px;
+    margin-left: 20px;
+    color: #ccc;
+    opacity: 0;
+    z-index: 5;
+    transition: all 0.5s;
+    cursor: pointer;
+
+}
+.right{
+    left:91%;
+}
+.ccc{
+    width: 200px;
+    height: 2px;
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    top:90%;
+    display: flex;
+    justify-content: space-between;
+}
+.ccc li{
+    width: 60px;
+    height: 100%;
+    background-color: #DCDCDC;
+
+}
+.ctow{
+    width:60px;
+    height: 100%;
+
+}
 @media screen and (max-width: 1068px){
+    .banner{
+        height: 456px;
+    }
+    .bannersum{
+        height: 456px;
+        transform: translateX(-455px);
+    }
     .banner01{width: 100%;
         height: 456px;
         background: url("../images/banner-m.jpg") no-repeat;
         background-size: auto 100%;
         background-position: center;
+        background-color: #0A0A0A;
 
 }
+    .banner02 {
+        width: 100%;
+        height: 456px;
+        background: url("../images/banner-m2.jpg") no-repeat;
+        background-size: auto 100%;
+        background-position: center;
+        background-position-y: 100px;
+    }
+    .textiMAC{
+        height: 90px;
+        color: #000;
+        position: absolute;
+        left: 30%;top: 4%;
+        font-size: 30px;
+        font-weight:300;
+    }
+    .textiMAC i{
+        font-size: 30px;
+    }
+
+    .banner03 {
+        width: 100%;
+        height: 456px;
+        background: url("../images/banner-m3.jpg") no-repeat;
+        background-size:cover;
+        background-position: center;
+    }
 
 }
 @media screen and (max-width: 735px){
@@ -176,9 +342,48 @@ img{
         background: url("../images/banner-s.jpg") no-repeat;
         background-size: auto 100%;
         background-position: center;
+        background-color: #0A0A0A;
+    }
+    .banner02{
+        width: 100%;
+        height: 409px;
+        background: url("../images/banner-s3.jpg") no-repeat;
+        background-size: auto 100%;
+        background-position: center;
+        background-position-y: 180px;
+        position: relative;
+        background-size: 100%;
+        background-color: #fff;
+    }
+    .textiMAC{
+        height: 90px;
+        color: #000;
+        position: absolute;
+        left: 30%;top: 4%;
+        font-size: 20px;
+        font-weight:300;
+    }
+    .textiMAC i{
+        font-size: 20px;
+    }
+    .banner03{
+        width: 100%;
+        height: 409px;
+        background: url("../images/banner-s2.jpg") no-repeat;
+        background-size: auto 100%;
+        background-position: center;
+        background-color: #F2F2F2;
     }
     .texti7{
         left: 35%;top: 4%;
+    }
+    .banner{
+        height: 409px;
+
+    }
+    .bannersum{
+        height: 409px;
+        transform: translateX(-455px);
     }
 }
  /*下文开始*/
@@ -271,7 +476,7 @@ img{
 /*最下面*/
 .last{
     width: 100%;
-    height: 600px;
+    /*height: 600px;*/
     margin-top: -2px;
     background: #f2f2f2;
 }

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            height: 4000px;
+        }
+        ul{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        section{
+            position: relative;
+        }
+
+         ul{
+             width: 20px;
+             height: 180px;
+             margin: auto;
+             position: fixed;
+             left: 0;right: 0;
+             top: 0;
+             background-color: #ccc;
+         }
+        li{
+            width: 20px;
+            height: 20px;
+            border: 1px solid #000;
+            box-sizing: border-box;
+        }
+        li:first-child{
+            background-color:red;
+        }
+    </style>
+</head>
+<body>
+<section>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+</section>
+</body>
+<script>
+    var li=document.querySelectorAll("ul li")
+    var lis=li[0];
+    window.onscroll=function(e){
+        var obj=document.body.scrollTop==0?document.documentElement:document.body;
+        var h=obj.scrollTop;
+        for (let i=0;i<li.length;i++){
+            lis.style.backgroundColor="#000";
+            if (h<200){
+                li[0].style.backgroundColor="red";
+                lis=li[0]
+            }
+            if (h>200&&h<500){
+                 li[1].style.backgroundColor="red";
+                lis=li[1];
+            }
+            if (h>500&&h<700){
+                li[2].style.backgroundColor="red";
+                lis=li[2];
+            }
+            if (h>700&&h<900){
+                li[3].style.backgroundColor="red";
+                lis=li[3];
+            }
+            if (h>900&&h<1100){
+                li[4].style.backgroundColor="red";
+                lis=li[4];
+            }
+            if (h>1100&&h<1300){
+                li[5].style.backgroundColor="red";
+                lis=li[5];
+            }
+            if (h>1300&&h<1500){
+                li[6].style.backgroundColor="red";
+                lis=li[6];
+            }
+            if (h>1500&&h<1700){
+                li[7].style.backgroundColor="red";
+                lis=li[7];
+            }
+            if (h>1700&&h<1900){
+                li[8].style.backgroundColor="red";
+                lis=li[8];
+            }
+        }
+
+    }
+</script>
+</html>
