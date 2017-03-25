@@ -10,9 +10,8 @@ function ajax (obj) {
          for(i in data){
          	var src="";
          	src+=i+"="+data[i]+"&";
-         	src.slice(0,-1);
-         	data=src;
          }
+		data=src.slice(0,-1);
 	};
 	if (type=="get") {
 		if (data=="") {
@@ -22,7 +21,7 @@ function ajax (obj) {
 		}
 		xhr.send();
 	}else{
-               xhr.open(type,url,aysnch)
+               xhr.open(type,url,aysnch);
                xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
                xhr.send(data);
 	}

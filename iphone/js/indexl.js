@@ -84,6 +84,55 @@ window.onload=function(){
 
 
     }
+    var smallshows=document.querySelector(".smallshows");
+    var navsmallshows=document.querySelector(".navsmallshows");
+    var top=document.querySelector(".top");
+    var shapping=document.querySelector(".shapping");
+    var flpp=true;
+    smallshows.onclick=function(){
+        if (flpp){
+            animate(navsmallshows,{height:500},500);
+            smallshows.innerHTML="&#xe659;";
+            smallshows.style.color="#fff";
+            top.style.display="none"
+            shapping.style.opacity=0;
+            flpp=!flpp;
+        }else {
+            animate(navsmallshows,{height:0},500);
+            smallshows.innerHTML="&#xe601;";
+            top.style.display="block"
+            shapping.style.opacity=1;
+            flpp=!flpp;
+        }
+
+        }
+    var find=document.querySelector("#find");
+    var findbox=document.querySelector(".findbox");
+    var mac=document.querySelector("#mac");
+    var macs=document.querySelector("#macs");
+    var gply=true;
+    find.onclick=function(){
+        if (gply){
+            find.innerHTML="&#xe659;"
+            find.style.color="#fff"
+            findbox.style.width="60%"
+            findbox.innerHTML="搜索";
+            mac.style.opacity=0;
+            macs.style.opacity=0;
+            top.style.display="none"
+            gply=!gply;
+        }else {
+            findbox.style.width="";
+            findbox.innerHTML="";
+            find.innerHTML="&#xe67a;"
+            mac.style.opacity=1
+            macs.style.opacity=0;
+            top.style.display="block"
+            gply=!gply
+        }
+
+
+    }
 
     //最后
     }

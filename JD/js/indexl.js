@@ -18,21 +18,21 @@ window.onload=function(){
             }else {
                 cenav.style.opacity="0"
             }
-            // cenavli.forEach(function(v,i){
-            // if (obj.scrollTop<1841&&obj.scrollTop>1500){
-            //     cenavli[0].style.backgroundColor="#918888"
-            // }
-            //  if (obj.scrollTop>1841&&scrollTop<2431){
-            //      alert(0)
-            //      licl.style.backgroundColor="#918888"
-            //        cenavli[1].style.backgroundColor="#D70B1C";
-            //      licl=cenavli[1];
-            //  }
-            // if (obj.scrollTop>2431&&scrollTop<2984){
-            //     licl.style.backgroundColor="#918888"
-            //     cenavli[2].style.backgroundColor="#D70B1C";
-            //     licl=cenavli[2];
-            // }
+             cenavli.forEach(function(v,i){
+             if (obj.scrollTop<1841&&obj.scrollTop>1500){
+                 cenavli[0].style.backgroundColor="#D70B1C"
+                 licl=cenavli[0]
+             }
+              if (obj.scrollTop>1841&&scrollTop<2431){
+                  licl.style.backgroundColor="#918888"
+                    cenavli[1].style.backgroundColor="#D70B1C";
+                  licl=cenavli[1];
+              }
+             if (obj.scrollTop>2431&&scrollTop<2984){
+                 licl.style.backgroundColor="#918888"
+                 cenavli[2].style.backgroundColor="#D70B1C";
+                 licl=cenavli[2];
+             }
             // if (obj.scrollTop>2898&&scrollTop<3537){
             //     licl.style.backgroundColor="#918888"
             //     cenavli[3].style.backgroundColor="#D70B1C";
@@ -68,7 +68,7 @@ window.onload=function(){
             //         cenavli[9].style.backgroundColor="#D70B1C";
             //         licl=cenavli[9];
             //     }
-            // })
+             })
         };
     var centertxet=document.querySelectorAll(".centertxet");
     var conimgimg=document.querySelectorAll(".conimg img");
@@ -433,5 +433,22 @@ window.onload=function(){
         goshoppingbox.style.opacity=0;
         goshopping.style.borderBottom="";
     })
+    var tent1li=document.querySelectorAll(".tent1 li");
+    var bigcontent=document.querySelector(".big-content");
+    Array.from(tent1li).forEach(function(v,i){
+         hover(v,function () {
+             v.style.cursor="pointer";
+             v.style.backgroundColor="#ccc"
+             bigcontent.style.display="block";
+         },function(){
+             bigcontent.style.display="none";
+             v.style.backgroundColor=""
+         })
+    })
+     hover(bigcontent,function(){
+         bigcontent.style.display="block";
+     },function (){
+         bigcontent.style.display="none";
+     })
     //最后
     };

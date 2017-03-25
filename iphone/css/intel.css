@@ -28,13 +28,21 @@ img{
     url('//at.alicdn.com/t/font_hcf4yxzyupiudi.ttf') format('truetype'),
     url('//at.alicdn.com/t/font_hcf4yxzyupiudi.svg#iconfont') format('svg');
 }
+/*@font-face {*/
+    /*font-family: 'iconfont';  !* project id 223369 *!*/
+    /*src: url('//at.alicdn.com/t/font_ph8fbwivsb9h33di.eot');*/
+    /*src: url('//at.alicdn.com/t/font_ph8fbwivsb9h33di.eot?#iefix') format('embedded-opentype'),*/
+    /*url('//at.alicdn.com/t/font_ph8fbwivsb9h33di.woff') format('woff'),*/
+    /*url('//at.alicdn.com/t/font_ph8fbwivsb9h33di.ttf') format('truetype'),*/
+    /*url('//at.alicdn.com/t/font_ph8fbwivsb9h33di.svg#iconfont') format('svg');*/
+/*}*/
 @font-face {
     font-family: 'iconfont';  /* project id 223369 */
-    src: url('//at.alicdn.com/t/font_ph8fbwivsb9h33di.eot');
-    src: url('//at.alicdn.com/t/font_ph8fbwivsb9h33di.eot?#iefix') format('embedded-opentype'),
-    url('//at.alicdn.com/t/font_ph8fbwivsb9h33di.woff') format('woff'),
-    url('//at.alicdn.com/t/font_ph8fbwivsb9h33di.ttf') format('truetype'),
-    url('//at.alicdn.com/t/font_ph8fbwivsb9h33di.svg#iconfont') format('svg');
+    src: url('//at.alicdn.com/t/font_cvgk66nb5ely2e29.eot');
+    src: url('//at.alicdn.com/t/font_cvgk66nb5ely2e29.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_cvgk66nb5ely2e29.woff') format('woff'),
+    url('//at.alicdn.com/t/font_cvgk66nb5ely2e29.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_cvgk66nb5ely2e29.svg#iconfont') format('svg');
 }
 /*最上面*/
 .top{
@@ -42,6 +50,7 @@ img{
     height: 42px;
     border-bottom: 2px solid #000;
     background: #444;
+
 }
 .topgunag{
     width: 1000px;
@@ -102,6 +111,26 @@ img{
 .smallshows{
     display: none;
 }
+.navsmallshows{
+    display: none;
+}
+.findbox{
+    width:0;
+    height: 44px;
+    background-color: #000;
+    position: absolute;
+    top:0px;
+    left:18%;
+    z-index: 20;
+    color: #fff;
+    font-size: 14px;
+    line-height: 44px;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+#mac{
+    transition: all 0.5s;
+}
 @media screen and (max-width: 1068px){.navsum{
     width: 100%;
 }
@@ -114,6 +143,10 @@ img{
     .smallshows{
         display: none;
     }
+    .navsmallshows{
+        display: none;
+    }
+
     .topgunag{
         width: 100%;
         padding-right: 20px;
@@ -132,7 +165,11 @@ img{
     font-family: 'iconfont';
     display: inline-block;
     padding-left: 10px;
+    cursor: pointer;
 }
+    .navsmallshows{
+        display: block;
+    }
 }
 .goshopping{
     width: 250px;
@@ -193,7 +230,7 @@ em{
     height: 553px;
     display: flex;
     transition: all 0.5s;
-    /*transform: translateX(-1275px);*/
+    transform: translateX(-1275px);
 }
 .banner01{
     width:100%;
@@ -267,7 +304,7 @@ i{
 
 }
 .right{
-    left:91%;
+    margin-left: 1150px;
 }
 .ccc{
     width: 200px;
@@ -472,6 +509,34 @@ i{
     border-bottom: solid 2px #fff;
 
 }
+    .navsmallshows{
+        width:100%;
+        height:0;
+        background-color: #000;
+        overflow: hidden;
+    }
+    .navsmallshows-box{
+        width:90%;
+        height: 200px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 0 20px 20px;
+    }
+    .navsmallshows li{
+        width:100%;
+        font-size: 20px;
+        color: #fff;
+        padding:10px 0;
+        border-bottom: 1px solid #ccc;
+        transition: all 0.5s;
+    }
+    .navsmallshows li:hover{
+        color: #BCBCBC;
+        cursor: pointer;
+    }
+    .navsmallshows li:last-child{
+        border-bottom: none;
+    }
 }
 /*最下面*/
 .last{
@@ -558,6 +623,7 @@ span{
         width: 100%;
         height: 240px;
         padding-left: 20px;
+        background-color: #F2F2F2;
 
     }
 
@@ -586,6 +652,9 @@ span{
 }
 
 @media screen and (max-width: 735px) {
+    .top{
+        transition: all 0.5s;
+    }
     p{
         display:none;
     }

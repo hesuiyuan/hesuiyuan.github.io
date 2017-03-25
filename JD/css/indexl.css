@@ -480,15 +480,30 @@ body{font-family: "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53'
     display: flex;
     flex-wrap: wrap;
     align-content: space-around;
-    padding-left: 12px;
     font-size: 12px;
     color:#fff;
+    position: relative;
+}
+.big-content{
+    width: 1003px;
+    height:480px;
+    background-color: #fff;
+    position: absolute;
+    left:230px;
+    z-index: 10;
+    display: none;
+}
+.tent1 li{
+    width: 190px;
+    height: 30px;
+    line-height: 30px;
+    text-indent: 2em;
 }
 .tent1 li:first-child{
-    padding-top: 20px;
+    margin-top: 20px;
 }
 .tent1 li:last-child{
-     padding-bottom: 10px;
+     margin-bottom: 10px;
 }
 .tent2{
     width: 790px;
