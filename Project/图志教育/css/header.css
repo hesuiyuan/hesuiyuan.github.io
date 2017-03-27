@@ -29,7 +29,7 @@
     font-size: 14px;
 }
 .nav-box>li:last-child{
-    width: 235px;
+    width: 210px;
     height:78px;
     float: left;
     line-height:78px;
@@ -39,7 +39,7 @@
 }
 #login{
     color: #666;
-    padding-left: 30px;
+    /*padding-left: 30px;*/
 }
 .nav-box>li:last-child>a:last-child{
     color: #acacad;

@@ -1,0 +1,63 @@
+#group-banner{
+    background: url("../images/group-banner.jpg") no-repeat center;
+}
+.group-title{
+    width: 1200px;
+    height: 60px;
+    margin: 0 auto;
+    line-height: 60px;
+}
+.group-title>a{
+    color: #000;
+}
+.group-title>a:first-child{
+    margin-left: 2em;
+}
+.group-content{
+    width: 1200px;
+    height: 235px;
+    margin: 0 auto;
+    display: flex;
+    margin-bottom: 10px;
+}
+.group-teacher{
+    width: 212px;
+    height: 235px;
+    border: 1px solid #000;
+}
+.group-text{
+    width: 890px;
+    height: 235px;
+}
+.group-text>p:first-child{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+.group-text>p:nth-child(2){
+    text-align: justify;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+    line-height: 200%;
+    font-size: 14px;
+}
+.group-icon{
+    width: 98px;
+    height:78px;
+    text-align: center;
+}
+.group-icon>img{
+    width: 67px;
+    height: 48px;
+    margin: 0 auto;
+    margin-top: 110px;
+    margin-bottom: 5px;
+}
+.group-icon>span{
+    font-size: 14px;
+    color: #000;
+
+}
