@@ -27,6 +27,14 @@ body{
     display: flex;
     justify-content: space-between;
 }
+.educition-icon>i{
+    font-size: 50px;
+    line-height: 140px;
+}
+.educition-icon>span{
+    font-size: 26px;
+    font-weight: bold;
+}
 .educition-con>div>a{
     color: #000;
 }
@@ -34,6 +42,11 @@ body{
     width:31%;
     height: 100%;
     border: 1px solid #ccc;
+}
+.educition-icon{
+    text-align: center;
+    font-family: 'iconfont';
+    color: #959595;
 }
 .educition-con2{
     width: 1200px;
@@ -47,6 +60,51 @@ body{
     width: 1200px;
     height: 58px;
     background-color: #EEEEEE;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    font-family: 'iconfont';
+}
+.o2{
+    height:100%;
+    text-indent: 2em;
+}
+.o2>i{
+    font-size: 30px;
+     line-height: 58px;
+     color: #1E9CDD;
+}
+.o2>span{
+    font-size: 14px;
+    font-weight: 600;
+}
+.o2s{
+    height: 100%;
+    line-height: 68px;
+    color:#1E9CDD ;
+    font-weight: bold;
+    cursor: pointer;
+}
+.o3{
+    width: 600px;
+    height: 100%;
+    line-height: 68px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.o4{
+    width: 216px;
+    height: 100%;
+    line-height: 66px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.o5{
+    width: 80px;
+    height: 100%;
+    line-height: 66px;
+    font-weight: bold;
+    cursor: pointer;
 }
 .educition-list-sum{
     width: 1200px;

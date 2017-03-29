@@ -57,6 +57,7 @@
     background-color: #0aa6e8;
     position: absolute;
     top:16px;
+    transition: all 0.2s;
 }
 .nav-con>li{
     width: 132px;
@@ -92,8 +93,11 @@
 }
 .header-find-icon{
     position: absolute;
-    top: 0;right:160px;
+    top: 2px;
+    margin-left: 120px;
     font-size: 12px;
+    font-family: 'iconfont';
+    color: #0aa6e8;
 }
 #header-find:focus{
     outline: none;

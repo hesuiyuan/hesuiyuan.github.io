@@ -14,25 +14,26 @@
     height: 100%;
 }
 .banner-box img{
-    width: 1200px;
+    width: 100%;
     height: 100%;
     margin: 0 auto;
 }
 .left,.right{
-
     font-size: 30px;
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-top:-15px;
+    margin-top:-10px;
 }
 .left{
     margin-left:-575px;
     color: #fff;
+    font-family: 'iconfont';
 }
 .right{
     margin-left:555px;
     color: #fff;
+    font-family: 'iconfont';
 }
 .content-one{
     width: 100%;
@@ -50,18 +51,18 @@
 }
 .list1-box{
     width:100%;
-    height:100%;
+    height:70px;
 }
 .list1-box>div:first-child{
     width: 15px;
     height: 45px;
     background-color: #0061b2;
     float: left;
-    margin-top: 45px;
+    margin-top: 40px;
 }
 .list1-box>div:last-child{
     float: left;
-    padding-top:45px;
+    padding-top:40px;
     padding-left: 30px;
     color: #000;
 }
@@ -74,14 +75,13 @@
 }
 .list2{
     width:1200px;
-    height: 250px;
     margin: 0 auto;
 }
 .list2>li{
     width: 158px;
     height:146px;
     float:left;
-    margin: 20px 80px;
+    margin: 40px 80px;
 }
 .raduim{
     width: 90px;
@@ -138,7 +138,7 @@
 /*02*/
 .content-tow{
     width: 100%;
-    height: 996px;
+    height: 950px;
     background-color: #fff;
 }
 .con-tow-box{
@@ -191,12 +191,14 @@
 .list2-con-bottom>div:last-child{
     padding-left: 36px;
     line-height: 50px;
+    font-family: 'iconfont';
 }
 .list2-con-bottom>div:last-child>span>i{
     color: #ccc;
 }
 .list2-con-bottom>div:last-child>span>em{
     color: #0468b9;
+    font-weight: bold;
 }
 .list2-con-bottom>div:last-child>span>i:first-child{
     padding-right: 6px;
@@ -209,19 +211,20 @@
     color: #0468b9;
 }
 .list2-con-bottom>div:last-child>span:nth-child(3)>a>i{
-    padding-left: 15px;
+    padding-left: 5px;
 }
 #list2{
     width:1200px;
-    height:135px;
+    height:100px;
 }
 #list2-tow>aside{
     position: absolute;
     left: 50%;
-    margin-left: 534px;
+    margin-left: 524px;
     margin-top: -20px;
     color: #ccc;
     cursor: pointer;
+    font-family: 'iconfont';
 }
 /*03*/
 .content-three{
@@ -288,6 +291,7 @@
     color: #fff;
     padding-top: 25px;
     padding-left:10px;
+    font-family: 'iconfont';
 }
 .list3-tow-02>div>p{
     font-size: 12px;
@@ -361,6 +365,9 @@
     -ms-background-position-y:-45px;
     background-position-y:-45px;
     margin: 37px auto 30px auto;
+}
+.people2{
+    background: url("../images/people-2.jpg") no-repeat;
 }
 /*05*/
 .content-five{

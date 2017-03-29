@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>课程展示</title>
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/educition.css">
     <link rel="stylesheet" href="css/footer.css">
+    <script src="js/jQuery.js"></script>
+    <script src="js/header.js"></script>
 </head>
 <body>
 <header>
@@ -19,46 +21,46 @@
             <li>
                 <ul class="nav-con">
                     <li>
-                        <a href="">
+                        <a href="index.html" target="_blank">
                             <p>首页</p>
                             <p>HOME</p>
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="educition.html" target="_blank">
                             <p>课程展示</p>
                             <p>EDUCATION</p>
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="aboutus.html" target="_blank">
                             <p>企业简介</p>
                             <p>ABOUT US</p>
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="group.html" target="_blank">
                             <p>师资力量</p>
                             <p>GROUP</p>
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="student.html" target="_blank">
                             <p>优秀学员</p>
                             <p>STUDENTS</p>
                         </a>
                     </li>
-                    <div class="header-hover"></div>
+                    <div class="header-hover" style="left: 145px"></div>
                 </ul>
             </li>
             <li>
-                <input type="text" id="header-find" placeholder="搜索">
-                <div class="header-find-icon">0</div>
-                <a href="" id="login">
+                <input type="text" id="header-find" placeholder="搜索" style="border: 1px solid #949494;background-color: #fff">
+                <div class="header-find-icon" style="color: #949494">&#xe67a;</div>
+                <a href="login.html" id="login">
                     <span>登录</span>
                     <i>|</i>
                 </a>
-                <a href="">
+                <a href="login.html">
                     <span>注册</span>
                 </a>
             </li>
@@ -77,14 +79,45 @@
         </a>
     </div>
     <div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div class="educition-icon" style=" border-color:#1E9CDD; color:#1E9CDD;">
+                <i>&#xe616;</i>
+                <span>精品课程</span>
+        </div>
+        <div class="educition-icon">
+            <i>&#xe603;</i>
+            <span>高效学习</span>
+        </div>
+        <div class="educition-icon">
+            <i>&#xe612;</i>
+            <span>大讲堂</span>
+        </div>
     </div>
 
 </section>
 <section class="educition-con2">
-<div class="o1"></div>
+<div class="o1">
+    <div class="o2">
+        <i>&#xe616;</i>
+        <span>精品课程    |</span>
+    </div>
+    <div class="o2s">
+        <i>综合排序</i>
+        <span>&#xe606;    |</span>
+    </div>
+    <div class="o3">
+        <i>最新</i>
+        <span>&#xe606;</span>
+    </div>
+    <div class="o4">
+        <i>热门推荐</i>
+        <span>&#xe606;</span>
+    </div>
+    <div class="o5">
+        <i>更多</i>
+        <span>&#xe606;</span>
+    </div>
+
+</div>
     <div class="educition-list-sum">
         <ul class="educition-list1">
             <a href="">
@@ -294,7 +327,7 @@
 </section>
 <section class="num-sum">
     <ul class="ection-num">
-        <a href="">
+        <a href="" style="border-color:#1E9CDD;color: #1E9CDD">
             <li>1</li>
         </a>
         <a href=""><li>2</li></a>
