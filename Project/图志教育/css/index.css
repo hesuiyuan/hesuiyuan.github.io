@@ -96,6 +96,9 @@
     background-repeat: no-repeat;
     position: relative;
 }
+.list2>li>p>a:hover{
+    color: #07AAF4;
+}
 .list2>li:first-child>.raduim{
     background-position-x:10px;
     background-position-y: 15px;
@@ -495,4 +498,9 @@
 }
 .con-six-sum>div:nth-child(4){
     background: url("../images/school-4.png") no-repeat center;
+}
+.pfc{width: 320px;height:240px;position: fixed;left:0;top:0;
+    background-color: yellow;}
+.pfc>img{
+    width: 320px;height: 240px;
 }

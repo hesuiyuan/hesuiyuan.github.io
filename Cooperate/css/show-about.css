@@ -1,0 +1,70 @@
+@import "metia.css";
+.nr{
+    width: 7.0rem;height: 7.26rem;
+    padding-left:0.2rem;
+    background: #fff;margin: 0 auto;
+    margin-bottom:0.1rem;
+}
+.lantiao{
+    width:0.04rem;height:0.24rem;
+    margin-top:0.32rem;
+    background: #01b5ff;
+    float: left;
+}
+.wz{
+    float: left;
+    width: 6.42rem;
+    margin-top:0.26rem;
+    margin-left: 0.2rem;
+}
+.p{
+    font-weight: bolder;font-size:0.24rem;
+    min-font-size: 12px;
+    display: block;
+    width: 100%;height:0.4rem;
+    border-bottom: 1px dashed #999;
+    color: #444;
+}
+.pp{
+    text-align:justify;
+    margin-top:0.06rem;
+    line-height:0.32rem;font-size:0.24rem;
+    min-font-size: 12px;
+    color: #666;
+}
+.nr1{
+    width: 7.0rem;height:2.76rem;
+    padding-left:0.2rem;
+    background: #fff;margin: 0 auto;
+    margin-bottom: 0.1rem;
+}
+.wh{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;height:2rem;
+}
+.wh li{
+    width: 1.33rem;height: 1.33rem;
+}
+.nr2{
+    width: 7.0rem;height:1.32rem;
+    padding-left:0.2rem;
+    background: #fff;margin: 0 auto;
+    margin-bottom:0.1rem;
+}
+.pr{
+    font-size:0.24rem;
+    min-font-size: 12px;
+    color: #666;
+    height:0.48rem;
+    line-height:0.48rem;
+}
+.nr3{
+    width: 1.68rem;height: 1.68rem;
+    margin: 0 auto;
+    margin-top:0.24rem;
+}
+img{
+    width: 100%;height: 100%;
+}

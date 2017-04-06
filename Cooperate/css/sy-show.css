@@ -1,0 +1,223 @@
+@import "metia.css";
+@import "swiper.min.css";
+/*首页面开始*/
+.header {
+    width: 100%;
+    height: 0.89rem;
+    background-color: #007be3;
+    top: 0;
+    position: fixed;
+    z-index: 1000;
+}
+
+.header .box {
+    width: 2.27rem;
+    height: 0.68rem;
+    margin: 0 auto;
+    padding-top: 0.16rem;
+}
+
+.header .box a.logo {
+    width: 0.7rem;
+    height: 0.67rem;
+    background: url("../images/HSY1.png") center center no-repeat;
+    float: left;
+    background-size: 0.7rem;
+}
+
+.header .box h3 {
+    font-size: 0.36rem;
+    color: #fff;
+    line-height: 0.68rem;
+    float: left;
+    margin-left: 0.16rem;
+}
+/*banner*/
+/*.banner {*/
+    /*width: 100%;*/
+    /*height: 2.8rem;*/
+    /*margin-top: 0.89rem;*/
+/*}*/
+.swiper-container{
+    width: 100%;height: 4.2rem;
+    margin-top: 0.89rem;
+}
+.swiper-slide>a>img{
+    width: 100%;height: auto;
+}
+/*.swiper-slide{*/
+    /*display: block;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*background: #fff url("../images/HSY2.png") center center no-repeat;*/
+    /*background-size: cover;*/
+/*}*/
+p,a{
+    margin: 0; padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: #2d2d2d;
+}
+i,em{
+    font-style: normal;
+}
+.nav-box{
+    width: 100%;height: .82rem;
+    background-color: #F5F6FA;
+    line-height: .82rem;
+}
+.nav-box>p{
+    margin-left: .22rem;
+}
+.nav-box>p>a{
+    color: #000;
+    font-size:.22rem;
+    font-family: 微软雅黑 Regular;
+}
+.nav-box>p>b{
+    color: #000;
+    font-size:.22rem;
+    font-family: 微软雅黑 Regular;
+}
+.con-box{
+    width: 100%;height:15.60rem;
+    background-color: #f5f6fa;
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
+.con-box>a{
+    width:7.02rem;height: 1.85rem;
+    margin: 0 auto;
+    text-decoration: none;
+    color: #000;
+}
+.content{
+    width:7.02rem;height: 1.85rem;
+    background-color: #fff;
+    margin: 0 auto;
+    display: flex;
+}
+.people-img{
+    width: 1.93rem;height:1.45rem;
+    background-color: #c8c8c8;
+    margin: auto .2rem auto .2rem;
+}
+.people-text{
+    width: 4.7rem;height:1.45rem;
+    margin: auto .2rem auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+.people-text>li:first-child{
+    width: 100%;height: .56rem;
+}
+.people-text>li:first-child>p>i{
+    font-size: .36rem;
+    font-weight: bold;
+    line-height: .56rem;
+    padding-right: .1rem;
+    border-bottom: .008rem dashed #000;
+}
+.people-text>li:nth-child(2){
+    width: 100%;height: .4rem;
+    line-height: .4rem;
+}
+.people-text>li:nth-child(2)>p{
+    font-size: .26rem;
+    color: #94d43b;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.people-text>li:nth-child(3){
+    width: 100%;height:.49rem;
+    line-height: .4rem;
+}
+.people-text>li:nth-child(3)>p{
+    font-size: .26rem;
+    color: #444;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.num-box{
+    width: 100%;height: .7rem;
+    background-color: #fff;
+    display: flex;
+}
+.con-list{
+    width:4.6rem;height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.con-list>li{
+    width:.32rem;height: .32rem;
+    border: 1px solid #000;
+    text-align: center;
+    line-height: .32rem;
+    font-size: .12rem;
+    border-radius: 50%;
+    margin: auto 0;
+
+}
+.con-list>li:first-child {
+    width: .58rem;
+    height: .32rem;
+    border-radius: .16rem;
+    border: 1px solid #000;
+    margin-left: .36rem;
+    font-family: 'iconfont';
+}
+.con-list>li:nth-child(7){
+    width: .58rem;
+    height: .32rem;
+    border: none;
+}
+.con-list>li:nth-child(9){
+    width: .58rem;
+    height: .32rem;
+    border-radius: .16rem;
+    line-height: .36rem;
+    font-family: 'iconfont';
+}
+.con-list2{
+    width: 2.4rem;
+    height: 100%;
+    font-size: .12rem;
+    line-height:.7rem;
+    display: flex;
+    justify-content: space-between;
+}
+.con-list2>li:first-child{
+    padding-left: .2rem;
+}
+.con-list2>li:nth-child(2){
+    width: .58rem;
+    height: .32rem;
+    border-radius: .16rem;
+    border: 1px solid #000;
+    margin: auto 0;
+}
+.con-list2>li:nth-child(4){
+    width:.32rem;height: .32rem;
+    border: 1px solid #000;
+    text-align: center;
+    line-height: .32rem;
+    font-size: .10rem;
+    border-radius: 50%;
+    margin: auto 0;
+}
+.footer{
+    width: 100%;height: .92rem;
+    background-color: #F5F6FA;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.footer>div{
+    width: 100%;height:50%;
+    font-size: .12rem;
+    line-height: .46rem;
+}

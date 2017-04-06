@@ -71,7 +71,7 @@ window.onload=function(){
              })
         };
     var centertxet=document.querySelectorAll(".centertxet");
-    var conimgimg=document.querySelectorAll(".conimg img");
+    var conimgimg=document.querySelectorAll(".conimg images");
     var conimg=document.querySelectorAll(".conimg")
     Array.from(conimg).forEach(function(v,i){
         v.onmouseover=function(){
@@ -141,7 +141,7 @@ window.onload=function(){
         right.style.opacity=0;
     };
     //手动
-    var banner=document.querySelectorAll(".tent2s img");
+    var banner=document.querySelectorAll(".tent2s images");
     var oo=document.querySelectorAll(".oo");
     var oneoo=oo[0];
      oo.forEach(function(v,i){
@@ -381,7 +381,7 @@ window.onload=function(){
     var importli=document.querySelectorAll(".import li");
     var line=document.querySelector(".line");
     var importspan=document.querySelectorAll(".import li span");
-    var import2img=document.querySelectorAll(".import2 img");
+    var import2img=document.querySelectorAll(".import2 images");
     var import2span=document.querySelectorAll(".import2 span");
     var newimg=["images/12.jpg","images/12.1.jpg","images/12.3.jpg","images/12.4.jpg","images/12.5.jpg","images/12.1.jpg"];
     var newimg2=["images/12.1.jpg","images/12.jpg","images/12.4.jpg","images/12.3.jpg","images/12.1.jpg","images/12.5.jpg"];

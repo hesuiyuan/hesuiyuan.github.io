@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload=function () {
+          var pfc=document.querySelector(".pfc")
+           var speedx=10;
+            var speedy=10;
+            var l=parseInt(getComputedStyle(pfc,null).left)
+
+
+            var t=parseInt(getComputedStyle(pfc,null).top)
+            console.log(t)
+            setInterval(function () {
+                l+=speedx;
+                t+=speedy;
+                if(t>window.innerHeight-pfc.offsetHeight||t<0){
+                    speedy*=-1;
+                }
+                if(l>window.innerWidth-pfc.offsetWidth||l<0){
+                    speedx*=-1
+                }
+
+                pfc.style.left=l+"px"
+                pfc.style.top=t+"px"
+
+            },50)
+
+
+
+
+
+
+        }
+
+
+    </script>
+</head>
+<style>
+
+    .pfc{width: 104px;height:104px;position: fixed;left:0;top:0;
+        background-color: yellow;}
+</style>
+<body>
+
+<div class="pfc"><img src="10.png" alt=""></div>
+
+</body>
+</html>

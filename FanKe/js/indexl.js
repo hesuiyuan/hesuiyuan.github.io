@@ -1,15 +1,15 @@
 window.onload=function(){
     //banner的轮播图
     //  var radom=document.getElementsByClassName("yuanquan");
-    //  var img=document.getElementsByClassName("banneroo");
+    //  var images=document.getElementsByClassName("banneroo");
     // for (let i=0;i<radom.length;i++){
     //     radom[i].onmouseover=function(){
-    //         for(let j=0;j<img.length;j++){
+    //         for(let j=0;j<images.length;j++){
     //             radom[j].style.background="#ccc";
-    //             img[j].style.opacity="0"
+    //             images[j].style.opacity="0"
     //         }
     //         radom[i].style.background="#A10000";
-    //         img[i].style.opacity="1";
+    //         images[i].style.opacity="1";
     //         num=i;
     //     }
     // }
@@ -29,22 +29,22 @@ window.onload=function(){
     // var num=0;
     // function move(){
     //     num++;
-    //     if (num==img.length){
+    //     if (num==images.length){
     //         num=0;
     //     }
     //     if (num==-1){
-    //         num=img.length-1;
+    //         num=images.length-1;
     //     }
-    //     for(let j=0;j<img.length;j++){
+    //     for(let j=0;j<images.length;j++){
     //         radom[j].style.background="#ccc";
-    //         img[j].style.opacity="0"
+    //         images[j].style.opacity="0"
     //     }
     //     radom[num].style.background="#A10000";
-    //     img[num].style.opacity="1"
+    //     images[num].style.opacity="1"
     // }
     // var t1=setInterval(move,1000);
  //   移入停止
- //    var imgbox=document.getElementsByClassName("img-box")[0];
+ //    var imgbox=document.getElementsByClassName("images-box")[0];
  //    imgbox.onmousemove=function(){
  //        clearInterval(t1)
  //    };

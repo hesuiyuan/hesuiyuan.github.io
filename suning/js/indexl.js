@@ -4,6 +4,7 @@ window.onload=function(){
         var pd="right";
         var w=window.innerWidth;
         con.addEventListener("touchstart",function(e){
+            console.log(e)
             con.style.transition="none";
             sl=e.changedTouches[0].clientX;
             st=e.timeStamp;
