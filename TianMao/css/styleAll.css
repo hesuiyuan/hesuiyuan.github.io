@@ -1,0 +1,16 @@
+body,ul,ol,dl,h1,h2,h3,h4,h5,h6,p,input{
+    margin: 0;padding: 0;list-style: none;
+}
+img,input{
+    border: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-family:"Helvetica Neue LT Rro","微软雅黑";font-size: 12px;color: #333;
+    background: #f5f5f5;
+}
+*{
+    box-sizing:border-box;
+}

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+头：<input type="text" id="tou">
+<br>
+<br>
+脚：<input type="text" id="jiao">
+<br>
+<br>
+<input type="button" value="提交" id="but">
+<br>
+<br>
+<div>鸡是:<b id="p1"></b></div>
+<br>
+<br>
+<div>兔是:<b id="p2"></b></div>
+</body>
+<script>
+    var but=document.querySelector("#but");
+    var tou=document.querySelector("#tou");
+    var jiao=document.querySelector("#jiao");
+    var p1=document.querySelector("#p1");
+    var p2=document.querySelector("#p2");
+    but.onclick=function(){
+    function num(a,b) {
+    out:
+    for (var i=0;i<=a;i++){
+        for (var j=0;j<=a;j++){
+            if ((i+j==a)&&(2*i+4*j==b)){
+                p1.innerHTML=i;
+                p2.innerHTML=j;
+//                document.write("鸡是"+i+"只");
+//                document.write("兔是"+j+"只");
+                break out;
+
+            }
+        }
+
+    }
+    }
+        num(tou.value,jiao.value);
+    };
+
+</script>
+</html>
