@@ -1,0 +1,11 @@
+.thumbnail{
+    padding: 15px;
+    background-color: transparent;
+}
+.thumbnail .caption{
+    background-color: #fff;
+
+}
+.caption>p{
+    height: auto;
+}
