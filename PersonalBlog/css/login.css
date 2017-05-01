@@ -1,0 +1,50 @@
+body,html{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+.bg-img{
+    width: 100%;
+    height: 100%;
+    background: url("../images/banner2.jpg") no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.center{
+    width: 330px;
+    height: 330px;
+    border-radius: 5px;
+    background-color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.thumbnail {
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 0!important;
+    margin-bottom: 0px;
+    border: none;
+    border-radius: 0px;
+    background-color: transparent!important;
+}
+.thumbnail>img{
+    width: 100px;
+    height: 100px;
+}
+.btn{
+    width: 100%;
+    background-color: #6BC5A4;
+    border: none;
+}
+.btn:hover{
+    background-color:#00FFA2;
+}
+@media screen and (max-width: 768px){
+    .center{
+        background-color: transparent;
+    }
+}

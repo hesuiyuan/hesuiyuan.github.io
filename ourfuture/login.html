@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>登录</title>
+    <link rel="stylesheet" href="css/xiangying.css">
+    <link rel="stylesheet" href="css/sy.css">
+    <script src="js/dl-js.js"></script>
+    <script src="js/jquery.js"></script>
+</head>
+<body>
+
+<!--登录注册开始-->
+<div class="dl-loginzt">
+    <!--dl-登录logo开始-->
+    <div class="dl-loginlogo"></div>
+    <!--dl-登录logo结束-->
+    <!--dl-登录注册盒子开始-->
+    <div class="dl-loginbox">
+        <!--dl-登录注册头部开始-->
+        <div class="dl-loginhead">
+            <div class="dl-login dl-sy">登录</div>
+            <div class="dl-register">注册</div>
+        </div>
+        <!--dl-登录注册头部结束-->
+        <!--dl-登录窗口开始-->
+        <div class="dl-table dl-dl"  style="display:block;">
+            <form action="" method="get">
+                <div class="dl-user">
+                    <input type="text" name="user" placeholder="手机号码" id="dl-userl">
+                </div>
+                <div class="dl-password">
+                    <input type="password" name="pwd" placeholder="填写密码" id="dl-pwdl">
+                </div>
+                <div class="dl-prompt1" id="dl-promptl">
+
+                </div>
+                <div class="dl-submit">
+                    <input type="button" value="登陆" id="dl-submitl">
+                </div>
+                <div class="dl-helpme">
+                    <a href="#">忘记密码</a>
+                </div>
+            </form>
+        </div>
+        <!--dl-登录窗口结束-->
+        <!--dl-注册窗口开始-->
+        <div class="dl-table dl-zc" style="display: none;">
+            <div class="dl-user">
+                <input type="text" name="user" placeholder="手机号码" id="dl-userl" class="sy-user" maxlength="11">
+            </div>
+            <div class="dl-user">
+                <input type="text" name="test" value="点击右侧获取验证码" id="dl-testl">
+            </div>
+            <div class="dl-password">
+                <input type="password" name="pwdr" placeholder="填写密码(6位数字)" id="dl-pwdl" class="dl-sy-paw">
+            </div>
+            <div class="dl-prompt" id="dl-promptrl">
+
+            </div>
+            <div class="dl-prompt-box">
+                获取验证码
+            </div>
+            <div class="dl-submit dl-registe">
+                <input type="submit" value="注册并登陆" id="dl-submitl" class="dl-sy-resize">
+            </div>
+        </div>
+        <!--注册窗口结束-->
+    </div>
+    <!--dl-登录注册盒子结束-->
+</div>
+<!--登录注册结束-->
+</body>
+<style>
+    .dl-prompt{
+        display: none;
+    }
+</style>
+<script>
+    var user=document.querySelector(".sy-user");
+    var dlprompt=document.querySelector(".dl-prompt");
+    var dlsypaw=document.querySelector(".dl-sy-paw");
+    var tgle=true;
+    user.onblur=function(){
+        var value=user.value
+        var iphone=/^1(3|4|5|7|8)\d{9}$/;
+        if (value==""){
+            tgle=true;
+            dlprompt.innerHTML="请输入手机号码";
+            dlprompt.style.display="block";
+        }else {
+            tgle=true;
+            if (iphone.test(value)){
+                dlprompt.style.display="";
+            }else {
+                dlprompt.style.display="block";
+                dlprompt.innerHTML="手机号呢输入有误";
+                return false;
+            }
+        }
+
+    }
+    dlsypaw.onblur=function(){
+        var v=dlsypaw.value;
+        if (v==""){
+            tgle=true;
+        }else {
+            tgle=false;
+        }
+    }
+    user.onfocus=function(){
+        dlprompt.style.display="";
+    }
+    var dlpromptbox=document.querySelector(".dl-prompt-box");
+    var dltestl=document.querySelector("#dl-testl");
+    dlpromptbox.onclick=function(){
+         dltestl.value="888";
+    }
+    var dlsyresize=document.querySelector(".dl-sy-resize");
+    dlsyresize.onclick=function(){
+        if (tgle){
+            dlprompt.innerHTML="请输入注册信息";
+            dlprompt.style.display="block";
+        }else {
+            setInterval(add,1000);
+            var num=4;
+            function add() {
+                num--;
+                dlprompt.style.display="block";
+                dlprompt.innerHTML=`${num}秒后自动登录`;
+                if (num==0){
+                    location.href="main.html"
+                }
+            }
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>banner</title>
+    <link rel="stylesheet" href="css/xiangying.css">
+    <link rel="stylesheet" href="css/sy.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/swiper.min.js"></script>
+</head>
+<body>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <a href="#" class="dl-banner">
+                <img src="images/dl-banner1.png" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="#" class="dl-banner">
+                <img src="images/dl-banner2.png" alt="">
+            </a>
+        </div>
+        <div class="swiper-slide">
+            <a href="login.html" class="dl-banner" id="sy-add">
+                <img src="images/dl-banner3.png" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+<script language="javascript">
+    var mySwiper = new Swiper('.swiper-container',{
+        pagination : '.swiper-pagination',
+    })
+
+
+</script>
+</body>
+</html>
