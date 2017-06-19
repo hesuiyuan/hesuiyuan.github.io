@@ -1,0 +1,119 @@
+﻿<pre>  
+ div和css的盒子模型：
+                  盒子模型：利用块元素水平排练，纵向排练，嵌套排练相结合来完成网页布局的一种方式.
+                   table的布局麻烦 
+     *俩个盒子同一个位置的边距会合并并且使用较大的值
+	 如果在marign设置一一个值：四个方向
+	                       二个值：上下 左右 top botton left right
+	                       三个值：上 左右 下
+	                       四个值：上 右 下 左
+	                       marign可以赋值负数
+	                       marign-left:auto 
+	                        左居中效果
+
+/*padding设置内边框:
+                   一个真正的所占的宽高 width+padding-left 不可以设置负值*/
+                   border： border-top border-left border-right border-bottom
+         border-left-width
+        一个元素在没有设置宽度的时候，宽度会自动适应父元素
+        一个元素在没有设置高度的时候，高度会子元素撑开
+
+        ul中不要自己带的属性要加：margin:为零
+                                  padding：为零
+                                  list-style:none为了去掉点点
+行元素设置外边距只是识别左右 内边距都识别 不会影响其它行的元素
+行内快级元素: img input（需要设置一下下padding） textarea select
+             可以设置内外边距
+display:/block inline  inline-block(行内块元素)
+连接中放置图片：a标签没有宽高 display：block
+                 高度由图片自动撑开会有框比图片高    img｛display：block｝
+                 在ie浏览器中会给图片自动加一个边框  img｛border：none；｝
+                 float 浮动属性：left左   right
+                       脱离文档流，同级元素没有浮动元素属性会视它不见
+                       浮动元素可以在当前行显示，除非前面的元素有浮动，它会移动到前面的一行.
+                       *凡是是在一行显示的元素都需要添加浮动属性
+                       *浮动元素还是会限父元素的限制
+                        浮动元素在一行放不下去的时候，会自动换行
+                  clear：用来清除folat的影响  left right both
+                  浮动元素不能把父元素的高度撑开
+                     *在浮动元素的最后增加一个div 然后设置为clear:both
+                     给父元素设置 overflow   hidden
+                                  overflow:scroll
+                                  auto  不超出正常显示
+                                  overflow-x单独对x的设置   overflow-y单独对Y的设置 
+
+a的可以设置float格式可以不要设置display：block
+
+如果出现盒子内不能下移动解决办法：给父元素加一个上边框
+  给父元素内边距
+  子元素有浮动就好了
+  子元素需要是第一个
+
+
+
+  线的样式：虚线dashed
+            双线double
+            点线dotted
+            槽线groove
+            无none
+            内凹inset
+            外凸outset
+
+  background-image：url(插入图片
+  )
+  图片会自动重复：background-repact
+
+  位置的默认为中间：center
+  background-posititon：10px 10px；
+    left right bottom top
+  background-attachment：filed
+  在移动段不可以使用
+
+
+ 图片精灵：直接插入一张图片就可以搞定
+
+
+图片要用png
+jpg
+
+定位属性：position：static默认静态定位
+                    relative 相对位置设置对于自身元素和周围没有影响，
+                    设置了以后可以就可以设置了
+                    left相对的移动
+                    right相对的移动
+                    top 相对的移动
+相对移动是脱离文档流依然会占据位置.
+
+绝对定位：absolute脱离文档流周围的元素会占据他的位置   有定位属性的前辈父元素，如果一层一层找都没有属性最后就相对于文档
+
+居中 ：left 0% right 0 top 0 bottom 0
+       
+ max min width height
+ 在有%的基础上设置min-width
+                  max-width
+ 在文字设置中我们需要min-height
+                    max-height
+ 在文字非常多又设置了max-height overflow：auto自动的滚动条
+     list-style-type：disc黑圆圈    square小黑方快 lower-roman小写的罗马字排序 circle空心月点
+    none没有  
+    list-style-img：url（和图片精灵一样引入）
+
+
+
+
+
+	                             </pre> 
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <div class="demo1"></div>
+  <div class="demo2"></div>
+  <div class="demo3"></div>
+</body>
+</html>

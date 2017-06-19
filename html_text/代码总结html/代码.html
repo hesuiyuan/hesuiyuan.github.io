@@ -1,0 +1,344 @@
+﻿<pre>
+表单标签
+    form:是web浏览器和web服务器进行的通信的最常用的，不仅可以从web服务器中获取信息也可以给web中反馈信息.
+    &ltform action="**.php"(后台的地址）method="get"(指定提交方式） target="_blank"(重新一个网页打开）&gt&lt/form&gt
+      默认get:适应大部分的场合，传送数据量小，速度快，安全性不高
+      另外post：传送数据量大，速度慢，安全性比较高
+      &ltlabel for="sub"(这里的for与id互相用）&gt扩展选择&lt/label&gt
+      ul必须把li嵌套进行使用
+      帐号-&ltinput type="text"(文本的类型）name="123"(必须要有为了在后台可以识别) size="大小" maxlength="最大值的确定" readonly="只读"
+      密码-&ltinput type=“password”（密码/输入进去以小黑点代表）name=“必须要有”&gt
+      &ltinput type=“radio”(理解为一个可以点击的小圈点) name="必须要有"&gt
+      在选择一个情况下不要另外一个选择中我们需要加name=“sex”
+      For example
+                 性别:man&ltinput type="radio" name=sex(为了防止俩个同时选择) name="123"(为了给后台处理)&gt
+                 性别:man&ltinput type="radio" checked(代表默认选中）&gt
+      &ltinput type="checkbox"（代表一个小方块可以选择上对沟）&gt
+      &lttextarea name=""cols="30" （列cols-clospan合并列）rows="10"（行rows-rowspan为合并行）&gt（写的内容在页面显示）
+      &lt/textarea&gt
+      &ltselect name="" id="">写的内容&lt/select>
+      &ltoption value="**">写的内容要选择的&lt/option&gt
+      &ltinput type="file"（选择文件的连接）>
+      &ltinput type="reset"（重新至按钮）>
+      &ltinput type="button"（按钮的建立）value=“名字” onclick=document.body.style.background=#000 （换背景的办法）>
+      &lta href="http“//www.baidu.com”">点击需要连接的文字就可以直接到百度&lt/a&gt
+      在同一网页内插入另外一张网页（针窗口）&ltiframe src="http：//www.baidu.com" frameborder="0">&lt/iframe>
+       disabled不可以选择
+       readonly只读属性
+       checked 默认
+       select 默认选择下拉
+       align为水平对齐方式
+       vlign为垂直对齐方式
+
+
+第二节CSS：层垫样式用于控制网页样式或将样式信息与网页内容分离的y种标记性语言.
+          1.行内样式优先级最高    eg：&ltdiv style="width:100px;(可以设置宽高) border：3px ** ** （表框的大小+空格+color+空格+solid是实线）">
+          2.嵌入样式:在head的后面写入sytle然后进行编辑
+          3.引入样式：写在head的后面就好 &ltlink rel="stylesheet" href="（连接的位置）">
+          4.导入标签需要进行多次的重复导入和倒进
+          类选择器class=“one”     前面为.one｛然后进行相应的编辑｝
+          id选择器   id=“tow”        前面为#tow｛然后为相应的编辑｝
+          群组选择器    &ltstyle>p,(逗号隔开)h1,div{width: 100px;height: 100px;border: blue 3px solid}&lt/style>   （大括号都比较类似）
+          交叉选择器：eg：div.one/div#
+     注意：   id选择器>类名选择器>标签名选择器>通用选择器>每个标签的默认样式>
+     后代选择器：每个出现的方块互相不连接，所有文字样式都会继承
+              eg:     .sum div{width: 100px;height: 100px;border: 10px red solid}
+                        &ltdiv class="sum">
+                        &ltdiv id="one">12300&lt/div>
+                        &ltdiv>123&lt/div>
+   伪装选择器：在原有的基础上进行二次选择
+   鼠标的移入效果    p:hover{}
+    手按钮cursor：pointer/move
+
+
+   二.字体的属性：切记依然在style内加，对象
+                  利用class选择器.mm｛font-family：｛“***”切记所有的字要双引号｝｝  
+                  打字的时候注意就好
+                  font-size  大小
+               <!--    font-weight 加粗 bolid -->
+               <!--  font-style bold-->
+               text-align:center 水平居中
+               text-vlign：
+               text-indent：10px  首行缩进字符
+               text-decoration：定义文本修饰
+                                underline 下划线
+                                line-thought 中划线
+                                overline    上画线
+                  line-height 适合单行文字居中
+                  em/px类似em为当前字体的2倍
+                  rem什么时候都为更元素的大小的倍数
+                  color：rgb(255,255,0)逗号
+                         rgba（a代表透明度为0-1的范围）
+                 
+
+                 dashed
+                 font-sytle:italice
+                 font-weight:border
+                 font-family:微软雅黑，宋体;
+
+
+  div和css的盒子模型：
+                  盒子模型：利用块元素水平排练，纵向排练，嵌套排练相结合来完成网页布局的一种方式.
+                   table的布局麻烦 
+     *俩个盒子同一个位置的边距会合并并且使用较大的值
+   如果在marign设置一一个值：四个方向
+                         二个值：上下 左右 top botton left right
+                         三个值：上 左右 下
+                         四个值：上 右 下 左
+                         marign可以赋值负数
+                         marign-left:auto 
+                          左居中效果
+
+/*padding设置内边框:
+                   一个真正的所占的宽高 width+padding-left 不可以设置负值*/
+                   border： border-top border-left border-right border-bottom
+         border-left-width
+        一个元素在没有设置宽度的时候，宽度会自动适应父元素
+        一个元素在没有设置高度的时候，高度会子元素撑开
+
+        ul中不要自己带的属性要加：margin:为零
+                                  padding：为零
+                                  list-style:none为了去掉点点
+行元素设置外边距只是识别左右 内边距都识别 不会影响其它行的元素
+行内快级元素: img input（需要设置一下下padding） textarea select
+             可以设置内外边距
+display:/block inline  inline-block(行内块元素)
+连接中放置图片：a标签没有宽高 display：block
+                 高度由图片自动撑开会有框比图片高    img｛display：block｝
+                 在ie浏览器中会给图片自动加一个边框  img｛border：none；｝
+                 float 浮动属性：left左   right
+                       脱离文档流，同级元素没有浮动元素属性会视它不见
+                       浮动元素可以在当前行显示，除非前面的元素有浮动，它会移动到前面的一行.
+                       *凡是是在一行显示的元素都需要添加浮动属性
+                       *浮动元素还是会限父元素的限制
+                        浮动元素在一行放不下去的时候，会自动换行
+                  clear：用来清除folat的影响  left right both
+                  浮动元素不能把父元素的高度撑开
+                     *在浮动元素的最后增加一个div 然后设置为clear:both
+                     给父元素设置 overflow   hidden
+                                  overflow:scroll
+                                  auto  不超出正常显示
+                                  overflow-x单独对x的设置   overflow-y单独对Y的设置 
+
+a的可以设置float格式可以不要设置display：block
+
+如果出现盒子内不能下移动解决办法：给父元素加一个上边框
+  给父元素内边距
+  子元素有浮动就好了
+  子元素需要是第一个
+
+
+
+  线的样式：虚线dashed
+            双线double
+            点线dotted
+            槽线groove
+            无none
+            内凹inset
+            外凸outset
+
+  background-image：url(插入图片
+  )
+  图片会自动重复：background-repact
+
+  位置的默认为中间：center
+  background-posititon：10px 10px；
+    left right bottom top
+  background-attachment：filed
+  在移动段不可以使用
+
+
+ 图片精灵：直接插入一张图片就可以搞定
+
+
+图片要用png
+jpg
+
+定位属性：position：static默认静态定位
+                    relative 相对位置设置对于自身元素和周围没有影响，
+                    设置了以后可以就可以设置了
+                    left相对的移动
+                    right相对的移动
+                    top 相对的移动
+相对移动是脱离文档流依然会占据位置.
+
+绝对定位：absolute脱离文档流周围的元素会占据他的位置   有定位属性的前辈父元素，如果一层一层找都没有属性最后就相对于文档
+
+居中 ：left 0% right 0 top 0 bottom 0
+       
+ max min width height
+ 在有%的基础上设置min-width
+                  max-width
+ 在文字设置中我们需要min-height
+                    max-height
+ 在文字非常多又设置了max-height overflow：auto自动的滚动条
+     list-style-type：disc黑圆圈    square小黑方快 lower-roman小写的罗马字排序 circle空心月点
+    none没有  
+    list-style-img：url（和图片精灵一样引入）
+ border： border-top border-left border-right border-bottom
+         border-left-width
+        一个元素在没有设置宽度的时候，宽度会自动适应父元素
+        一个元素在没有设置高度的时候，高度会子元素撑开
+
+        ul中不要自己带的属性要加：margin:为零
+                                  padding：为零
+                                  list-style:none为了去掉点点
+行元素设置外边距只是识别左右 内边距都识别 不会影响其它行的元素
+行内快级元素: img input（需要设置一下下padding） textarea select
+             可以设置内外边距
+display:/block inline  inline-block(行内块元素)
+连接中放置图片：a标签没有宽高 display：block
+                 高度由图片自动撑开会有框比图片高    img｛display：block｝
+                 在ie浏览器中会给图片自动加一个边框  img｛border：none；｝
+                 float 浮动属性：left左   right
+                       脱离文档流，同级元素没有浮动元素属性会视它不见
+                       浮动元素可以在当前行显示，除非前面的元素有浮动，它会移动到前面的一行.
+                       *凡是是在一行显示的元素都需要添加浮动属性
+                       *浮动元素还是会限父元素的限制
+                        浮动元素在一行放不下去的时候，会自动换行
+                  clear：用来清除folat的影响  left right both
+                  浮动元素不能把父元素的高度撑开
+                     *在浮动元素的最后增加一个div 然后设置为clear:both
+                     给父元素设置 overflow   hidden
+                                  overflow:scroll
+                                  auto  不超出正常显示
+                                  overflow-x单独对x的设置   overflow-y单独对Y的设置 
+h5
+块标签：
+   标签小写
+   可以不写某些标签
+增加一些语义标签有利于seo
+
+
+section用于定义一节内容或一章内容也可以是区域的章节的表达.和div完全一样
+
+头部和尾部的分离:header(网页的头部)
+                  fotter（网页的尾部）
+                  包含
+ nav（菜单导航和连接导航的标签是navigator缩写）直接上面改
+ article 用来放置文章内容主体无样式
+ hgroup打包标题
+aside完成侧边栏的效果普通的快标签
+figure插入视频内容和音频内容（默认外边距）
+figcaption标题视频
+code放置代码（字体变小）
+
+行标签：meter可以工资 max min
+        time（2016.01.01）
+        progress可以设置 min max value表示当前进度的范围
+        contenteditable可以修改属性
+        hidden隐藏属性 直接在后面加单词
+
+        vidio：autoplay出现立马播放
+        controls出现暂停开始
+        loop循环播放
+        muted没有声音可调节
+        preload：auto none播放方式
+        src：url
+        source可以在vidio在加视频
+        audio：可以加你需要的文字
+        canvas:制作一些效果.
+
+  新增加的表单：forms 需要加id就可以外面写
+        input="email" 邮件
+        input="URL"  网站地址的写
+             ="date" 日期
+             ="month"月份
+             ="time" 具体的时间
+             ="week"   
+             ="number"必须是数字 min max step=2代表逸二增加 value
+             ="range" 滑块
+             ="search" 自己有删除×
+             ="tel" 电话号码
+             ="color"颜色 默认黑色
+
+    表单属性：placeholder="输入你想提示的文字"
+              required   直接加入不需要写如何东西  提醒客户必须写
+              pattern="^/d{7}$"  限制格式  代表  
+              autofocus   直接加入不需要写如何东西 自动获取焦点
+
+IE6的问题：容器的高度会被子元素撑开利用一个属性overfloww：hidden；
+          在子元素加一个绝对定对例如：给父元素为相对定位子元素为绝对定位.
+          2.容器的高度也会自动撑开。解决办法也是一样的设置绝对定位和相对定位或者是overflow.
+          3.浮动元素和行元素不能在一行显示/解决办法：就是给行元素设置上浮动.....
+          4.input中的元素不会自动垂直居中，自己设置line-height实现.
+          5.IE6不支持固定定位
+            通过绝对定位模拟固定定位.
+            css的hack 通过给属性名或选择器添加一些特定的选择器  从而让属性名和选择器只会被特定的浏览器识别   -IE6
+            js expression（eval（doctoment.doctomentElement.scrollTop））
+            出现抖动我们应该*html｛
+                 background:url(about:blank);
+                 background-attachment:fixed;
+            ｝
+            IE中最著名的bug：当我们给一系列的子元素设置边距的时候出现双边距.
+            我们可以将第一个元素设置为一半如-marige-left：15px；就ok？
+            也可以设置：同样给第一个元素具有双边距的display：inline
+
+            7.我们设置为负值时候，超出的部分看不到，解决办法就是给这个元素设置相对定位.
+            8.不支持a元素之外的hover.只能拿js来完成这个效果.
+            9.不支持png24的一些图片（也可以使用替换的格式）
+            rgba最好使用
+            opacity表示透明效果（0-1)
+            filter:alpha（opacity=50）｛0-100｝;设置一个滤镜...
+html:4s
+
+如果要以3d的效果呈现必须要这样设置
+perspective:100px；当前的景深.父元素
+transform-style:preserve-3d;当前容器里面的元素是以那种方式来呈现
+translateZ（）
+transform-rotate（）
+transform-orign
+backface-visibility：hidden（隐藏）
+perspective-origin:可以设置观测者的角度
+
+
+transform：rotateZ（90deg）  
+
+动画：1.定义动画@keyframes name｛0%｛｝｝
+2.应用动画 animation-name指定动画的名称
+animation-duration 指定动画的持续时间
+animation-timing-function指定动画的运动方式
+animation-inter-count指定动画的执行次数
+animation-delay 指定动画的延时
+
+字体文件：@font-face
+字体图标   font
+
+响应式布局：现在很流行的一个设计理念，随着互联网的盛行，为解决如今各式各样的浏览器分辨率以及不同移动的显示的效果，设计师提出了响应式的设计方案.所谓的响应式布局就是一个网站能够兼容多个终端，而不是为每个终端做一个特定版本.也就是说一个页面可以在多个终端呈现你想要的效果，能够兼容各个终端.
+*实现的原理利用媒体查询：media query
+*@media+媒体的类型/screen屏幕 all所有的设备/  /，设备列表/+操作符号(条件)｛里面写css的样式｝
+设备列表/and连接/ /not排除/  /only限定某些设备类型/
+条件：width当宽度为具体的值的时候可见
+min-width 当宽度大于木个值可见
+max-width 当宽度小于木个值可见
+阀值  就是在网页变化的一瞬间的当前浏览器的宽度
+
+
+
+在导航中平均分布的办法：display：
+
+像素：一个像素就是计算机屏幕能显示一种特定颜色的最小区域.
+设备像素：设备屏幕的物理像素 任何设备的物理像素都是固定的
+
+逻辑像素：用来内容的像素和设备像素有个比例......
+
+
+
+meta name="viewport" content=“width=device-width，user-scalable=no，initial-scale=1”
+
+meta：width设置布局口的宽度为特定定的值.
+      initial-scale设置页面的初始缩放程度和布局视口的宽度.
+      minimum-scale 最小缩放程度
+      maximum-scale 最大缩放程度
+      user-scalable 是否缩放
+
+git 分布式版本控制系统
+githup 基于git原理的一个代码托管平台
+新建文件夹
+右击git bash
+git clone ///////////////（地址）
+git status  检测当前版本的状态
+git add *要提交修改
+git commit -m "写点描述"
+把最后的修改提交到远程 git push
+把远程下载到本地利用 git pull
