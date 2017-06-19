@@ -84,9 +84,11 @@ Knowsright.innerHTML=`<li>
 // 最近几小时的天气 开始
 var only=document.querySelector('.only');
 store.getHour(function(data){
+	 
      data['HeWeather5'][0]['hourly_forecast'].slice(0,6).forEach(function(v)
      {
      	                      var timess=v['date'];
+
      	                      var timeb=timess.split(" ");
      	                      var icon="https://cdn.heweather.com/cond_icon/"
                               // 本地图片的处理 开始
