@@ -1,9 +1,7 @@
 
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+ 
+  <html class="no-js">
     <head>
 
         <title>个人主页</title>
@@ -11,11 +9,6 @@
         <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-     <!--    <meta name="description" content="FlexyCodes - FlexyCard vCard Template. Creating my personal page!"/> -->
-        
-        <!-- CSS | Google Fonts -->
-        <!-- <link href='http://fonts.useso.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'> -->
 
         <!-- CSS | bootstrap -->
         <!-- Credits: http://getbootstrap.com/ -->
@@ -50,10 +43,6 @@
         <!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="images/favicon/favicon.ico">
 
-        <!--[if IE 7]>
-                <link rel="stylesheet" type="text/css" href="css/icons/font-awesome-ie7.min.css"/>
-        <![endif]-->
-
         <style>
             @media only screen and (max-width : 991px){
                 .resp-vtabs .resp-tabs-container {
@@ -74,9 +63,7 @@
 
     <body>
 
-        <!--[if lt IE 7]>
-                <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+    
 
         <!-- Laoding page -->
         <div id="preloader"><div id="spinner"></div></div>
@@ -580,8 +567,7 @@
          </div>
             <!-- /Contact Info -->
            
-
-           <!--<h3 class="main-heading" style="margin-left: 22px;"><span>Follow me</span></h3>-->
+ 
 
                                                          
 
@@ -778,22 +764,18 @@
             var mouseY;
             var imageOne;
 
-            /* Calling the initialization function */
+           
             $(init);
-
-            /* The images need to re-initialize on load and on resize, or else the areas
-             * where each image is displayed will be wrong. */
+ 
             $(window).load(init);
             $(window).resize(init);
 
-            /* Setting the mousemove event caller */
+          
             $(window).mousemove(getMousePosition);
 
-            /* This function is called on document ready, on load and on resize
-             * and initiallizes all the images */
+         
             function init() {
-
-                /* Instanciate the mouse position variables */
+ 
                 mouseX = 0;
                 mouseY = 0;
 
@@ -819,8 +801,6 @@
         </script>
 
 
-        <!--[if lt IE 9]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+       
     </body>
 </html>
