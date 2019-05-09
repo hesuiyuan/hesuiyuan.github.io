@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.countup.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.waypoints.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		*{
+			box-sizing: border-box;
+		}
+		body,html{
+			width: 100%;
+			height: 100%;
+		}
+		.container{
+			width: 100%;
+			height: 100%;
+			background-color: #001132;
+			border-top: 1px solid #001132;
+		}
+		.h_o_title{
+			width:942px;
+			height: 26px;
+			background: url(images/logo.png) no-repeat;
+			background-size: 100% 100%;
+			margin: 0px auto;
+			margin-top: 20px;
+		}
+		.h_o_con{
+			width: 90%;
+			height: 70px;
+			background: url(images/line-top.png) no-repeat;
+			margin: 0 auto;
+			background-size: 100% 100%;
+			/*margin-bottom: 25px;*/
+			
+		}
+		.h_o_con>li{
+			width: 33.33%;
+			height: 100%;
+		}
+		.sp>p:first-child{
+			font-size:50px;
+			font-family:PingFangSC-Medium;
+			font-weight:500;
+			color:rgba(0,164,241,1);
+			background:linear-gradient(0deg,rgba(0,252,255,1) 0%, rgba(48,155,255,1) 100%);
+			-webkit-background-clip:text;
+			-webkit-text-fill-color:transparent;
+		}
+		.sp>p:nth-child(2){
+			font-family:"PingFang";
+			font-weight:400;
+			color:rgba(254,254,254,1);
+			padding-top: 20px;
+		}
+		.sp{
+			width:50%;
+			height: 100%;
+			text-align: center;
+			
+		}
+		.pp{
+			width: 50%;
+			height: 100%;
+			text-align: center;
+		}
+		.pp>p:first-child{
+			font-size:50px;
+			font-family:PingFangSC-Medium;
+			font-weight:500;
+			color:rgba(0,164,241,1);
+			background:linear-gradient(0deg,rgba(0,252,255,1) 0%, rgba(48,155,255,1) 100%);
+			-webkit-background-clip:text;
+			-webkit-text-fill-color:transparent;
+		}
+		.pp>p:nth-child(2){
+			font-family:"PingFang";
+			font-weight:400;
+			color:rgba(254,254,254,1);
+			padding-top: 20px;
+		}
+		.h_o_allmoney>p:first-child{
+			font-size:90px;
+			font-family:TRENDS;
+			font-weight:400;
+			color:rgba(255,231,134,1);
+			background:linear-gradient(0deg,rgba(255,139,129,1) 0%, rgba(255,33,38,1) 100%);
+			-webkit-background-clip:text;
+			-webkit-text-fill-color:transparent;
+			text-align: center;
+			font-family: fantasy;
+		}
+		.h_o_allmoney>p:nth-child(2){
+			font-size: 24px;
+		    font-family: "苹方";
+		    font-weight: 400;
+		    color:#00F1F4;
+		    text-align: center;
+		    padding-top: 35px;
+		}
+		.h_message{
+			width: 100%;
+			min-height: 930px;
+			background-color: #001132;
+			overflow: hidden;
+		}
+		.h_message>li:first-child{
+			width:25%;
+		}
+		.h_message>li:nth-child(2){
+			width: 50%;
+		}
+		.h_message>li:nth-child(3){
+			width: 25%;
+		}
+		.h_mes_top,.h_mes_bottom{
+			width: 100%;
+			height: 50%;
+		}
+		.h_mes_toptitle{
+	 		padding-left: 30px;
+	 	}
+	 	.h_mes_toptitle>span:first-child{
+	 		display: inline-block;
+	 		width:22px;
+			height:22px;
+			background:linear-gradient(0deg,rgba(0,252,255,1) 0%,rgba(48,155,255,1) 100%);
+			border-radius:50%;
+	 	}
+	 	.h_mes_toptitle>span:nth-child(2){
+			font-size:22px;
+			font-family:'PingFang';
+			font-weight:bold;
+			color:rgba(0,241,244,1);
+			text-indent: 20px;
+			letter-spacing: 1px;
+				
+	 	}
+	 	.h_mes_text{
+	 		width: 100%;
+	 		height: auto;
+	 		overflow: hidden;
+	 		padding-left: 15%;
+	 		margin-top: 10px;
+	 	}
+	 	.h_text_title{
+	 		width: 100%;
+	 		height: 30px;
+	 		text-align: left;
+	 		line-height: 30px;
+	 		margin-top: 32px;
+			font-size:14px;
+			font-family:"PingFang";
+			font-weight:400;
+			color:rgba(255,255,255,0.8);
+	 	}
+	 	.h_text_con{
+	 		width: 100%;
+	 		height: 30px;
+	 		text-align: left;
+	 		line-height: 30px;
+	 		font-size:14px;
+			font-family:"PingFang";
+			font-weight:400;
+			color:rgba(255,255,255,0.6);
+	 	}
+	 	.h_text_con>li:first-child,.h_text_title>li:first-child{
+	 		width:15%;
+	 	}
+	 	.h_text_con>li:nth-child(2),.h_text_title>li:nth-child(2){
+	 		width: 50%;
+	 	}
+	 	.h_text_con>li:nth-child(3),.h_text_title>li:nth-child(3){
+	 		width: 35%;
+	 	}
+	 	.border_h_mess{
+	 		width: 100px;
+	 		height: 100px;
+	 		background-color:transparent;
+	 		border-radius:50%; 
+	 		position: absolute;
+	 		left: 50%;
+	 		top: 50%;
+	 		margin-left: -50px;
+	 		margin-top: -10px;
+	 	}
+	 	.border_h_mess>li{
+	 		width: 100%;
+	 		height: 50px;
+	 		background-color:#2610FF;
+	 		border-radius:50px 50px 0 0;
+	 		font-size: 12px;color: #fff;
+	 		text-align: center;
+	 		line-height: 60px;
+	 		font-family: "PingFang";
+	 	}
+	 	.h_xxpt{
+			font-size:20px;
+			 font-family: "苹方";
+			font-weight:500;
+			letter-spacing: 1px;
+			color:rgba(0,241,244,1);
+			margin-left: 108px;
+		}
+		.h_c33{
+			width: 100%;
+			height: 33.3333%;
+		}
+ 		.h_center_query{
+ 			width: 100%;
+ 			height: 900px;
+ 			overflow: hidden;
+ 		}
+ 		.h_center_query>li:first-child{
+ 			width: 100%;
+ 			height: 60%;
+ 		}
+ 		.h_center_query>li:nth-child(2){
+ 			width: 100%;
+ 			height: 40%;
+ 		}
+ 		/*旋转开始*/
+ 		@keyframes animtran {
+            from {
+                transform: rotateZ(0deg);
+            }
+            to {
+                transform: rotateZ(360deg);
+            }
+        }
+
+        @keyframes animtrans {
+            from {
+                transform: rotateZ(360deg);
+            }
+            to {
+                transform: rotateZ(0deg);
+            }
+        }
+
+        @-webkit-keyframes animtran {
+            from {
+                transform: rotateZ(0deg);
+            }
+            to {
+                transform: rotateZ(360deg);
+            }
+        }
+
+        @-webkit-keyframes animtrans {
+            from {
+                transform: rotateZ(360deg);
+            }
+            to {
+                transform: rotateZ(0deg);
+            }
+        }
+
+        #advert {
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        #advert .bg1 {
+            width: 440px;
+            height: 440px;
+            position: absolute;
+            top: 35px;
+            left: 26px;
+            z-index: 10;
+        }
+
+        #advert .bg1 div {
+            width: 440px;
+            height: 440px;
+            border:1px solid rgba(29,241,150,0.5);
+            border-radius: 15em;
+            position: relative;
+            animation: animtran 16s linear infinite;
+            -webkit-animation: animtran 16s linear infinite;
+        }
+
+        #advert .bg1 img {
+            width: 80px;
+            position: absolute;
+            animation: animtrans 16s linear infinite;
+            -webkit-animation: animtrans 16s linear infinite;
+        }
+
+        #advert .bg1 .icon01 {
+        	top: -36px;
+    		left: 192px;
+            
+        }
+
+        #advert .bg1 .icon02 {
+                top: 182px;
+    			left: -35px;
+        }
+
+        #advert .bg1 .icon03 {
+                bottom: -34px;
+    			left: 192px;
+        }
+
+        #advert .bg1 .icon04 {
+               top: 183px;
+   				 right: -36px;
+        }
+
+        #advert .bg1 .icon05 {
+            top: 80px;
+            right: -24px;
+        }
+
+        #advert .bg1 .icon06 {
+            bottom: 25px;
+            right: 7px;
+        }
+
+        #advert .bg1 .icon07 {
+            bottom: -25px;
+            left: 105px;
+        }
+
+        #advert .bg2 {
+            width: 286px;
+            height: 286px;
+            position: absolute;
+            top: 115px;
+            left:104px;
+            z-index: 9;
+        }
+
+        #advert .bg2 div {
+            width: 286px;
+            height: 286px;
+           border:1px solid rgba(29,241,150,1);
+            border-radius: 15em;
+            position: relative;
+            animation: animtrans 12s linear infinite;
+            -webkit-animation: animtrans 12s linear infinite;
+        }
+
+        #advert .bg2 span {
+            display: inline-block;
+            /*background-color: #FFFFFF;*/
+            overflow: hidden;
+            border-radius: 15em;
+            position: absolute;
+            animation: animtran 6s linear infinite;
+            -webkit-animation: animtran 6s linear infinite;
+        }
+
+        /*#advert .bg2 img {
+            padding: 10px;
+            display: block;
+        }*/
+
+        #advert .bg2 .icon08 {
+            top: 10px;
+            left: 13px;
+        }
+
+        #advert .bg2 .icon09 {
+            bottom: 0;
+            left: 36px;
+        }
+
+        #advert .bg2 .icon10 {
+            bottom: 75px;
+            right: -5px;
+        }
+
+
+        #advert .bg3 {
+            width:132px;
+            height: 132px;
+            position: absolute;
+            top: 192px;
+            left:184px;
+            z-index: 8;
+        }
+
+        #advert .bg3 div {
+            width: 132px;
+            height: 132px;
+            border:1px dashed rgba(0,252,255,1);
+            border-radius: 15em;
+            position: relative;
+            animation: animtran 8s linear infinite;
+            -webkit-animation: animtran 8s linear infinite;
+        }
+
+        #advert .bg3 span {
+            display: inline-block;
+            /*background-color: #FFFFFF;*/
+            overflow: hidden;
+            border-radius: 15em;
+            position: absolute;
+            animation: animtrans 4s linear infinite;
+            -webkit-animation: animtrans 4s linear infinite;
+        }
+
+        /*#advert .bg3 img {
+            padding: 10px;
+            display: block;
+        }*/
+
+        #advert .bg3 .icon11 {
+            top: -14px;
+            right: 32px;
+        }
+
+        #advert .bg3 .icon12 {
+            bottom: -17px;
+            right: 37px;
+        }
+
+        #advert .content {
+            width: 180px;
+            height: 50px;
+            background: linear-gradient(to right, #ff8eab, #e23e3e);
+            position: absolute;
+            z-index: 11;
+            left: 157px;
+            top: 230px;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 50px;
+            color: #fff;
+            font-size: 18px;
+            font-family: '苹方';
+            box-shadow: rgba(78,146,255,0.3) 2px 2px 55px 5px;;
+            cursor: pointer;
+        }
+
+
+        @keyframes ani-one {
+            from {
+                left: 260px;
+            }
+            to {
+                left: 16px
+            }
+        }
+
+        @keyframes ani-two {
+            from {
+                left: 260px;
+            }
+            to {
+                left: 70px
+            }
+        }
+
+        @keyframes ani-three {
+            from {
+                top: 0;
+                left: 0;
+            }
+            to {
+                top: 8px;
+                left: 8px;
+            }
+        }
+
+        @keyframes ani-four {
+            0% {
+                width: 130px;
+                height: 50px;
+                left: 85px;
+                top: 125px;
+                box-shadow: #f6f6f6 8px 8px 8px 4px;
+                border: #eee 0px solid;
+                margin-left: 0;
+            }
+            100% {
+                width: 259px;
+                height: 333px;
+                left: 50%;
+                top: 0px;
+                box-shadow: #FFFFFF 0 0 0 0;
+                border: #eee 1px solid;
+                margin-left: -130px;
+            }
+        }
+
+        @keyframes ani-five {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        @keyframes ani-six {
+            from {
+                left: 260px;
+            }
+            to {
+                left: 0;
+            }
+        }
+
+        @-webkit-keyframes ani-one {
+            from {
+                left: 260px;
+            }
+            to {
+                left: 16px
+            }
+        }
+
+        @-webkit-keyframes ani-two {
+            from {
+                left: 260px;
+            }
+            to {
+                left: 70px
+            }
+        }
+
+        @-webkit-keyframes ani-three {
+            from {
+                top: 0;
+                left: 0;
+            }
+            to {
+                top: 8px;
+                left: 8px;
+            }
+        }
+
+        @-webkit-keyframes ani-four {
+            0% {
+                width: 130px;
+                height: 50px;
+                left: 85px;
+                top: 125px;
+                box-shadow: #f6f6f6 8px 8px 8px 4px;
+                border: #eee 0px solid;
+                margin-left: 0;
+            }
+            100% {
+                width: 259px;
+                height: 333px;
+                left: 50%;
+                top: 0px;
+                box-shadow: #FFFFFF 0 0 0 0;
+                border: #eee 1px solid;
+                margin-left: -130px;
+            }
+        }
+
+        @-webkit-keyframes ani-five {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        @-webkit-keyframes ani-six {
+            from {
+                left: 260px;
+            }
+            to {
+                left: 0;
+            }
+        }
+
+ 
+
+        .animation-paused {
+            animation-play-state: paused !important;
+            -webkit-animation-play-state: paused !important;
+        }
+
+        .animation-one {
+            animation: ani-one 0.6s ease 1;
+            -webkit-animation: ani-one 0.6s ease 1;
+        }
+
+        .animation-two {
+            animation: ani-two 0.6s ease 1;
+            -webkit-animation: ani-two 0.6s ease 1;
+        }
+
+        .animation-three {
+            animation: ani-three 0.6s ease 1;
+            -webkit-animation: ani-three 0.6s ease 1;
+        }
+
+        .animation-four {
+            animation: ani-four 0.3s ease 1;
+            -webkit-animation: ani-four 0.3s ease 1;
+        }
+
+        .animation-five {
+            animation: ani-five 0.5s ease 1;
+            -webkit-animation: ani-five 0.5s ease 1;
+        }
+
+        .animation-six {
+            animation: ani-six 0.6s ease 1;
+            -webkit-animation: ani-six 0.6s ease 1;
+        }
+
+        .opacity0 {
+            opacity: 0;
+        }
+        /*旋转结束*/
+       .h_dd_title_bg{
+			width: 858px;
+			height: 371px;
+			margin: 0 auto;
+			background: url(images/bg-dd.png) no-repeat;
+			background-size: 100% 100%;
+		}
+		.h_dd_title_bg h5{
+			font-size:22px;
+			font-family:"苹方";
+			font-weight:500;
+			color:rgba(0,241,244,1);
+			text-align: center;
+			line-height:60px;
+		}
+		.h_ssdd_top{
+			width: 100%;
+			height: auto;
+			overflow: hidden;
+			box-sizing: border-box;
+			padding-left: 65px;
+		}
+		
+	</style>
+	<body>
+		<section class="container">
+			 <div  class="h_o_title"></div>
+			 <ul class="h_o_con h_flex">
+			 	<li class="h_flex">
+			 		<a href="index.html"><span class="h_xxpt"><返回</span></a>
+			 	</li>
+			 	<li class="h_o_allmoney" style="font-family:'NeuesBauenDemo';">
+			 		<!--请勿删除-->
+			 		<p></p>
+			 		<!--请勿删除-->
+			 		<p>优粮网购</p>
+			 	</li>
+			 	<li class="h_flex">
+			 		<a href="line.html"><span class="h_xxpt" style="margin-left: 310px;">线下门店展示 ></span></a>
+			 	</li>
+			 </ul>
+			 <ul class="h_message h_flex" style="box-sizing: border-box;padding-top: 30px;">
+			 	<li class="h_flex" style="flex-wrap: wrap;">
+			 		<div class="h_mes_top h_c33">
+			 			<div class="h_o_allmoney" style="font-family:'NeuesBauenDemo';">
+					 		<p style="font-size: 60px;">￥<span id="h_all_money" style="font-family:'NeuesBauenDemo';">29,035,256</span></p>
+					 		<p style="color: #fff;font-size: 24px;padding-top: 15px;">线上交易额</p>
+			 			</div>
+			 			<div class="h_flex" style="margin-top: 55px;">
+					 		<div class="sp">
+					 			<p>158</p>
+					 			<p>交易量</p>
+					 		</div>
+					 		<div class="pp">
+					 			<p>9</p>
+					 			<p>会员</p>
+					 		</div>
+			 			</div>
+			 			 
+			 		</div>
+			 		<div class="h_c33" style="height: 40%;">
+			 			<div class="h_mes_toptitle h_flex"><span></span><span>交易走势图</span></div>
+			 			<iframe width="100%" height="100%" src="demo3ss.html" frameBorder=0 scrolling=no style="margin:0;padding:0"></iframe>
+			 	
+			 		</div>
+			 		<div class="h_mes_bottom h_c33">
+			 			<div class="h_mes_toptitle h_flex"><span></span><span>商品热卖榜</span></div>
+			 			 <div class="h_mes_text">
+			 			 	<ul class="h_text_title h_flex">
+			 			 		<li>排名</li>
+			 			 		<li style="text-align: center;">商品名称</li>
+			 			 		<li style="text-align: center;">成交订单</li>
+			 			 	</ul>
+			 			 	<ul class="h_text_con h_flex">
+			 			 		<li><img width="20" height="18" src="images/first.png"/></li>
+			 			 		<li style="text-align: center;">稻花香米礼盒250g</li>
+			 			 		<li style="text-align: center;">12523笔</li>
+			 			 	</ul>
+			 			 	<ul class="h_text_con h_flex">
+			 			 		<li><img width="20" height="18" src="images/second.png"/></li>
+			 			 		<li style="text-align: center;">稻花香米礼盒250g</li>
+			 			 		<li style="text-align: center;">12523笔</li>
+			 			 	</ul>
+			 			 	<ul class="h_text_con h_flex">
+			 			 		<li><img width="20" height="18" src="images/third.png"/></li>
+			 			 		<li style="text-align: center;">稻花香米礼盒250g</li>
+			 			 		<li style="text-align: center;">12523笔</li>
+			 			 	</ul>
+			 			 	<ul class="h_text_con h_flex">
+			 			 		<li><img width="20" height="18" src="images/4.png"/></li>
+			 			 		<li style="text-align: center;">稻花香米礼盒250g</li>
+			 			 		<li style="text-align: center;">12523笔</li>
+			 			 	</ul>
+			 			 	<ul class="h_text_con h_flex">
+			 			 		<li><img width="20" height="18" src="images/5.png"/></li>
+			 			 		<li style="text-align: center;">稻花香米礼盒250g</li>
+			 			 		<li style="text-align: center;">12523笔</li>
+			 			 	</ul>
+			 			 </div>
+			 		</div>
+			 	</li>
+			 	<li>
+			 		 <ul class="h_center_query">
+			 		 	<li> 
+			 		 		<!--旋转开始-->
+			 		 		<div id="advert">
+						        <div class="bg1">
+						            <div>
+						                <img src="icons/yuan01.png" alt="" class="icon01">
+						                <img src="icons/yuan02.png" alt="" class="icon02">
+						                <img src="icons/yuan03.png" alt="" class="icon03">
+						                <img src="icons/yuan04.png" alt="" class="icon04">
+						            </div>
+						        </div>
+						        <div class="bg2">
+						            <div>
+						                <span class="icon08">
+						                    <img src="icons/y01.png" alt="" width="58px">
+						                </span>
+						                <span class="icon09">
+						                    <img src="icons/y02.png" alt="" width="48px">
+						                </span>
+						                <span class="icon10">
+						                    <img src="icons/y03.png" alt="" width="28px">
+						                </span>
+						            </div>
+						        </div>
+						        <div class="bg3">
+						            <div>
+						                <span class="icon11">
+						                    <img src="icons/yu4.png" alt="" width="36px">
+						                </span>
+						                <span class="icon12">
+						                    <img src="icons/yu5.png" alt="" width="36px">
+						                </span>
+						            </div>
+						        </div>
+						        <div class="content">
+						            <span>优粮网购电商体系</span>
+						        </div>
+						    </div>
+						    <!--旋转结束-->
+			 		 	</li>
+			 		 	<li>
+			 		 		 <div class="h_dd_title_bg">
+			 		 		 	 <h5>实时成交订单</h5>
+			 		 		 	 <ul class="h_ssdd_top">
+			 		 		 	 	<li class="h_flex h_jcsa" style="color: #fff;font-family: '苹方';text-align: left;line-height: 30px;">
+			 		 		 	 		<span style="width: 20%;">订单编号</span>
+			 		 		 	 		<span style="width: 20%;">订单金额</span>
+			 		 		 	 		<span style="width: 20%;">订单状态</span>
+			 		 		 	 		<span style="width: 20%;">订单来源</span>
+			 		 		 	 		<span style="width: 20%;">下单时间</span>
+			 		 		 	 	</li>
+			 		 		 	 	<li class="h_flex h_jcsa" style="color: #2AD88C;font-family: '苹方';line-height: 30px;font-size: 14px;">
+			 		 		 	 		<span style="width: 20%;">TC29180877777</span>
+			 		 		 	 		<span style="width: 20%;">¥276.00</span>
+			 		 		 	 		<span style="width: 20%;">已收货</span>
+			 		 		 	 		<span style="width: 20%;">web端</span>
+			 		 		 	 		<span style="width: 20%;">2019.05.01 15:34</span>
+			 		 		 	 	</li>
+			 		 		 	 	<li class="h_flex h_jcsa" style="color: #fff;font-family: '苹方';line-height: 30px;font-size: 14px;">
+			 		 		 	 		<span style="width: 20%;">TC29180877777</span>
+			 		 		 	 		<span style="width: 20%;">¥276.00</span>
+			 		 		 	 		<span style="width: 20%;">已收货</span>
+			 		 		 	 		<span style="width: 20%;">web端</span>
+			 		 		 	 		<span style="width: 20%;">2019.05.01 15:34</span>
+			 		 		 	 	</li>
+			 		 		 	 	<li class="h_flex h_jcsa" style="color: #fff;font-family: '苹方';line-height: 30px;font-size: 14px;">
+			 		 		 	 		<span style="width: 20%;">TC29180877777</span>
+			 		 		 	 		<span style="width: 20%;">¥276.00</span>
+			 		 		 	 		<span style="width: 20%;">已收货</span>
+			 		 		 	 		<span style="width: 20%;">web端</span>
+			 		 		 	 		<span style="width: 20%;">2019.05.01 15:34</span>
+			 		 		 	 	</li>
+			 		 		 	 	<li class="h_flex h_jcsa" style="color: #fff;font-family: '苹方';line-height: 30px;font-size: 14px;">
+			 		 		 	 		<span style="width: 20%;">TC29180877777</span>
+			 		 		 	 		<span style="width: 20%;">¥276.00</span>
+			 		 		 	 		<span style="width: 20%;">已收货</span>
+			 		 		 	 		<span style="width: 20%;">web端</span>
+			 		 		 	 		<span style="width: 20%;">2019.05.01 15:34</span>
+			 		 		 	 	</li>
+			 		 		 	 	<li class="h_flex h_jcsa" style="color: #fff;font-family: '苹方';line-height: 30px;font-size: 14px;">
+			 		 		 	 		<span style="width: 20%;">TC29180877777</span>
+			 		 		 	 		<span style="width: 20%;">¥276.00</span>
+			 		 		 	 		<span style="width: 20%;">已收货</span>
+			 		 		 	 		<span style="width: 20%;">web端</span>
+			 		 		 	 		<span style="width: 20%;">2019.05.01 15:34</span>
+			 		 		 	 	</li>
+			 		 		 	 	<li class="h_flex h_jcsa" style="color: #fff;font-family: '苹方';line-height: 30px;font-size: 14px;">
+			 		 		 	 		<span style="width: 20%;">TC29180877777</span>
+			 		 		 	 		<span style="width: 20%;">¥276.00</span>
+			 		 		 	 		<span style="width: 20%;">已收货</span>
+			 		 		 	 		<span style="width: 20%;">web端</span>
+			 		 		 	 		<span style="width: 20%;">2019.05.01 15:34</span>
+			 		 		 	 	</li>
+			 		 		 	 	<li class="h_flex h_jcsa" style="color: #fff;font-family: '苹方';line-height: 30px;font-size: 14px;">
+			 		 		 	 		<span style="width: 20%;">TC29180877777</span>
+			 		 		 	 		<span style="width: 20%;">¥276.00</span>
+			 		 		 	 		<span style="width: 20%;">已收货</span>
+			 		 		 	 		<span style="width: 20%;">web端</span>
+			 		 		 	 		<span style="width: 20%;">2019.05.01 15:34</span>
+			 		 		 	 	</li>
+			 		 		 	 	<li class="h_flex h_jcsa" style="color: #fff;font-family: '苹方';line-height: 30px;font-size: 14px;">
+			 		 		 	 		<span style="width: 20%;">TC29180877777</span>
+			 		 		 	 		<span style="width: 20%;">¥276.00</span>
+			 		 		 	 		<span style="width: 20%;">已收货</span>
+			 		 		 	 		<span style="width: 20%;">web端</span>
+			 		 		 	 		<span style="width: 20%;">2019.05.01 15:34</span>
+			 		 		 	 	</li>
+			 		 		 	 	
+			 		 		 	 	
+			 		 		 	 </ul>
+			 		 		 </div>
+			 		 	</li>
+			 		 </ul>
+			 	</li>
+			 	<li class="h_flex" style="flex-wrap: wrap;">
+			 		<div class="h_mes_top" style="position: relative;">
+			 			<div class="h_mes_toptitle h_flex" style="padding-left: 0;"><span></span><span>商品分类占比</span></div>
+			 			<iframe width="100%" height="100%" src="demo6.html" frameBorder=0 scrolling=no style="margin:0;padding:0"></iframe>
+			 		</div>
+			 		<div class="h_mes_bottom">
+			 			<div class="h_mes_toptitle h_flex" style="padding-left: 0;"><span></span><span>会员分布</span></div>
+			 			<iframe width="100%" height="100%" src="demo1s.html" frameBorder=0 scrolling=no style="margin:0;padding:0"></iframe>
+			 		</div>
+			 	</li>
+			 </ul>
+		</section>
+	</body>
+	<script type="text/javascript">
+		$('#h_all_money').countUp({
+			delay:100,
+    		time: 3000
+		})
+	</script>
+</html>
+
+
+
+

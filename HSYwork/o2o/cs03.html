@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+   <style type="text/css">
+   	.h_tk{
+		width: 392px;
+		height: 250px;
+		background: url(images/bg-news.png) no-repeat;
+		background-size: 100% 100%;
+		position: absolute;
+		top: 50px;
+		right: 0;
+		    box-sizing: border-box;
+    padding-left: 60px;
+	}
+	.h_sscjxx{
+font-size:30px;
+font-family:"PingFang";
+font-weight:bold;
+color:rgba(255,33,38,1);
+text-align: center;
+padding-top: 30px;
+padding-bottom: 23px;
+	}
+	.h_ldnlxx{
+font-size:18px;
+font-family:"PingFang";
+font-weight:400;
+color:rgba(0,241,244,1);
+text-align: center;
+padding-bottom: 30px;
+	}
+	.h_ssxx>li{
+font-size:18px;
+font-family:"PingFang";
+font-weight:400;
+color:rgba(255,33,38,1);
+text-align: center;
+padding-bottom: 20px;
+	}
+	.h_ssxx{
+		box-sizing: border-box;
+		padding-left: 43px;
+	}
+	body,html{
+		overflow: auto;
+		position: relative;
+	}
+	.h_left_one{
+		width: 460px;
+		height: 400px;
+		background:rgba(0,32,80,0.9);
+		box-shadow:0px 8px 10px 0px rgba(0, 0, 0, 0.3);
+		position: absolute;
+		box-sizing: border-box;
+		padding: 34px 34px 0px 34px;
+		z-index: 10;
+	}
+	.h_mes_toptitle>span:first-child {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: linear-gradient(0deg,rgba(0,252,255,1) 0%,rgba(48,155,255,1) 100%);
+    border-radius: 50%;
+}
+.h_mes_toptitle>span:nth-child(2) {
+    font-size: 22px;
+    font-family: 'PingFang';
+    font-weight: bold;
+    color: rgba(0,241,244,1);
+    text-indent: 20px;
+    letter-spacing: 1px;
+}
+.h_mes_text{
+	 		width: 100%;
+	 		height: auto;
+	 		overflow: hidden;
+	 		padding-left:40px;
+	 		/*margin-top: 10px;*/
+	 	}
+	 	.h_text_title{
+	 		width: 100%;
+	 		height: 30px;
+	 		text-align: left;
+	 		line-height: 30px;
+	 		margin-top: 32px;
+			font-size:14px;
+			font-family:"PingFang";
+			font-weight:400;
+			color:rgba(255,255,255,0.8);
+	 	}
+	 	.h_text_con{
+	 		width: 100%;
+	 		height: 34px;
+	 		text-align: left;
+	 		line-height: 34px;
+	 		font-size:14px;
+			font-family:"PingFang";
+			font-weight:400;
+			color:rgba(255,255,255,0.6);
+	 	}
+	 	.h_text_con>li:first-child,.h_text_title>li:first-child{
+	 		width:20%;
+	 	}
+	 	.h_text_con>li:nth-child(2),.h_text_title>li:nth-child(2){
+	 		width: 50%;
+	 	}
+	 	.h_text_con>li:nth-child(3),.h_text_title>li:nth-child(3){
+	 		width: 30%;
+	 	}
+	 	.h_line_title{
+			font-size:22px;
+			font-family:"PingFang";
+			font-weight:bold;
+			text-align: center;
+			color:rgba(91,255,245,1);
+			padding-bottom:25px;
+		}
+		.h_lin_text>span,.h_lin_text>p{
+			font-size:16px;
+			font-family:"PingFang";
+			font-weight:400;
+			color:rgba(255,255,255,1);
+			line-height: 34px;
+		}
+		.h_o_allmoney>p:first-child {
+    font-size: 60px;
+    font-family: TRENDS;
+    font-weight: 400;
+    color: rgba(255,231,134,1);
+    background: linear-gradient(0deg,rgba(255,139,129,1) 0%, rgba(255,33,38,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-family: fantasy;
+}
+.h_o_allmoney>p:nth-child(2) {
+    font-size: 24px;
+    font-family: "PingFang";
+    font-weight: 400;
+    color: rgba(254,254,254,1);
+    text-align: center;
+    padding-top: 35px;
+}
+.h_tk{
+	display: block;
+}
+.h_left_one{
+	opacity: 0;
+}
+   </style>
+   
+   
+   
+   
+   
+   <body style="height: 100%; margin: 0">
+       <div id="container" style="height: 100%"></div>
+       <div class="h_tk">
+		<p class="h_sscjxx">实时成交信息</p>
+		<p class="h_ldnlxx">——  5 陕西粮农劳动南路店  ——</p>
+		<ul class="h_ssxx">
+			<li style="text-align: left;">销售编号：T2134876</li>
+			<li style="text-align: left;">销售金额：256元</li>
+			<li style="text-align: left;">成交时间：2019-04-20 16:23</li>
+		</ul>
+	</div>
+	<!--点击后的效果-->
+	<div class="h_left_one" style="left: 50px; top: 60px;">
+		 <h3 class="h_line_title">陕西粮农团结南路店</h3> 
+		 <div class="h_lin_text">
+		 	<span>店长：李四</span>
+		 	<span style="display: block;float: right;">电话：029-5246895</span>
+		 	<p>地址：西安市长安区韦曲街道韦常路南段2号</p>
+		 </div>
+		  <img style="margin-top: 24px;" src="images/img.png"/>
+	</div>
+	<div class="h_left_one" style="left: 50px; bottom: 370px;">
+		
+		<div class="h_o_allmoney" style="font-family:'NeuesBauenDemo';">
+			 		<p>￥<span id="h_all_money" style="font-family:'NeuesBauenDemo';">29,035,256</span></p>
+			 		<p>交易额</p>
+		</div>
+		<div class="h_o_allmoney" style="font-family:'NeuesBauenDemo';margin-top: 58px;">
+			 		<p><span id="" style="font-family:'NeuesBauenDemo';">4724</span></p>
+			 		<p>交易数</p>
+		</div>
+	</div>
+	<div class="h_left_one" style="right: 50px;top: 60px;">
+		<div class="h_mes_toptitle h_flex"><span></span><span>交易走势图</span></div>
+			 			<iframe width="100%" height="100%" src="demo3s.html" frameborder="0" scrolling="no" style="margin:0;padding:0"></iframe> 
+	</div>
+	<div class="h_left_one" style="right: 50px;bottom: 370px;">
+		<div class="h_mes_toptitle h_flex"><span></span><span>商品热卖排名 </span></div>
+		<div class="h_mes_text">
+		 	<ul class="h_text_title h_flex">
+		 		<li>排名</li>
+		 		<li>商品名称</li>
+		 		<li>成交订单</li>
+		 	</ul>
+		 	<ul class="h_text_con h_flex">
+		 		<li><img width="24" height="20" src="images/first.png"></li>
+		 		<li>稻花香米礼盒250g</li>
+		 		<li>12523笔</li>
+		 	</ul>
+		 	<ul class="h_text_con h_flex">
+		 		<li><img width="24" height="20" src="images/second.png"></li>
+		 		<li>稻花香米礼盒250g</li>
+		 		<li>12523笔</li>
+		 	</ul>
+		 	<ul class="h_text_con h_flex">
+		 		<li><img width="24" height="20" src="images/third.png"></li>
+		 		<li>稻花香米礼盒250g</li>
+		 		<li>12523笔</li>
+		 	</ul>
+		 	<ul class="h_text_con h_flex">
+		 		<li><img width="24" height="20" src="images/4.png"></li>
+		 		<li>稻花香米礼盒250g</li>
+		 		<li>12523笔</li>
+		 	</ul>
+		 	<ul class="h_text_con h_flex">
+		 		<li><img width="24" height="20" src="images/5.png"></li>
+		 		<li>稻花香米礼盒250g</li>
+		 		<li>12523笔</li>
+		 	</ul>
+		 	<ul class="h_text_con h_flex">
+		 		<li><img width="24" height="20" src="images/6.png"></li>
+		 		<li>稻花香米礼盒250g</li>
+		 		<li>12523笔</li>
+		 	</ul>
+		 	<ul class="h_text_con h_flex">
+		 		<li><img width="24" height="20" src="images/7.png"></li>
+		 		<li>稻花香米礼盒250g</li>
+		 		<li>12523笔</li>
+		 	</ul>
+		 </div>
+	</div>
+       
+       
+       
+       
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/jquery/jquery.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+       <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=sbAA8Y9wR4D6PkDo3rFFHCuuZgCEKyPg"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+       <script src="js/allbasLines.js" type="text/javascript" charset="utf-8"></script>
+       <script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+app.title = '北京公交路线 - 线特效';
+var data=[{name: '陕西粮农团结南路店', value: 299},{name: '陕西粮农团结中路店', value: 299}]
+var geoCoordMap={'陕西粮农团结南路店':[108.88833828155764,34.23788733598617],'陕西粮农团结中路店':[108.89331495157446,34.26982771687103
+]};
+var convertData = function (data) {
+    var res = [];
+    for (var i = 0; i < data.length; i++) {
+        var geoCoord = geoCoordMap[data[i].name];
+        if (geoCoord) {
+            res.push({
+                name: data[i].name,
+                value: geoCoord.concat(data[i].value)
+            });
+        }
+    }
+    return res;
+};
+
+    var busLines = []
+    var hStep = 300 / (basLines.length - 1);
+    for(var i=0;i<basLines.length;i++){
+    	busLines.push({
+            coords: basLines[i],
+            lineStyle: {
+                normal: {
+                    color: echarts.color.modifyHSL('#5A94DF', Math.round(hStep * i))
+                }
+            }
+        })
+    };
+    myChart.setOption(option = {
+        bmap: {
+            center: [108.93, 34.27],
+            zoom: 14,
+            roam: true,
+            mapStyle: {
+              'styleJson': [
+              {
+				    "featureType": "background",
+				    "elementType": "geometry",
+				    "stylers": {
+				        "color": "#001132",
+				    }
+				},
+                {
+                  'featureType': 'water',
+                  'elementType': 'all',
+                  'stylers': {
+                    'color': '#001132'
+                  }
+                },
+                {
+                  'featureType': 'land',
+                  'elementType': 'geometry',
+                  'stylers': {
+                    'color': '#001132'
+                  }
+                },
+                {
+                  'featureType': 'highway',
+                  'elementType': 'all',
+                  'stylers': {
+                    'visibility': 'off'
+                  }
+                },
+                {
+                  'featureType': 'arterial',
+                  'elementType': 'geometry.fill',
+                  'stylers': {
+                    'color': '#001132'
+                  }
+                },
+                {
+    "featureType": "educationlabel",
+    "elementType": "labels.icon",
+    "stylers": {
+        "visibility": "off"
+    }
+}, {
+    "featureType": "scenicspotslabel",
+    "elementType": "labels",
+    "stylers": {
+        "visibility": "on"
+    }
+}, {
+    "featureType": "scenicspotslabel",
+    "elementType": "labels.icon",
+    "stylers": {
+        "visibility": "off"
+    }
+}, {
+    "featureType": "tertiaryway",
+    "elementType": "geometry",
+    "stylers": {
+        "visibility": "off"
+    }
+}, {
+    "featureType": "tertiaryway",
+    "elementType": "labels",
+    "stylers": {
+        "visibility": "off"
+    }
+}, {
+    "featureType": "fourlevelway",
+    "elementType": "geometry",
+    "stylers": {
+        "visibility": "off"
+    }
+}, {
+    "featureType": "fourlevelway",
+    "elementType": "labels",
+    "stylers": {
+        "visibility": "off"
+    }
+}, {
+    "featureType": "fourlevelway",
+    "elementType": "labels.icon",
+    "stylers": {
+        "visibility": "off"
+    }
+}, {
+    "featureType": "local",
+    "elementType": "geometry",
+    "stylers": {
+        "visibility": "off"
+    }
+}, {
+    "featureType": "local",
+    "elementType": "labels",
+    "stylers": {
+        "visibility": "off"
+    }
+}, {
+    "featureType": "local",
+    "elementType": "labels.icon",
+    "stylers": {
+        "visibility": "off"
+    }
+}, {
+    "featureType": "nationalway",
+    "elementType": "geometry",
+    "stylers": {
+        "visibility": "off"
+    }
+}, {
+    "featureType": "nationalway",
+    "elementType": "labels",
+    "stylers": {
+        "visibility": "off"
+    }
+}, {
+    "featureType": "provincialway",
+    "elementType": "geometry",
+    "stylers": {
+        "visibility": "on"
+    }
+}, {
+    "featureType": "provincialway",
+    "elementType": "labels",
+    "stylers": {
+        "visibility": "off"
+    }
+}, {
+    "featureType": "arterial",
+    "elementType": "geometry",
+    "stylers": {
+        "visibility": "on"
+    }
+}, {
+    "featureType": "arterial",
+    "elementType": "labels",
+    "stylers": {
+        "visibility": "off"
+    }
+}, {
+    "featureType": "arterial",
+    "elementType": "labels.icon",
+    "stylers": {
+        "visibility": "off"
+    }
+}, {
+    "featureType": "scenicspotsway",
+    "elementType": "geometry",
+    "stylers": {
+        "visibility": "off"
+    }
+}, {
+    "featureType": "universityway",
+    "elementType": "geometry",
+    "stylers": {
+        "visibility": "off"
+    }
+}, {
+    "featureType": "vacationway",
+    "elementType": "geometry",
+    "stylers": {
+        "visibility": "off"
+    }
+}, {
+    "featureType": "railway",
+    "elementType": "geometry",
+    "stylers": {
+        "visibility": "off"
+    }
+}, {
+    "featureType": "subway",
+    "elementType": "geometry",
+    "stylers": {
+        "visibility": "off",
+        "weight": 0
+    }
+},
+{
+    "featureType": "highway",
+    "elementType": "geometry.fill",
+    "stylers": {
+        "color": "#00209433"
+    }
+},
+{
+    "featureType": "governmentlabel",
+    "elementType": "labels",
+    "stylers": {
+        "visibility": "on"
+    }
+}, {
+    "featureType": "governmentlabel",
+    "elementType": "labels.icon",
+    "stylers": {
+        "visibility": "off"
+    }
+},
+{
+    "featureType": "highway",
+    "elementType": "geometry.stroke",
+    "stylers": {
+        "color": "#00209430"
+    }
+}, {
+    "featureType": "highway",
+    "elementType": "labels.text.fill",
+    "stylers": {
+        "color": "#ff0000ff"
+    }
+}, {
+    "featureType": "highway",
+    "elementType": "labels",
+    "stylers": {
+        "visibility": "off"
+    }
+}, 
+{
+    "featureType": "hotellabel",
+    "elementType": "labels",
+    "stylers": {
+        "visibility": "off"
+    }
+}, {
+    "featureType": "hotellabel",
+    "elementType": "labels.icon",
+    "stylers": {
+        "visibility": "off"
+    }
+},
+{
+    "featureType": "highwaysign",
+    "elementType": "labels",
+    "stylers": {
+        "visibility": "off"
+    }
+}, {
+    "featureType": "highwaysign",
+    "elementType": "labels.icon",
+    "stylers": {
+        "visibility": "off"
+    }
+}, {
+    "featureType": "tertiaryway",
+    "elementType": "labels.icon",
+    "stylers": {
+        "visibility": "off"
+    }
+}, {
+    "featureType": "road",
+    "elementType": "labels",
+    "stylers": {
+        "visibility": "off"
+    }
+}, {
+    "featureType": "highway",
+    "elementType": "geometry.fill",
+    "stylers": {
+        "color": "#00209433"
+    }
+}, {
+    "featureType": "highway",
+    "elementType": "geometry.stroke",
+    "stylers": {
+        "color": "#00209430"
+    }
+}, {
+    "featureType": "highway",
+    "elementType": "labels.text.fill",
+    "stylers": {
+        "color": "#ff0000ff"
+    }
+}, {
+    "featureType": "highway",
+    "elementType": "labels",
+    "stylers": {
+        "visibility": "off"
+    }
+}, {
+    "featureType": "nationalway",
+    "elementType": "geometry.fill",
+    "stylers": {
+        "color": "#0020948a"
+    }
+}, {
+    "featureType": "nationalway",
+    "elementType": "geometry.stroke",
+    "stylers": {
+        "color": "#00209475"
+    }
+}, {
+    "featureType": "cityhighway",
+    "elementType": "geometry",
+    "stylers": {
+        "visibility": "off"
+    }
+},
+                {
+                  'featureType': 'arterial',
+                  'elementType': 'geometry.stroke',
+                  'stylers': {
+                    'color': '#0b3d51'
+                  }
+                },
+                {
+                  'featureType': 'local',
+                  'elementType': 'geometry',
+                  'stylers': {
+                    "visibility": "off"
+                  }
+                },
+                {
+                  'featureType': 'railway',
+                  'elementType': 'geometry.fill',
+                  'stylers': {
+                    "visibility": "off"
+                  }
+                },
+                {
+                  'featureType': 'railway',
+                  'elementType': 'geometry.stroke',
+                  'stylers': {
+                    "visibility": "off"
+                  }
+                },
+                {
+                  'featureType': 'subway',
+                  'elementType': 'geometry',
+                  'stylers': {
+                    'lightness': -70
+                  }
+                },
+                {
+                  'featureType': 'building',
+                  'elementType': 'geometry.fill',
+                  'stylers': {
+                    'color': '#002094'
+                  }
+                },
+                {
+    "featureType": "building",
+    "elementType": "geometry.fill",
+    "stylers": {
+        "visibility": "off"
+    }
+}, {
+    "featureType": "building",
+    "elementType": "geometry.stroke",
+    "stylers": {
+       "visibility": "off"
+    }
+},
+
+{
+    "featureType": "estatelabel",
+    "elementType": "labels",
+    "stylers": {
+        "visibility": "off"
+    }
+}, {
+    "featureType": "estatelabel",
+    "elementType": "labels.icon",
+    "stylers": {
+        "visibility": "off"
+    }
+}, 
+{
+    "featureType": "estate",
+    "elementType": "geometry",
+    "stylers": {
+        "visibility": "off",
+    }
+},
+{
+    "featureType": "estatelabel",
+    "elementType": "labels.text.fill",
+    "stylers": {
+       "visibility": "off"
+    }
+}, {
+    "featureType": "estatelabel",
+    "elementType": "labels.text.stroke",
+    "stylers": {
+       "visibility": "off"
+    }
+}, {
+    "featureType": "restaurantlabel",
+    "elementType": "labels.text.fill",
+    "stylers": {
+        "visibility": "off"
+    }
+},
+{
+    "featureType": "restaurantlabel",
+    "elementType": "labels",
+    "stylers": {
+        "visibility": "off"
+    }
+}, {
+    "featureType": "restaurantlabel",
+    "elementType": "labels.icon",
+    "stylers": {
+        "visibility": "off"
+    }
+},
+{
+    "featureType": "entertainment",
+    "elementType": "geometry",
+    "stylers": {
+        "visibility": "off",
+    }
+}, 
+ {
+    "featureType": "entertainmentlabel",
+    "elementType": "labels.icon",
+    "stylers": {
+        "visibility": "off"
+    }
+}, {
+    "featureType": "entertainmentlabel",
+    "elementType": "labels.text.fill",
+    "stylers": {
+        "visibility": "off"
+    }
+}, {
+    "featureType": "entertainmentlabel",
+    "elementType": "labels.text.stroke",
+    "stylers": {
+        "visibility": "off"
+    }
+},
+  {  "featureType": "businesstowerlabel",
+    "elementType": "labels",
+    "stylers": {
+        "visibility": "off"
+    }
+}, {
+    "featureType": "businesstowerlabel",
+    "elementType": "labels.icon",
+    "stylers": {
+        "visibility": "off"
+    }
+}, 
+
+{
+    "featureType": "estate",
+    "elementType": "geometry",
+    "stylers": {
+        "visibility": "off",
+    }
+}, 
+{
+    "featureType": "estatelabel",
+    "elementType": "labels.text.fill",
+    "stylers": {
+        "visibility": "off"
+    }
+}, {
+    "featureType": "estatelabel",
+    "elementType": "labels.text.stroke",
+    "stylers": {
+       "visibility": "off"
+    }
+}, 
+                {
+                  'featureType': 'all',
+                  'elementType': 'labels.text.fill',
+                  'stylers': {
+                    'color': '#857f7f'
+                  }
+                },
+                {
+                  'featureType': 'all',
+                  'elementType': 'labels.text.stroke',
+                  'stylers': {
+                    'color': '#002094'
+                  }
+                },
+                {
+                	
+    "featureType": "shoppinglabel",
+    "elementType": "labels",
+    "stylers": {
+        "visibility": "off"
+    }
+}, {
+    "featureType": "shoppinglabel",
+    "elementType": "labels.icon",
+    "stylers": {
+        "visibility": "off"
+    }
+},
+
+   { "featureType": "financelabel",
+    "elementType": "labels",
+    "stylers": {
+        "visibility": "off"
+    }
+}, {
+    "featureType": "financelabel",
+    "elementType": "labels.icon",
+    "stylers": {
+        "visibility": "off"
+    }
+},
+{
+    "featureType": "financelabel",
+    "elementType": "labels.text.fill",
+    "stylers": {
+        "color": "#ffffff00"
+    }
+}, {
+    "featureType": "financelabel",
+    "elementType": "labels.text.stroke",
+    "stylers": {
+        "color": "#ffffff00"
+    }
+},
+{
+    "featureType": "medicallabel",
+    "elementType": "labels",
+    "stylers": {
+        "visibility": "off"
+    }
+}, {
+    "featureType": "medicallabel",
+    "elementType": "labels.icon",
+    "stylers": {
+        "visibility": "off"
+    }
+},
+{
+    "featureType": "transportationlabel",
+    "elementType": "labels",
+    "stylers": {
+        "visibility": "off"
+    }
+}, {
+    "featureType": "transportationlabel",
+    "elementType": "labels.icon",
+    "stylers": {
+        "visibility": "off"
+    }
+},
+                
+                
+                {
+                  'featureType': 'building',
+                  'elementType': 'geometry',
+                  'stylers': {
+                    'color': '#022338'
+                  }
+                },
+                {
+                  'featureType': 'green',
+                  'elementType': 'geometry',
+                  'stylers': {
+                    'color': '#062032'
+                  }
+                },
+                {
+                  'featureType': 'boundary',
+                  'elementType': 'all',
+                  'stylers': {
+                    'color': '#465b6c'
+                  }
+                },
+                {
+                  'featureType': 'manmade',
+                  'elementType': 'all',
+                  'stylers': {
+                    'visibility': 'off'
+                  }
+                },
+                {
+                  'featureType': 'label',
+                  'elementType': 'all',
+                  'stylers': {
+                    'visibility': 'off'
+                  }
+                }
+              ]
+            }
+        },
+        series: [{
+            type: 'lines',
+            coordinateSystem: 'bmap',
+            polyline: true,
+            data: busLines,
+            silent: true,
+            lineStyle: {
+                normal: {
+                    // color: '#c23531',
+                    // color: 'rgb(200, 35, 45)',
+                    opacity: 0.2,
+                    width: 1
+                }
+            },
+            progressiveThreshold: 500,
+            progressive: 200
+        }, {
+            type: 'lines',
+            coordinateSystem: 'bmap',
+            polyline: true,
+            data: busLines,
+            lineStyle: {
+                normal: {
+                    width: 0
+                }
+            },
+            effect: {
+                constantSpeed: 50,
+                show: true,
+                trailLength: 0.1,
+                symbolSize: 1.5
+            },
+            zlevel: 1
+        },
+        {
+            name: 'Top 5',
+            type: 'effectScatter',
+            coordinateSystem: 'bmap',
+            data: convertData(data.sort(function (a, b) {
+                return b.value - a.value;
+            }).slice(0, 6)),
+            symbolSize: function (val) {
+                return val[2] / 10;
+            },
+            showEffectOn: 'render',
+            rippleEffect: {
+                brushType: 'stroke'
+            },
+            hoverAnimation: true,
+            label: {
+                normal: {
+                    formatter: '{b}',
+                    position: 'right',
+                    show: false
+                }
+            },
+            itemStyle: {
+                normal: {
+                    color: 'rgba(0,168,255,0.2)',
+                    shadowBlur: 10,
+                    shadowColor: '#333'
+                }
+            },
+            zlevel: 1
+        }
+        ]
+    });
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+ // 获取百度地图实例，使用百度地图自带的控件
+var bmap = myChart.getModel().getComponent('bmap').getBMap();
+//调用百度的方法，使用bmap对象
+	var point = new BMap.Point(108.93, 34.27);
+	bmap.centerAndZoom(point, 14);
+	
+	//创建小狐狸
+	//创建小狐狸
+	var pt1 = new BMap.Point(108.88833828155764,34.23788733598617);
+	var myIcon1 = new BMap.Icon("images/gif/gif01.gif", new BMap.Size(300,300));
+	var marker1 = new BMap.Marker(pt1,{icon:myIcon1});  // 创建标注
+	bmap.addOverlay(marker1,function(e){
+		console.log(e)
+	});              // 将标注添加到地图中
+	
+	var pt2 = new BMap.Point(108.89331495157446,34.26982771687103);
+	var myIcon2 = new BMap.Icon("images/shopimages/2.png", new BMap.Size(300,300));
+	var marker2 = new BMap.Marker(pt2,{icon:myIcon2});  // 创建标注
+	bmap.addOverlay(marker2);              // 将标注添加到地图中
+	
+	var pt3 = new BMap.Point(109.0146442861439,34.264785158254579);
+	var myIcon3 = new BMap.Icon("images/shopimages/3.png", new BMap.Size(300,300));
+	var marker3 = new BMap.Marker(pt3,{icon:myIcon3});  // 创建标注
+	bmap.addOverlay(marker3);              // 将标注添加到地图中
+	
+	var pt4 = new BMap.Point(108.99526955924364,34.322119677989217);
+	var myIcon4 = new BMap.Icon("images/shopimages/4.png", new BMap.Size(300,300));
+	var marker4 = new BMap.Marker(pt4,{icon:myIcon4});  // 创建标注
+	bmap.addOverlay(marker4);              // 将标注添加到地图中
+	
+	var pt5 = new BMap.Point(108.96928150897554,34.24900723097573);
+	var myIcon5 = new BMap.Icon("images/shopimages/5.png", new BMap.Size(300,300));
+	var marker5 = new BMap.Marker(pt5,{icon:myIcon5});  // 创建标注
+	bmap.addOverlay(marker5);              // 将标注添加到地图中
+	
+	var pt6 = new BMap.Point(108.93742339601346,34.239384193833107);
+	var myIcon6 = new BMap.Icon("images/shopimages/6.png", new BMap.Size(300,300));
+	var marker6 = new BMap.Marker(pt6,{icon:myIcon6});  // 创建标注
+	bmap.addOverlay(marker6);              // 将标注添加到地图中
+	
+	var pt7 = new BMap.Point(108.97982475455963,34.310762552962298);
+	var myIcon7 = new BMap.Icon("images/shopimages/7.png", new BMap.Size(300,300));
+	var marker7 = new BMap.Marker(pt7,{icon:myIcon7});  // 创建标注
+	bmap.addOverlay(marker7);              // 将标注添加到地图中
+	
+	var pt8 = new BMap.Point(108.96321042077963,34.328282960004418);
+	var myIcon8 = new BMap.Icon("images/shopimages/8.png", new BMap.Size(300,300));
+	var marker8 = new BMap.Marker(pt8,{icon:myIcon8});  // 创建标注
+	bmap.addOverlay(marker8);              // 将标注添加到地图中
+	
+	var pt9 = new BMap.Point(107.02191238028216,33.0919188973788);
+	var myIcon9 = new BMap.Icon("images/shopimages/9.png", new BMap.Size(300,300));
+	var marker9 = new BMap.Marker(pt9,{icon:myIcon9});  // 创建标注
+	bmap.addOverlay(marker2);              // 将标注添加到地图中
+ 
+ //点击事件
+	function showInfo(e){
+		if (e.point.lng==108.973694) {
+			currentMarker.hideInfoWindow();
+			bmap.centerAndZoom(new BMap.Point(e.point.lng, e.point.lat),17);
+			$('.h_tk').hide();
+			$('.h_left_one').css('opacity','1');
+		} else{
+			currentMarker.hideInfoWindow();
+			bmap.centerAndZoom(new BMap.Point(108.93, 34.27),14);
+			$('.h_tk').show();
+			$('.h_left_one').css('opacity','0');
+		}
+		
+	}
+	bmap.addEventListener("click", showInfo);
+       </script>
+   </body>
+</html>

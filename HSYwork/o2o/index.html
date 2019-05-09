@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.countup.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.waypoints.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		*{
+			box-sizing: border-box;
+		}
+		body,html{
+			width: 100%;
+			height: 100%;
+		}
+		.container{
+			width: 100%;
+			height: 100%;
+			background-color: #001132;
+			border-top: 1px solid #001132;
+		}
+		.h_o_title{
+			width:942px;
+			height: 26px;
+			background: url(images/logo.png) no-repeat;
+			background-size: 100% 100%;
+			margin: 20px auto;
+		}
+		.h_o_con{
+			width: 100%;
+			height: 166px;
+			background: url(images/border.png) no-repeat;
+			background-size: 100% 100%;
+			margin-bottom: 25px;
+		}
+		.h_o_con>li{
+			width: 33.33%;
+			height: 100%;
+		}
+		.sp>p:first-child{
+			font-size:50px;
+			font-family:PingFangSC-Medium;
+			font-weight:500;
+			color:rgba(0,164,241,1);
+			background:linear-gradient(0deg,rgba(0,252,255,1) 0%, rgba(48,155,255,1) 100%);
+			-webkit-background-clip:text;
+			-webkit-text-fill-color:transparent;
+		}
+		.sp>p:nth-child(2){
+			font-family:"PingFang";
+			font-weight:400;
+			color:rgba(254,254,254,1);
+			padding-top: 20px;
+		}
+		.sp{
+			width:70%;
+			height: 100%;
+			text-align: center;
+			padding-left: 25px;
+			
+		}
+		.pp{
+			width: 30%;
+			height: 100%;
+			text-align: center;
+		}
+		.pp>p:first-child{
+			font-size:50px;
+			font-family:PingFangSC-Medium;
+			font-weight:500;
+			color:rgba(0,164,241,1);
+			background:linear-gradient(0deg,rgba(0,252,255,1) 0%, rgba(48,155,255,1) 100%);
+			-webkit-background-clip:text;
+			-webkit-text-fill-color:transparent;
+		}
+		.pp>p:nth-child(2){
+			font-family:"PingFang";
+			font-weight:400;
+			color:rgba(254,254,254,1);
+			padding-top: 20px;
+		}
+		.h_o_allmoney>p:first-child{
+			font-size:90px;
+			font-family:TRENDS;
+			font-weight:400;
+			color:rgba(255,231,134,1);
+			background:linear-gradient(0deg,rgba(255,139,129,1) 0%, rgba(255,33,38,1) 100%);
+			-webkit-background-clip:text;
+			-webkit-text-fill-color:transparent;
+			text-align: center;
+			font-family: fantasy;
+		}
+		.h_o_allmoney>p:nth-child(2){
+			font-size:24px;
+			font-family:"PingFang";
+			font-weight:400;
+			color:rgba(254,254,254,1);
+			text-align: center;
+			padding-top: 35px;
+		}
+		.h_message{
+			width: 100%;
+			min-height: 820px;
+			background-color: #001132;
+			overflow: hidden;
+		}
+		.h_message>li:first-child{
+			width:25%;
+		}
+		.h_message>li:nth-child(2){
+			width: 50%;
+		}
+		.h_message>li:nth-child(3){
+			width: 25%;
+		}
+		.h_mes_top,.h_mes_bottom{
+			width: 100%;
+			height: 50%;
+		}
+		.h_mes_toptitle{
+	 		padding-left: 30px;
+	 	}
+	 	.h_mes_toptitle>span:first-child{
+	 		display: inline-block;
+	 		width:22px;
+			height:22px;
+			background:linear-gradient(0deg,rgba(0,252,255,1) 0%,rgba(48,155,255,1) 100%);
+			border-radius:50%;
+	 	}
+	 	.h_mes_toptitle>span:nth-child(2){
+			font-size:22px;
+			font-family:'PingFang';
+			font-weight:bold;
+			color:rgba(0,241,244,1);
+			text-indent: 20px;
+			letter-spacing: 1px;
+				
+	 	}
+	 	.h_mes_text{
+	 		width: 100%;
+	 		height: auto;
+	 		overflow: hidden;
+	 		padding-left: 15%;
+	 		margin-top: 10px;
+	 	}
+	 	.h_text_title{
+	 		width: 100%;
+	 		height: 30px;
+	 		text-align: left;
+	 		line-height: 30px;
+	 		margin-top: 32px;
+			font-size:14px;
+			font-family:"PingFang";
+			font-weight:400;
+			color:rgba(255,255,255,0.8);
+	 	}
+	 	.h_text_con{
+	 		width: 100%;
+	 		height: 30px;
+	 		text-align: left;
+	 		line-height: 30px;
+	 		font-size:14px;
+			font-family:"PingFang";
+			font-weight:400;
+			color:rgba(255,255,255,0.6);
+	 	}
+	 	.h_text_con>li:first-child,.h_text_title>li:first-child{
+	 		width:15%;
+	 	}
+	 	.h_text_con>li:nth-child(2),.h_text_title>li:nth-child(2){
+	 		width: 50%;
+	 	}
+	 	.h_text_con>li:nth-child(3),.h_text_title>li:nth-child(3){
+	 		width: 35%;
+	 	}
+	 	.border_h_mess{
+	 		width: 100px;
+	 		height: 100px;
+	 		background-color:transparent;
+	 		border-radius:50%; 
+	 		position: absolute;
+	 		left: 50%;
+	 		top: 50%;
+	 		margin-left: -50px;
+	 		margin-top: -10px;
+	 	}
+	 	.border_h_mess>li{
+	 		width: 100%;
+	 		height: 50px;
+	 		background-color:#2610FF;
+	 		border-radius:50px 50px 0 0;
+	 		font-size: 12px;color: #fff;
+	 		text-align: center;
+	 		line-height: 60px;
+	 		font-family: "PingFang";
+	 	}
+	 	.h_o_title{
+	 		position: relative;
+	 	}
+	 	.h_aline{
+	 		position: absolute;
+	 	}
+	 	.h_o_title>a:first-child{
+	 		width: 260px;
+	 		height: 40px;
+	 		display: inline-block;
+	 		background: url(images/btn-ylwg-normal.png) no-repeat;
+	 		background-size: 100% 100%;
+	 		top: -10px;
+	 		left: -130px;
+	 		transition: all 0.3s;
+	 	}
+	 	.h_o_title>a:first-child:hover{
+	 		width: 260px;
+	 		height: 40px;
+	 		display: inline-block;
+	 		background: url(images/btn-ylwg-hover.png) no-repeat;
+	 		background-size: 100% 100%;
+	 		top: -10px;
+	 		left: -130px;
+	 	}
+	 	.h_o_title>a:last-child{
+	 		width: 260px;
+	 		height: 40px;
+	 		display: inline-block;
+	 		background: url(images/btn-xxmd-normal.png) no-repeat;
+	 		background-size: 100% 100%;
+	 		top: -10px;
+	 		left: 854px;
+	 		transition: all 0.3s;
+	 	}
+	 	.h_o_title>a:last-child:hover{
+	 		width: 260px;
+	 		height: 40px;
+	 		display: inline-block;
+	 		background: url(images/btn-xxmd-hover.png) no-repeat;
+	 		background-size: 100% 100%;
+	 		top: -10px;
+	 		left: 854px;
+	 	}
+	</style>
+	<body>
+		<section class="container">
+			 <div  class="h_o_title">
+			 	<a class="h_aline" href="list.html"></a>
+			 	<a class="h_aline" href="line.html"></a>
+			 </div>
+			 <ul class="h_o_con h_flex">
+			 	<li class="h_flex">
+			 		<div class="sp">
+			 			<p>158</p>
+			 			<p>商品</p>
+			 		</div>
+			 		<div class="pp">
+			 			<p>9</p>
+			 			<p>品牌</p>
+			 		</div>
+			 	</li>
+			 	<li class="h_o_allmoney" style="font-family:'NeuesBauenDemo';">
+			 		<p>￥<span id="h_all_money" style="font-family:'NeuesBauenDemo';">29,035,256</span></p>
+			 		<p>交易额</p>
+			 	</li>
+			 	<li class="h_flex">
+			 		<div class="pp">
+			 			<p>12456</p>
+			 			<p>交易量</p>
+			 		</div>
+			 		<div class="sp" style="padding-left: 0;">
+			 			<p>5487</p>
+			 			<p>会员</p>
+			 		</div>
+			 	</li>
+			 </ul>
+			 <ul class="h_message h_flex">
+			 	<li class="h_flex" style="flex-wrap: wrap;">
+			 		<div class="h_mes_top">
+			 			<div class="h_mes_toptitle h_flex"><span></span><span>各品牌商品数量</span></div>
+			 			<iframe width="100%" height="100%" src="demo1.html" frameBorder=0 scrolling=no style="margin:0;padding:0"></iframe>
+			 		</div>
+			 		<div class="h_mes_bottom">
+			 			<div class="h_mes_toptitle h_flex"><span></span><span>商品热卖榜/门店排名</span></div>
+			 			 <div class="h_mes_text">
+			 			 	<ul class="h_text_title h_flex">
+			 			 		<li>排名</li>
+			 			 		<li style="text-align: center;">商品名称</li>
+			 			 		<li style="text-align: center;">成交订单</li>
+			 			 	</ul>
+			 			 	<ul class="h_text_con h_flex">
+			 			 		<li><img width="20" height="18" src="images/pm.png"/></li>
+			 			 		<li style="text-align: center;">稻花香米礼盒250g</li>
+			 			 		<li style="text-align: center;">12523笔</li>
+			 			 	</ul>
+			 			 	<ul class="h_text_con h_flex">
+			 			 		<li><img width="20" height="18" src="images/pm2.png"/></li>
+			 			 		<li style="text-align: center;">稻花香米礼盒250g</li>
+			 			 		<li style="text-align: center;">12523笔</li>
+			 			 	</ul>
+			 			 	<ul class="h_text_con h_flex">
+			 			 		<li><img width="20" height="18" src="images/pm3.png"/></li>
+			 			 		<li style="text-align: center;">稻花香米礼盒250g</li>
+			 			 		<li style="text-align: center;">12523笔</li>
+			 			 	</ul>
+			 			 </div>
+			 			  <div class="h_mes_text">
+			 			 	<ul class="h_text_title h_flex">
+			 			 		<li>排名</li>
+			 			 		<li style="text-align: center;">门店名称</li>
+			 			 		<li style="text-align: center;">成交金额</li>
+			 			 	</ul>
+			 			 	<ul class="h_text_con h_flex">
+			 			 		<li><img width="20" height="18" src="images/pm.png"/></li>
+			 			 		<li style="text-align: center;">陕西粮农劳动南路店</li>
+			 			 		<li style="text-align: center;">2546872元</li>
+			 			 	</ul>
+			 			 	<ul class="h_text_con h_flex">
+			 			 		<li><img width="20" height="18" src="images/pm2.png"/></li>
+			 			 		<li style="text-align: center;">陕西粮农团结中路店</li>
+			 			 		<li style="text-align: center;">2546872元</li>
+			 			 	</ul>
+			 			 	<ul class="h_text_con h_flex">
+			 			 		<li><img width="20" height="18" src="images/pm3.png"/></li>
+			 			 		<li style="text-align: center;">陕西粮农西荷花园店</li>
+			 			 		<li style="text-align: center;">2546872元</li>
+			 			 	</ul>
+			 			 </div>
+			 		</div>
+			 	</li>
+			 	<li>
+			 		<img width="100%" height="100%" src="images/mains.gif"/>
+			 	</li>
+			 	<li class="h_flex" style="flex-wrap: wrap;">
+			 		<div class="h_mes_top" style="position: relative;">
+			 			<div class="h_mes_toptitle h_flex" style="padding-left: 0;"><span></span><span>示范店销售热度</span></div>
+			 			<iframe width="100%" height="100%" src="demo2.html" frameBorder=0 scrolling=no style="margin:0;padding:0"></iframe>
+			 			<ul class="border_h_mess">
+			 				<li>线下：65%</li>
+			 				<li style="border-radius: 0 0 50px 50px;background-color: #1070FF;line-height:45px;">线上：35%</li>
+			 			</ul>
+			 		</div>
+			 		<div class="h_mes_bottom">
+			 			<div class="h_mes_toptitle h_flex" style="padding-left: 0;"><span></span><span>交易走势图</span></div>
+			 			<iframe width="100%" height="100%" src="demo3.html" frameBorder=0 scrolling=no style="margin:0;padding:0"></iframe>
+			 		</div>
+			 	</li>
+			 </ul>
+		</section>
+	</body>
+	<script type="text/javascript">
+		$('#h_all_money').countUp({
+			delay:100,
+    		time: 3000
+		})
+	</script>
+</html>
+
+
+
+

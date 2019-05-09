@@ -1,0 +1,176 @@
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+
+
+@font-face {
+  	font-family: 'NeuesBauenDemo';
+    src: url('../font/neues_bauen_demo-webfont.eot');
+    src: url('../font/neues_bauen_demo-webfont.eot?#iefix') format('embedded-opentype'),
+	 url('../font/neues_bauen_demo-webfont.woff') format('woff'),
+	 url('../font/neues_bauen_demo-webfont.ttf') format('truetype'),
+	 url('../font/neues_bauen_demo-webfont.svg#NeuesBauenDemo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+  @font-face {
+  	font-family: 'PingFang';
+    src: url('../font/PingFang.eot');
+    src: url('../font/PingFang.eot?#iefix') format('embedded-opentype'),
+	 url('../font/PingFang.woff') format('woff'),
+	 url('../font/PingFang.ttf') format('truetype'),
+	 url('../font/PingFang.svg#NeuesBauenDemo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-weight: normal;
+    vertical-align: baseline;
+}
+
+
+
+
+
+body,html{
+	/*overflow: hidden!important;*/
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* custom */
+a {
+    color: #7e8c8d;
+    text-decoration: none;
+    -webkit-backface-visibility: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+::-webkit-scrollbar {
+    width: 1px;
+    height: 1px;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: rgba(2, 8, 53, 0.2);
+    -webkit-border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    height: 2px;
+    background-color: rgba(2, 8, 53, 0.2);
+    -webkit-border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    width: 2px;
+    background-color: rgba(2, 8, 53, 0.2);
+    -webkit-border-radius: 6px;
+}
+
+html, body {
+    width: 100%;
+}
+
+body {
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/*布局样式*/
+	.h_flex{
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+	}
+	/* 水平居中*/
+	.h_jc{
+		-webkit-box-align: center;
+		-moz-box-align: center;
+		-ms-flex-pack:center;/* IE 10 */
+		-webkit-justify-content: center;
+		-moz-justify-content: center;
+		justify-content: center;/* IE 11+,Firefox 22+,Chrome 29+,Opera 12.1*/
+	}
+	.h_jcsa{
+		-webkit-box-align:space-around ;
+		-moz-box-align: space-around;
+		-ms-flex-pack:space-around;/* IE 10 */
+		-webkit-justify-content: space-around;
+		-moz-justify-content: space-around;
+		justify-content: space-around;/* IE 11+,Firefox 22+,Chrome 29+,Opera 12.1*/
+	}
+	.h_jcsb{
+		-webkit-box-align:space-between ;
+		-moz-box-align: space-between;
+		-ms-flex-pack:space-between;/* IE 10 */
+		-webkit-justify-content: space-between;
+		-moz-justify-content: space-between;
+		justify-content: space-between;/* IE 11+,Firefox 22+,Chrome 29+,Opera 12.1*/
+	}
+	/* 垂直居中 */
+	.h_ai{
+		  -webkit-box-pack: center;
+		  -moz-box-pack: center;
+		  -ms-flex-align:center;/* IE 10 */
+		  -webkit-align-items: center;
+		  -moz-align-items: center;
+		  align-items: center;
+	}
+	.h_f1{
+		flex: 1;
+		-webkit-box-flex: 1;
+	}
+	.fl{
+		float: left;
+	}
+	.fr{
+		float: right;
+	}
+	.cont{
+		overflow: hidden;/*内容超出后隐藏*/
+		text-overflow: ellipsis;/* 超出内容显示为省略号*/
+		white-space: nowrap;/*文本不进行换行*/
+	
+	}

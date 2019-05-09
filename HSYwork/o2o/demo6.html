@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/reset.css" />
+	</head>
+	<body>
+		<div id="main" style="width: 100%;height:100%;position:fixed;"></div>
+		 <script src="js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var myChart = echarts.init(document.getElementById('main'));
+
+			 var ydata = [{
+        name: '粮油食品',
+        value: 100
+    },
+    {
+        name: '陕西特产',
+        value: 20
+    },
+    {
+        name: '生鲜果蔬',
+        value: 50
+    },
+    {
+        name: '营养食品',
+        value: 30
+    }
+     
+];
+var color =["#2610FF", "#00a4f1","#00e1bf","#0060f1"]
+var xdata = ['粮油食品', "陕西特产", "生鲜果蔬", "营养食品"];
+option = {
+    color:color,
+    legend: {
+        orient: 'horizontal',
+         top:'76%',
+         width:400,
+         icon:"circle",
+//        type:'scroll',
+         data: xdata,
+        textStyle: { //图例的公共文本样式
+            color: 'rgba(255,255,255,0.6)',
+            fontSize: 12
+        },
+    },
+    series: [{
+        type: 'pie',
+        clockwise: false, //饼图的扇区是否是顺时针排布
+        minAngle: 20, //最小的扇区角度（0 ~ 360）
+        radius: ["32%", "60%"],
+        center: ["45%", "40%"],
+        avoidLabelOverlap: false,
+        label: {
+            normal: {
+                show: false,
+                position: 'center',
+                formatter: '{value|{d}%}\n {text|{b}}',
+                rich: {
+                    text: {
+                        color: "#fff",
+                        fontSize: 16,
+                        align: 'center',
+                        verticalAlign: 'middle',
+                    },
+                    value: {
+                        color: "#fff",
+                        fontSize: 32,
+                        align: 'center',
+                        verticalAlign: 'middle',
+                    },
+                }
+            },
+            emphasis: {
+                show: true,
+                textStyle: {
+                    fontSize: 46,
+                }
+            }
+        },
+        data: ydata
+    }]
+};
+
+
+			// 使用刚指定的配置项和数据显示图表。
+			myChart.setOption(option);
+			setTimeout(function() {
+    myChart.dispatchAction({
+        type: 'highlight',
+        seriesIndex: 0,
+        dataIndex: 0
+    });
+
+    myChart.on('mouseover', function(params) {
+        if (params.name == ydata[0].name) {
+            myChart.dispatchAction({
+                type: 'highlight',
+                seriesIndex: 0,
+                dataIndex: 0
+            });
+        } else {
+            myChart.dispatchAction({
+                type: 'downplay',
+                seriesIndex: 0,
+                dataIndex: 0
+            });
+        }
+    });
+
+    myChart.on('mouseout', function(params) {
+        myChart.dispatchAction({
+            type: 'highlight',
+            seriesIndex: 0,
+            dataIndex: 0
+        });
+    });
+}, 1000);
+		</script>
+			<!--鼠标效果js start-->
+	<script src="js/mo.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/mojs-player.min.js" type="text/javascript" charset="utf-8"></script>
+  	<script src="js/mouse.js" type="text/javascript" charset="utf-8"></script>
+  <!--鼠标效果js end-->
+	</body>
+
+</html>
