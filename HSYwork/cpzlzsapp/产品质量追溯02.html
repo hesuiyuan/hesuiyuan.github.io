@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>产品质量追溯</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/mobile.css"/>
+	</head>
+	<style type="text/css">
+		body,html{
+			width: 100%;
+			height: 100%;
+		}
+		.h_h5s{
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			background-color: #fff;
+			text-align: center;
+			position: relative;
+		}
+		.h_top_bg{
+			width: 100%;
+			height: 5.2rem;
+			background: url(images/bg03.png) no-repeat;
+			background-size: 100% 100%;
+		}
+		.h_section{
+			width:5.6rem;
+			height:6.3rem;
+			background:rgba(255,255,255,1);
+			box-shadow:0rem 0rem 1rem 0rem rgba(0, 0, 0, 0.3);
+			border-radius:10px;
+			position: absolute;
+			left: 50%;
+			margin-left: -2.8rem;
+			top: 4rem;
+			padding-top: 0.9rem;
+			
+		}
+		.h_section li{
+			width: 4rem;
+			height: auto;
+			overflow: hidden;
+			margin: 0 auto;
+			margin-bottom: 0.4rem;
+			border-bottom: 1px solid #e1e1e1;
+		}
+		/*.h_section label{
+			font-size:0.3rem;
+			font-family:PingFang-SC-Medium;
+			font-weight:500;
+			color:rgba(255,255,255,1);
+			padding-right: 0.1rem;
+		}*/
+		.h_section select,.h_section input{
+			width:4rem;
+			height:0.74rem;
+			border-radius:0rem;
+			border: 1px solid transparent;
+			border-radius: 4px;
+			font-size:0.3rem;
+			font-weight: 500;
+		}
+		.h_kszs{
+			width:4.4rem!important;
+			height:0.88rem!important;
+			background:linear-gradient(-42deg,rgba(241,133,17,1) 0%,rgba(255,160,59,1) 100%);
+			box-shadow:0rem 0rem 0rem 0rem rgba(163,88,6,0.44);
+			border-radius:0rem;
+			border-radius: 0.88rem;
+			margin-bottom: 0!important;
+			margin: 0 auto;
+			line-height:0.88rem;
+			font-size:0.34rem;
+			color:rgba(255,255,255,1);
+			border-bottom:none!important;
+			letter-spacing: 2px;
+		}
+		.jszc{
+			width: 100%;
+			height: auto;
+			overflow: hidden;
+			font-size:0.22rem;
+			font-family:PingFang-SC-Medium;
+			font-weight:500;
+			color:rgba(255,255,255,1);
+			padding-top: 1rem;
+			text-shadow:0rem 0rem 0rem rgba(0, 0, 0, 0.24);
+			color: #666666;
+			position: absolute;
+			bottom:0.4rem;
+		}
+	</style>
+	<body>
+		<section class="h_h5s">
+			<div class="h_top_bg"></div>
+			<form name="form1" action="" method="get">
+			<ul class="h_section">
+				<li>
+					<select style="background-color: #fff;" name="province" onChange="set_city(this, this.form.city);">
+						 <option value="0">请选择商品名称
+</option>
+						    <option value="西瑞农家土榨菜籽油">西瑞农家土榨菜籽油</option>
+						    <option value="水鸭牌汉中香小榨菜籽油">水鸭牌汉中香小榨菜籽油</option>
+						    <option value="水鸭牌小榨浓香葵花籽油">水鸭牌小榨浓香葵花籽油</option>
+						    <option value="水鸭牌小榨浓香亚麻籽油">水鸭牌小榨浓香亚麻籽油</option>
+					</select>
+				</li>
+				<li>
+					<select style="background-color: #fff;"  name="city" id="citys">
+						 <option value="0">请选择商品规格
+</option>
+					</select>
+				</li>
+				<li>
+					<input placeholder="请选择生产日期
+"  onblur="checkMsg()" class="input-text Wdate" type="text" onFocus="WdatePicker({skin:'whyGreen',dateFmt:'yyyy-MM-dd'})" />
+				
+				</li>
+				<li class="h_kszs">开始追溯</li>
+			</ul>
+			 </form>
+			<p class="jszc">技术支持：陕西粮农信息技术有限公司</p>
+		</section>
+	</body> 
+	<script src="js/My97DatePicker/WdatePicker.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		cities = new Object();
+cities['西瑞农家土榨菜籽油']=new Array('300L', '500L', '1L', '1.8L', '5L');
+cities['水鸭牌汉中香小榨菜籽油']=new Array('1L', '1.8L', '5L');
+cities['水鸭牌小榨浓香葵花籽油']=new Array('1L', '1.8L', '5L');
+cities['水鸭牌小榨浓香亚麻籽油']=new Array('1L', '1.8L', '5L');
+
+function set_city(province, city)
+{
+    var pv, cv;
+    var i, ii;
+
+    pv=province.value;
+    cv=city.value;
+
+    city.length=1;
+
+    if(pv=='0') return;
+    if(typeof(cities[pv])=='undefined') return;
+
+    for(i=0; i<cities[pv].length; i++)
+    {
+       ii = i+1;
+       city.options[ii] = new Option();
+       city.options[ii].text = cities[pv][i];
+       city.options[ii].value = cities[pv][i];
+    }
+
+}
+	</script>
+</html>

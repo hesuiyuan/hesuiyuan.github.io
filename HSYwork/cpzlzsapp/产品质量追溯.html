@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>产品质量追溯</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/mobile.css"/>
+	</head>
+	<style type="text/css">
+		body,html{
+			width: 100%;
+			height: 100%;
+		}
+		.h_h5s{
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			background-color: #F18511;
+			text-align: center;
+			padding-top: 1rem;
+		}
+		.h_section li{
+			width: 100%;
+			height: auto;
+			overflow: hidden;
+			margin-bottom: 0.4rem;
+		}
+		.h_section label{
+			font-size:0.3rem;
+			font-family:PingFang-SC-Medium;
+			font-weight:500;
+			color:rgba(255,255,255,1);
+			padding-right: 0.1rem;
+		}
+		.h_section select,.h_section input{
+			width:4rem;
+			height:0.74rem;
+			border-radius:0rem;
+			border: 1px solid transparent;
+			border-radius: 4px;
+			font-size:0.3rem;
+			font-weight: 500;
+		}
+		.h_kszs{
+			width:2.62rem;
+			height:1rem;
+			background:linear-gradient(-42deg,rgba(1,123,198,1) 0%,rgba(40,166,239,1) 100%);
+			border-radius:0rem; 
+			font-size:0.32rem;
+			font-family:PingFang-SC-Medium;
+			font-weight:500;
+			color:rgba(255,255,255,1);
+			line-height:1rem;
+			margin:  0 auto;
+			letter-spacing: 2px;
+			margin-top: 1rem;
+		}
+		.jszc{
+			width: 100%;
+			height: auto;
+			overflow: hidden;
+			font-size:0.22rem;
+			font-family:PingFang-SC-Medium;
+			font-weight:500;
+			color:rgba(255,255,255,1);
+			padding-top: 1rem;
+			text-shadow:0rem 0rem 0rem rgba(0, 0, 0, 0.24);
+		}
+	</style>
+	<body>
+		<section class="h_h5s">
+			<img style="margin-bottom: 0.8rem;" src="images/01.png"/>
+			<br />
+			<img style="margin-bottom: 1rem;" src="images/02.png"/>
+			<form name="form1" action="" method="get">
+			<ul class="h_section">
+				<li>
+					<label>商品名称 </label>
+					<select style="background-color: #fff;" name="province" onChange="set_city(this, this.form.city);">
+						 <option value="0">请选择</option>
+						    <option value="西瑞农家土榨菜籽油">西瑞农家土榨菜籽油</option>
+						    <option value="水鸭牌汉中香小榨菜籽油">水鸭牌汉中香小榨菜籽油</option>
+						    <option value="水鸭牌小榨浓香葵花籽油">水鸭牌小榨浓香葵花籽油</option>
+						    <option value="水鸭牌小榨浓香亚麻籽油">水鸭牌小榨浓香亚麻籽油</option>
+					</select>
+				</li>
+				<li>
+					<label>规&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格</label>
+					<select style="background-color: #fff;"  name="city" id="citys">
+						 <option value="0">请选择</option>
+					</select>
+				</li>
+				<li>
+					<label>生产日期</label>
+					<input  onblur="checkMsg()" class="input-text Wdate" type="text" onFocus="WdatePicker({skin:'whyGreen',dateFmt:'yyyy-MM-dd'})" />
+				
+				</li>
+			</ul>
+			 </form>
+			<div class="h_kszs">开始追溯</div>
+			<p class="jszc">技术支持：陕西粮农信息技术有限公司</p>
+		</section>
+	</body> 
+	<script src="js/My97DatePicker/WdatePicker.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		cities = new Object();
+cities['西瑞农家土榨菜籽油']=new Array('300L', '500L', '1L', '1.8L', '5L');
+cities['水鸭牌汉中香小榨菜籽油']=new Array('1L', '1.8L', '5L');
+cities['水鸭牌小榨浓香葵花籽油']=new Array('1L', '1.8L', '5L');
+cities['水鸭牌小榨浓香亚麻籽油']=new Array('1L', '1.8L', '5L');
+
+function set_city(province, city)
+{
+    var pv, cv;
+    var i, ii;
+
+    pv=province.value;
+    cv=city.value;
+
+    city.length=1;
+
+    if(pv=='0') return;
+    if(typeof(cities[pv])=='undefined') return;
+
+    for(i=0; i<cities[pv].length; i++)
+    {
+       ii = i+1;
+       city.options[ii] = new Option();
+       city.options[ii].text = cities[pv][i];
+       city.options[ii].value = cities[pv][i];
+    }
+
+}
+	</script>
+</html>
